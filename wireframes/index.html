@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wireframe Pack — CinnamonFoto Website Revamp</title>
+  <link rel="stylesheet" href="./styles.css"/>
+  <style>
+    .page-card {
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .page-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(58,29,194,0.08);
+    }
+    .page-card-num {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--mag);
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+    }
+    .page-card-title {
+      font-size: 17px;
+      font-weight: 900;
+      color: var(--text);
+      letter-spacing: -0.2px;
+    }
+    .page-card-desc {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.65;
+      flex: 1;
+    }
+    .page-card-sections {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 4px;
+    }
+    .page-card-section-tag {
+      font-size: 10px;
+      font-weight: 600;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 2px 7px;
+      color: var(--muted);
+    }
+    .page-card-arrow {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-top: 4px;
+    }
+    .phase-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 3px 9px;
+      border-radius: 5px;
+      background: var(--accent);
+      color: white;
+    }
+    .phase-badge.p2 { background: var(--muted); }
+    .phase-badge.p3 { background: #9ca3af; }
+    .stat-row {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+    .stat-pill {
+      font-size: 11px;
+      background: rgba(58,29,194,0.07);
+      color: var(--accent);
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="wf-nav">
+  <div class="wf-brand">CinnamonFoto — Wireframes</div>
+  <div class="wf-links">
+    <a href="./home.html">Home</a>
+    <a href="./portfolio.html">Portfolio</a>
+    <a href="./services.html">Services</a>
+    <a href="./about.html">About</a>
+    <a href="./testimonials.html">Testimonials</a>
+    <a href="./faq-terms.html">FAQ</a>
+    <a href="./contact.html">Contact</a>
+  </div>
+  <a class="wf-nav-cta" href="./booking.html">Book a slot</a>
+</nav>
+
+<div class="wf-page">
+
+  <!-- Header -->
+  <div style="padding:32px 32px 8px;">
+    <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.9px;color:var(--mag);margin-bottom:10px;">CinnamonFoto · Website Revamp</div>
+    <div style="font-size:32px;font-weight:900;color:var(--text);letter-spacing:-0.5px;margin-bottom:8px;">Mid-fidelity wireframe pack</div>
+    <div style="font-size:13px;color:var(--muted);max-width:600px;line-height:1.7;">
+      Click any page card to open its wireframe. Each wireframe shows realistic section proportions, component anatomy, placeholder content, and design intent annotations — not just boxes with labels.
+    </div>
+    <div class="stat-row">
+      <div class="stat-pill">8 pages</div>
+      <div class="stat-pill">Phase 1 MVP</div>
+      <div class="stat-pill">Next.js · Sabah, Malaysia</div>
+      <div class="stat-pill">Primary CTA: Book a slot</div>
+    </div>
+  </div>
+
+  <!-- How to review -->
+  <div class="wf-notes" style="margin-top:16px;">
+    <strong>How to use these wireframes</strong>
+    <ol>
+      <li>Review <strong>section order</strong> — does each page tell the right story top to bottom?</li>
+      <li>Check <strong>CTA placement</strong> — every page ends with a path to "Book a slot".</li>
+      <li>Assess <strong>content completeness</strong> — are all the blocks you need present?</li>
+      <li>Note any <strong>missing sections</strong> or reordering you'd like before development begins.</li>
+      <li>Visual design (typography, photography, final colours) comes in the next phase — ignore polish here.</li>
+    </ol>
+  </div>
+
+  <!-- Phase 1 Pages Grid -->
+  <div style="padding:0 16px;margin-top:8px;">
+    <div style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:0.8px;color:var(--text);margin-bottom:14px;">
+      Phase 1 — Launch pages <span class="phase-badge" style="margin-left:8px;">Wireframed</span>
+    </div>
+  </div>
+
+  <div style="padding:0 16px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px;">
+
+    <a class="page-card" href="./home.html">
+      <div class="page-card-num">Page 01</div>
+      <div class="page-card-title">Home</div>
+      <div class="page-card-desc">Portfolio-first landing page. Full-bleed hero, gallery teasers by category, differentiators, before/after, testimonials, process, and final CTA.</div>
+      <div class="page-card-sections">
+        <span class="page-card-section-tag">Hero</span>
+        <span class="page-card-section-tag">Portfolio teasers</span>
+        <span class="page-card-section-tag">Why us</span>
+        <span class="page-card-section-tag">Services teaser</span>
+        <span class="page-card-section-tag">Before/After</span>
+        <span class="page-card-section-tag">Testimonials</span>
+        <span class="page-card-section-tag">Process</span>
+        <span class="page-card-section-tag">CTA + Footer</span>
+      </div>
+      <div class="page-card-arrow">Open wireframe →</div>
+    </a>
+
+    <a class="page-card" href="./portfolio.html">
+      <div class="page-card-num">Page 02</div>
+      <div class="page-card-title">Portfolio</div>
+      <div class="page-card-desc">Category-filtered masonry gallery with lightbox and story deep-links. Includes the story detail page template (/portfolio/[story-slug]).</div>
+      <div class="page-card-sections">
+        <span class="page-card-section-tag">Hero + filter chips</span>
+        <span class="page-card-section-tag">Masonry grid</span>
+        <span class="page-card-section-tag">Lightbox state</span>
+        <span class="page-card-section-tag">Story detail template</span>
+        <span class="page-card-section-tag">Sticky CTA</span>
+      </div>
+      <div class="page-card-arrow">Open wireframe →</div>
+    </a>
+
+    <a class="page-card" href="./about.html">
+      <div class="page-card-num">Page 03</div>
+      <div class="page-card-title">About</div>
+      <div class="page-card-desc">Trust-building narrative page. Founder story, style manifesto, behind-the-scenes strip, and credibility markers.</div>
+      <div class="page-card-sections">
+        <span class="page-card-section-tag">Hero</span>
+        <span class="page-card-section-tag">Founder story</span>
+        <span class="page-card-section-tag">Style manifesto</span>
+        <span class="page-card-section-tag">BTS strip</span>
+        <span class="page-card-section-tag">Credibility markers</span>
+        <span class="page-card-section-tag">CTA</span>
+      </div>
+      <div class="page-card-arrow">Open wireframe →</div>
+    </a>
+
+    <a class="page-card" href="./services.html">
+      <div class="page-card-num">Page 04</div>
+      <div class="page-card-title">Services &amp; Packages</div>
+      <div class="page-card-desc">Per-category service tabs with fully detailed package cards (CMS-editable), add-ons grid, and pricing FAQ mini-block.</div>
+      <div class="page-card-sections">
+        <span class="page-card-section-tag">Hero + tabs</span>
+        <span class="page-card-section-tag">Package cards ×3</span>
+        <span class="page-card-section-tag">Add-ons</span>
+        <span class="page-card-section-tag">Pricing FAQ</span>
+        <span class="page-card-section-tag">CTA</span>
+      </div>
+      <div class="page-card-arrow">Open wireframe →</div>
+    </a>
+
+    <a class="page-card" href="./testimonials.html">
+      <div class="page-card-num">Page 05</div>
+      <div class="page-card-title">Testimonials</div>
+      <div class="page-card-desc">Quote wall with category filters, trust badges (Google / Facebook), and featured client story cards that link to portfolio stories.</div>
+      <div class="page-card-sections">
+        <span class="page-card-section-tag">Hero + trust signals</span>
+        <span class="page-card-section-tag">Filtered quote wall</span>
+        <span class="page-card-section-tag">Featured stories</span>
+        <span class="page-card-section-tag">CTA</span>
+      </div>
+      <div class="page-card-arrow">Open wireframe →</div>
+    </a>
+
+    <a class="page-card" href="./faq-terms.html">
+      <div class="page-card-num">Page 06</div>
+      <div class="page-card-title">FAQ + Terms &amp; Conditions</div>
+      <div class="page-card-desc">Accordion FAQ organised by topic with a WhatsApp/Telegram fallback sidebar. T&C sections with placeholder legal copy.</div>
+      <div class="page-card-sections">
+        <span class="page-card-section-tag">FAQ accordion</span>
+        <span class="page-card-section-tag">Topic grouping</span>
+        <span class="page-card-section-tag">Fallback sidebar</span>
+        <span class="page-card-section-tag">T&amp;C sections</span>
+        <span class="page-card-section-tag">CTA</span>
+      </div>
+      <div class="page-card-arrow">Open wireframe →</div>
+    </a>
+
+    <a class="page-card" href="./contact.html">
+      <div class="page-card-num">Page 07</div>
+      <div class="page-card-title">Contact &amp; Socials</div>
+      <div class="page-card-desc">Fast multi-channel contact with WhatsApp and Telegram prominently first. Short inquiry form and service area coverage map/text.</div>
+      <div class="page-card-sections">
+        <span class="page-card-section-tag">Hero</span>
+        <span class="page-card-section-tag">Channel options</span>
+        <span class="page-card-section-tag">Social links</span>
+        <span class="page-card-section-tag">Short inquiry form</span>
+        <span class="page-card-section-tag">Service area</span>
+      </div>
+      <div class="page-card-arrow">Open wireframe →</div>
+    </a>
+
+    <a class="page-card" href="./booking.html">
+      <div class="page-card-num">Page 08</div>
+      <div class="page-card-title">Booking</div>
+      <div class="page-card-desc">Primary conversion page. Two-column form + helper sidebar, preferred contact channel, three consent checkboxes, and success state.</div>
+      <div class="page-card-sections">
+        <span class="page-card-section-tag">Page intro</span>
+        <span class="page-card-section-tag">Full booking form</span>
+        <span class="page-card-section-tag">Channel selector</span>
+        <span class="page-card-section-tag">Consent checkboxes</span>
+        <span class="page-card-section-tag">Success state</span>
+      </div>
+      <div class="page-card-arrow">Open wireframe →</div>
+    </a>
+
+  </div>
+
+  <!-- Deferred pages note -->
+  <div style="padding:0 16px;margin-bottom:32px;">
+    <div style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:0.8px;color:var(--text);margin-bottom:14px;">
+      Deferred pages — not wireframed yet
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+      <div style="background:var(--surface);border:1.5px dashed var(--border);border-radius:12px;padding:16px;opacity:0.6;">
+        <div class="phase-badge p2" style="margin-bottom:8px;">Phase 2</div>
+        <div style="font-size:14px;font-weight:700;color:var(--text);">Legal pages</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:4px;">Privacy Policy · Cookie Policy · Data Retention</div>
+      </div>
+      <div style="background:var(--surface);border:1.5px dashed var(--border);border-radius:12px;padding:16px;opacity:0.6;">
+        <div class="phase-badge p3" style="margin-bottom:8px;">Phase 3</div>
+        <div style="font-size:14px;font-weight:700;color:var(--text);">Blog / Journal</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:4px;">/blog index · /blog/[post-slug] template</div>
+      </div>
+      <div style="background:var(--surface);border:1.5px dashed var(--border);border-radius:12px;padding:16px;opacity:0.6;">
+        <div class="phase-badge p2" style="margin-bottom:8px;">Phase 2</div>
+        <div style="font-size:14px;font-weight:700;color:var(--text);">Booking automation</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:4px;">Calendar integration · automated confirmation flows</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Color palette reference -->
+  <div style="padding:0 16px;margin-bottom:40px;">
+    <div style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:0.8px;color:var(--text);margin-bottom:14px;">Brand colour palette reference</div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;">
+      <div style="text-align:center;">
+        <div style="width:56px;height:56px;border-radius:10px;background:#E12DEB;"></div>
+        <div style="font-size:10px;color:var(--muted);margin-top:5px;font-weight:600;">Magenta<br>#E12DEB</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="width:56px;height:56px;border-radius:10px;background:#3A1DC2;"></div>
+        <div style="font-size:10px;color:var(--muted);margin-top:5px;font-weight:600;">Royal Violet<br>#3A1DC2</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="width:56px;height:56px;border-radius:10px;background:#2A176D;"></div>
+        <div style="font-size:10px;color:var(--muted);margin-top:5px;font-weight:600;">Deep Indigo<br>#2A176D</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="width:56px;height:56px;border-radius:10px;background:#0D0A1C;"></div>
+        <div style="font-size:10px;color:var(--muted);margin-top:5px;font-weight:600;">Night Dark<br>#0D0A1C</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="width:56px;height:56px;border-radius:10px;background:#F7F7FB;border:1px solid var(--border);"></div>
+        <div style="font-size:10px;color:var(--muted);margin-top:5px;font-weight:600;">Background<br>#F7F7FB</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="width:56px;height:56px;border-radius:10px;background:#FFC27A;"></div>
+        <div style="font-size:10px;color:var(--muted);margin-top:5px;font-weight:600;">Warm Accent<br>#FFC27A</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
