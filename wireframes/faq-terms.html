@@ -1,9 +1,220 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Wireframe - FAQ + Terms</title><link rel="stylesheet" href="./styles.css"/></head><body>
-<header><div class="nav"><div class="brand">CinnamonFoto</div><nav class="nav-links"><a href="./index.html">Index</a><a href="./faq-terms.html">FAQ + T&C</a></nav><a class="cta" href="./booking.html">Book a slot</a></div></header>
-<main><h1 class="page-title">FAQ + Terms Wireframe</h1><p class="page-subtitle">Operational clarity and legal baseline.</p>
-<section class="grid">
-<div class="block span-6"><h3>FAQ Accordion</h3><ul><li>Booking process</li><li>Payment</li><li>Reschedule</li><li>Delivery timeline</li></ul></div>
-<div class="block span-6"><h3>Need Help Prompt</h3><p>WhatsApp / Telegram shortcuts.</p></div>
-<div class="block span-12"><h3>Terms Sections</h3><p>Scope, payment/refund, cancellation, usage rights, liability.</p></div>
-<div class="block span-12"><h3>CTA</h3><p>Book a slot after reviewing policy.</p></div>
-</section></main><footer><div class="inner">FAQ + Terms wireframe</div></footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wireframe — FAQ + Terms | CinnamonFoto</title>
+  <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+
+<nav class="wf-nav">
+  <div class="wf-brand">CinnamonFoto</div>
+  <div class="wf-links">
+    <a href="./home.html">Home</a>
+    <a href="./portfolio.html">Portfolio</a>
+    <a href="./services.html">Services</a>
+    <a href="./about.html">About</a>
+    <a href="./testimonials.html">Testimonials</a>
+    <a href="./faq-terms.html" class="active">FAQ</a>
+    <a href="./contact.html">Contact</a>
+  </div>
+  <a class="wf-nav-cta" href="./booking.html">Book a slot</a>
+</nav>
+
+<div class="wf-page">
+
+  <div class="wf-page-label">
+    <h1>FAQ + Terms &amp; Conditions</h1>
+    <span>Accordion FAQ by topic · unanswered question fallback · T&amp;C sections</span>
+    <a href="./index.html" style="font-size:12px;color:var(--muted);margin-left:auto;text-decoration:none;">← All wireframes</a>
+  </div>
+
+  <div class="wf-notes">
+    <strong>Wireframe annotations</strong>
+    <ol>
+      <li>FAQ uses an accordion — only one item open at a time per category group.</li>
+      <li>FAQ and T&amp;C coexist on one page separated by a section divider; T&amp;C can also be a separate URL.</li>
+      <li>The "Still have a question?" fallback prevents dead ends — links to WhatsApp / Telegram.</li>
+      <li>T&amp;C content is legal copy — this wireframe shows section headings and placeholder descriptions only.</li>
+    </ol>
+  </div>
+
+  <!-- §1 Hero -->
+  <div class="wf-section">
+    <span class="wf-section-tag dark">§1 Hero</span>
+    <div class="pad-l" style="background:linear-gradient(135deg,var(--indigo),#1e0d5c);">
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.9px;color:var(--mag);margin-bottom:10px;">Help &amp; policies</div>
+      <div style="font-size:28px;font-weight:900;color:#fff;margin-bottom:10px;letter-spacing:-0.4px;">Frequently asked questions</div>
+      <div style="font-size:13px;color:rgba(255,255,255,0.55);max-width:500px;line-height:1.7;">Everything you need to know before, during, and after your session. Can't find your answer? Message us directly.</div>
+    </div>
+  </div>
+
+  <!-- §2 FAQ — two columns: accordion + fallback sidebar -->
+  <div class="wf-section">
+    <span class="wf-section-tag">§2 FAQ accordion</span>
+    <div class="pad-m">
+      <div class="grid-12 gap-20">
+
+        <!-- Accordion (8 cols) -->
+        <div class="col-8">
+
+          <div class="faq-category-label">Booking &amp; Availability</div>
+          <div class="faq-group">
+            <div class="faq-item">
+              <div class="faq-q open">How do I book a session?</div>
+              <div class="faq-a">Fill in the booking form on the <a href="./booking.html" style="color:var(--accent);">Booking page</a> or message us directly on WhatsApp or Telegram. We'll confirm your date and next steps within 24 hours.</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">How far in advance should I book?</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">Can I book for a date that is less than 2 weeks away?</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">Do you cover destinations outside Sabah?</div>
+            </div>
+          </div>
+
+          <div class="faq-category-label">Payment</div>
+          <div class="faq-group">
+            <div class="faq-item">
+              <div class="faq-q">How much is the deposit?</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">What payment methods do you accept?</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">When is the remaining balance due?</div>
+            </div>
+          </div>
+
+          <div class="faq-category-label">Preparation &amp; On the Day</div>
+          <div class="faq-group">
+            <div class="faq-item">
+              <div class="faq-q">What should I wear to my shoot?</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">Can I give you a shot list?</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q open">What if it rains on my shoot day?</div>
+              <div class="faq-a">For outdoor sessions we monitor weather closely. If rain is forecast we'll discuss postponement or alternative indoor locations. For weddings, rain contingency is usually covered in your venue plan — we work with your coordinator.</div>
+            </div>
+          </div>
+
+          <div class="faq-category-label">Delivery</div>
+          <div class="faq-group">
+            <div class="faq-item">
+              <div class="faq-q">How long until I receive my edited photos?</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">How will my gallery be delivered?</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">How many edited photos will I receive?</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">Can I request a rush delivery?</div>
+            </div>
+          </div>
+
+          <div class="faq-category-label">Reschedule &amp; Cancellation</div>
+          <div class="faq-group">
+            <div class="faq-item">
+              <div class="faq-q">What is the reschedule policy?</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">Is the deposit refundable if I cancel?</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Fallback sidebar (4 cols) -->
+        <div class="col-4">
+          <div class="wf-sidebar" style="position:relative;top:auto;">
+            <div class="sidebar-title">Still have a question?</div>
+            <div style="font-size:12px;color:var(--muted);line-height:1.65;margin-bottom:12px;">Can't find the answer you're looking for? Ask us directly — we're happy to help.</div>
+            <div class="flex-col gap-8">
+              <a class="btn btn-wa btn-sm flex justify-center" href="#">💬 Ask on WhatsApp</a>
+              <a class="btn btn-tg btn-sm flex justify-center" href="#">✈ Ask on Telegram</a>
+            </div>
+            <hr class="hr"/>
+            <div style="font-size:12px;color:var(--muted);line-height:1.65;">Typical response time: same day during business hours. Weekend enquiries answered by next morning.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- §3 Terms & Conditions -->
+  <div class="wf-section">
+    <span class="wf-section-tag dark">§3 Terms &amp; Conditions</span>
+    <div class="pad-m">
+      <div class="flex items-center justify-between mb-20" style="flex-wrap:wrap;gap:8px;">
+        <div>
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.9px;color:var(--mag);margin-bottom:6px;">Legal</div>
+          <div style="font-size:22px;font-weight:900;color:var(--text);">Terms &amp; Conditions</div>
+        </div>
+        <div class="text-xxs text-muted">Last updated: [Date placeholder]</div>
+      </div>
+
+      <div class="flex-col gap-10">
+
+        <div class="surface-box flex-col gap-6">
+          <div style="font-size:14px;font-weight:800;color:var(--text);">1. Scope of Services</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.65;">[Legal copy placeholder] Description of services provided — photography and/or videography as agreed in the booking confirmation. Services are limited to what is specified in the confirmed package.</div>
+        </div>
+
+        <div class="surface-box flex-col gap-6">
+          <div style="font-size:14px;font-weight:800;color:var(--text);">2. Payment Terms</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.65;">[Legal copy placeholder] A non-refundable deposit of 30% is required to confirm any booking. Remaining balance is due [X] days before the shoot date. Failure to pay the balance may result in cancellation without refund of deposit.</div>
+        </div>
+
+        <div class="surface-box flex-col gap-6">
+          <div style="font-size:14px;font-weight:800;color:var(--text);">3. Reschedule &amp; Cancellation Policy</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.65;">[Legal copy placeholder] Reschedule requests must be made at least [X] days in advance. One complimentary reschedule is permitted. Cancellations forfeit the deposit. Force majeure clauses apply for declared natural disasters.</div>
+        </div>
+
+        <div class="surface-box flex-col gap-6">
+          <div style="font-size:14px;font-weight:800;color:var(--text);">4. Usage Rights &amp; Licensing</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.65;">[Legal copy placeholder] CinnamonFoto retains the right to use delivered images for portfolio, marketing, and social media purposes unless a non-display clause is agreed in writing prior to the shoot. Clients are granted a personal-use licence for all delivered images.</div>
+        </div>
+
+        <div class="surface-box flex-col gap-6">
+          <div style="font-size:14px;font-weight:800;color:var(--text);">5. Liability</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.65;">[Legal copy placeholder] CinnamonFoto liability is limited to the value of the contracted fee. We carry professional indemnity and equipment insurance. We are not liable for circumstances beyond our reasonable control.</div>
+        </div>
+
+        <div class="surface-box flex-col gap-6">
+          <div style="font-size:14px;font-weight:800;color:var(--text);">6. Force Majeure</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.65;">[Legal copy placeholder] In cases of declared emergencies, natural disasters, or government-mandated restrictions that prevent the session from proceeding, a reschedule will be offered at no penalty. If a reschedule is not possible, a partial refund may be offered at CinnamonFoto's discretion.</div>
+        </div>
+
+      </div>
+
+      <div class="highlight-box mt-16">
+        All T&amp;C sections above show placeholder text. Final legal copy must be reviewed by the business owner and, if needed, by a legal professional before publishing.
+      </div>
+    </div>
+  </div>
+
+  <!-- §4 CTA -->
+  <div class="wf-section">
+    <span class="wf-section-tag mag">§4 CTA</span>
+    <div class="wf-dark">
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--mag);">Happy with our terms?</div>
+      <h2>Book your session.</h2>
+      <p>All policies are outlined above. Once you're ready, securing your slot takes less than 2 minutes.</p>
+      <div class="wf-dark-actions">
+        <a class="btn btn-mag btn-lg" href="./booking.html">Book a slot</a>
+        <a class="btn btn-ghost" href="./contact.html">Contact us first</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

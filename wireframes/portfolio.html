@@ -1,11 +1,242 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Wireframe - Portfolio</title><link rel="stylesheet" href="./styles.css"/></head><body>
-<header><div class="nav"><div class="brand">CinnamonFoto</div><nav class="nav-links"><a href="./index.html">Index</a><a href="./home.html">Home</a><a href="./portfolio.html">Portfolio</a><a href="./booking.html">Booking</a></nav><a class="cta" href="./booking.html">Book a slot</a></div></header>
-<main><h1 class="page-title">Portfolio Wireframe</h1><p class="page-subtitle">Gallery architecture for high visual impact and efficient filtering.</p>
-<section class="grid">
-<div class="block span-12"><h3>Portfolio Hero + Filter Chips</h3><p>All / Wedding / Family Raya / Graduation / Videography.</p></div>
-<div class="block span-3"><h3>Gallery Card</h3><p>Vertical image</p></div><div class="block span-3"><h3>Gallery Card</h3><p>Horizontal image</p></div><div class="block span-3"><h3>Gallery Card</h3><p>Story cover</p></div><div class="block span-3"><h3>Gallery Card</h3><p>Reel cover</p></div>
-<div class="block span-8"><h3>Lightbox Behavior Notes</h3><ul><li>Keyboard navigation</li><li>Thumbnail strip</li><li>Quick close + swipe on mobile</li></ul></div>
-<div class="block span-4"><h3>Story Detail Entry</h3><p>Links to /portfolio/[story-slug].</p></div>
-<div class="block span-12"><h3>Bottom CTA</h3><p>Like this style? Book a slot.</p></div>
-</section>
-</main><footer><div class="inner">Portfolio wireframe</div></footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wireframe — Portfolio | CinnamonFoto</title>
+  <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+
+<nav class="wf-nav">
+  <div class="wf-brand">CinnamonFoto</div>
+  <div class="wf-links">
+    <a href="./home.html">Home</a>
+    <a href="./portfolio.html" class="active">Portfolio</a>
+    <a href="./services.html">Services</a>
+    <a href="./about.html">About</a>
+    <a href="./testimonials.html">Testimonials</a>
+    <a href="./faq-terms.html">FAQ</a>
+    <a href="./contact.html">Contact</a>
+  </div>
+  <a class="wf-nav-cta" href="./booking.html">Book a slot</a>
+</nav>
+
+<div class="wf-page">
+
+  <div class="wf-page-label">
+    <h1>Portfolio</h1>
+    <span>Masonry gallery with category filters · lightbox · story deep-links</span>
+    <a href="./index.html" style="font-size:12px;color:var(--muted);margin-left:auto;text-decoration:none;">← All wireframes</a>
+  </div>
+
+  <div class="wf-notes">
+    <strong>Wireframe annotations</strong>
+    <ol>
+      <li>Filter chips update the visible grid without page reload (client-side JS filter).</li>
+      <li>Masonry grid uses mixed aspect ratios: portrait, landscape, and square cards.</li>
+      <li>Story cards link to <code>/portfolio/[story-slug]</code> — see story detail section below.</li>
+      <li>Lightbox: keyboard nav (← →), swipe on mobile, thumbnail strip, close on Esc or backdrop tap.</li>
+      <li>"All" chip is active by default; clicking a category hides non-matching items with a fade.</li>
+    </ol>
+  </div>
+
+  <!-- §1 Hero + Filters -->
+  <div class="wf-section">
+    <span class="wf-section-tag dark">§1 Hero + filters</span>
+    <div class="wf-hero wf-hero-sm">
+      <div class="wf-hero-overlay"></div>
+      <div class="wf-hero-bg-label">Full-bleed category image · changes with active filter</div>
+      <div class="wf-hero-content" style="position:relative;z-index:2;">
+        <div class="wf-hero-eyebrow">CinnamonFoto · Portfolio</div>
+        <div class="wf-hero-h1" style="font-size:28px;">Every story deserves to be seen.</div>
+      </div>
+    </div>
+    <div class="pad-s flex items-center gap-12 flex-wrap" style="border-top:1px solid var(--border);">
+      <span style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;">Filter:</span>
+      <div class="chips">
+        <div class="chip active">All</div>
+        <div class="chip">Wedding</div>
+        <div class="chip">Family / Raya</div>
+        <div class="chip">Graduation</div>
+        <div class="chip">Videography</div>
+      </div>
+      <span class="text-xxs text-muted" style="margin-left:auto;">Showing 24 items</span>
+    </div>
+  </div>
+
+  <!-- §2 Masonry Gallery -->
+  <div class="wf-section">
+    <span class="wf-section-tag">§2 Masonry gallery</span>
+    <div class="pad-m">
+      <div class="highlight-box mb-12">
+        Mixed aspect-ratio grid — portrait (3 cols / tall), landscape (5 cols / medium), wide (6 cols / tall), story cards (4 cols / tall). Grid adapts to 2-col on mobile.
+      </div>
+      <div class="portfolio-masonry">
+        <!-- Row group 1 -->
+        <div class="pm-item pm-portrait">
+          <div class="pm-tag">Wedding</div>
+        </div>
+        <div class="pm-item pm-wide">
+          <div class="pm-tag">Wedding</div>
+        </div>
+        <div class="pm-item pm-narrow">
+          <div class="pm-tag">Graduation</div>
+        </div>
+
+        <!-- Row group 2 -->
+        <div class="pm-item pm-landscape">
+          <div class="pm-tag">Family / Raya</div>
+        </div>
+        <div class="pm-item pm-story">
+          <div style="flex:1;display:flex;flex-direction:column;justify-content:space-between;height:100%;">
+            <div>
+              <div class="tag mb-8">Story · Wedding</div>
+              <div style="font-size:13px;font-weight:800;color:var(--text);line-height:1.3;margin-bottom:6px;">Amira & Hafiz — A Keningau garden wedding</div>
+              <div class="text-xxs text-muted">Keningau · March 2025 · Photography + Videography</div>
+            </div>
+            <a class="btn btn-primary btn-sm" style="margin-top:12px;width:fit-content;">View story →</a>
+          </div>
+        </div>
+        <div class="pm-item pm-portrait">
+          <div class="pm-tag">Graduation</div>
+        </div>
+
+        <!-- Row group 3 -->
+        <div class="pm-item pm-square">
+          <div class="pm-tag">Family / Raya</div>
+        </div>
+        <div class="pm-item pm-landscape">
+          <div class="pm-tag">Videography</div>
+        </div>
+        <div class="pm-item pm-portrait">
+          <div class="pm-tag">Wedding</div>
+        </div>
+      </div>
+
+      <!-- Load more -->
+      <div class="flex justify-center mt-20">
+        <a class="btn btn-dark-out">Load more photos</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- §3 Lightbox (annotated state) -->
+  <div class="wf-section">
+    <span class="wf-section-tag mag">§3 Lightbox overlay state</span>
+    <div class="pad-m">
+      <div class="highlight-box mb-16">
+        Lightbox activates on any gallery card click. This block documents its anatomy — it is not a separate page section.
+      </div>
+      <div style="background:rgba(13,10,28,0.92);border-radius:12px;padding:28px;position:relative;">
+        <!-- Close button -->
+        <div style="position:absolute;top:16px;right:16px;color:rgba(255,255,255,0.5);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;">✕ Close (Esc)</div>
+        <!-- Main image area -->
+        <div class="img-ph rounded-lg" style="min-height:360px;max-width:700px;margin:0 auto 16px;background:rgba(80,60,160,0.25);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:48px;height:48px;opacity:0.2;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          Main image — full resolution
+        </div>
+        <!-- Prev / Next -->
+        <div style="display:flex;justify-content:center;gap:16px;margin-bottom:16px;">
+          <div class="btn btn-ghost btn-sm">← Prev</div>
+          <div style="color:rgba(255,255,255,0.4);font-size:12px;align-self:center;">8 / 24</div>
+          <div class="btn btn-ghost btn-sm">Next →</div>
+        </div>
+        <!-- Thumbnail strip -->
+        <div style="display:flex;gap:6px;overflow:hidden;justify-content:center;">
+          <div style="width:52px;height:40px;border-radius:6px;background:rgba(255,255,255,0.05);border:2px solid transparent;"></div>
+          <div style="width:52px;height:40px;border-radius:6px;background:rgba(255,255,255,0.05);border:2px solid transparent;"></div>
+          <div style="width:52px;height:40px;border-radius:6px;background:rgba(58,29,194,0.6);border:2px solid var(--accent);"></div>
+          <div style="width:52px;height:40px;border-radius:6px;background:rgba(255,255,255,0.05);border:2px solid transparent;"></div>
+          <div style="width:52px;height:40px;border-radius:6px;background:rgba(255,255,255,0.05);border:2px solid transparent;"></div>
+          <div style="color:rgba(255,255,255,0.3);font-size:11px;align-self:center;padding:0 6px;">+19</div>
+        </div>
+        <!-- Story link -->
+        <div style="margin-top:20px;text-align:center;">
+          <a class="btn btn-mag btn-sm" href="#">View full wedding story →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- §4 Story Detail (template) -->
+  <div class="wf-section">
+    <span class="wf-section-tag dark">§4 Story detail template  /portfolio/[story-slug]</span>
+    <div class="wf-hero wf-hero-sm">
+      <div class="wf-hero-overlay"></div>
+      <div class="wf-hero-bg-label">Cover image / video for this story</div>
+      <div class="wf-hero-content" style="position:relative;z-index:2;">
+        <div class="wf-hero-eyebrow">Wedding · Keningau · March 2025</div>
+        <div class="wf-hero-h1" style="font-size:26px;">Amira &amp; Hafiz</div>
+        <div class="wf-hero-sub" style="font-size:13px;">A three-day garden wedding celebration with full photo + video coverage</div>
+      </div>
+    </div>
+    <div class="pad-m">
+      <!-- Session context -->
+      <div class="grid-3 gap-12 mb-16">
+        <div class="surface-box"><div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);margin-bottom:4px;">Location</div><div style="font-size:13px;font-weight:700;">Keningau, Sabah</div></div>
+        <div class="surface-box"><div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);margin-bottom:4px;">Coverage</div><div style="font-size:13px;font-weight:700;">Photography + Videography</div></div>
+        <div class="surface-box"><div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);margin-bottom:4px;">Style</div><div style="font-size:13px;font-weight:700;">Documentary · Warm cinematic</div></div>
+      </div>
+      <!-- Narrative gallery sections -->
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.7px;color:var(--mag);margin-bottom:10px;">Getting ready</div>
+      <div class="portfolio-masonry mb-16" style="grid-auto-rows:44px;">
+        <div class="pm-item pm-landscape"><div class="pm-tag">Preparation</div></div>
+        <div class="pm-item pm-portrait"><div class="pm-tag">Bridal details</div></div>
+        <div class="pm-item pm-square"><div class="pm-tag">Décor</div></div>
+        <div class="pm-item pm-narrow"><div class="pm-tag">Venue</div></div>
+      </div>
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.7px;color:var(--mag);margin-bottom:10px;">Ceremony</div>
+      <div class="portfolio-masonry" style="grid-auto-rows:44px;">
+        <div class="pm-item pm-wide"><div class="pm-tag">Ceremony wide</div></div>
+        <div class="pm-item pm-portrait"><div class="pm-tag">Vows</div></div>
+        <div class="pm-item pm-square"><div class="pm-tag">Candid</div></div>
+        <div class="pm-item pm-narrow"><div class="pm-tag">Ring</div></div>
+      </div>
+      <!-- Related stories -->
+      <hr class="hr-dashed mt-20 mb-16"/>
+      <div style="font-size:13px;font-weight:800;margin-bottom:12px;">More wedding stories</div>
+      <div class="grid-3 gap-12">
+        <div class="wf-card">
+          <div class="img-ph img-ph-3-2 rounded-lg" style="border-radius:10px 10px 0 0;"></div>
+          <div class="wf-card-body">
+            <div class="wf-card-title">Sarah &amp; Daniel</div>
+            <div class="wf-card-sub">Kota Kinabalu · Jan 2025</div>
+          </div>
+        </div>
+        <div class="wf-card">
+          <div class="img-ph img-ph-3-2" style="border-radius:10px 10px 0 0;"></div>
+          <div class="wf-card-body">
+            <div class="wf-card-title">Nurul &amp; Azrin</div>
+            <div class="wf-card-sub">Ranau · Dec 2024</div>
+          </div>
+        </div>
+        <div class="wf-card">
+          <div class="img-ph img-ph-3-2" style="border-radius:10px 10px 0 0;"></div>
+          <div class="wf-card-body">
+            <div class="wf-card-title">Cindy &amp; Marcus</div>
+            <div class="wf-card-sub">Sandakan · Nov 2024</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky CTA (component annotation) -->
+  <div style="margin:0 16px 14px;">
+    <div class="highlight-box">
+      <strong style="color:var(--text);display:block;margin-bottom:4px;">Sticky CTA bar</strong>
+      Appears fixed at the bottom of the viewport while browsing story detail pages.
+    </div>
+  </div>
+  <div class="sticky-cta" style="position:relative;margin-bottom:14px;">
+    <div style="font-size:13px;font-weight:700;color:var(--text);">Love what you see?</div>
+    <div class="flex gap-8">
+      <a class="btn btn-mag btn-sm" href="./booking.html">Book a slot</a>
+      <a class="btn btn-wa btn-sm" href="#">WhatsApp</a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

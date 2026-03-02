@@ -1,11 +1,169 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Wireframe - Contact</title><link rel="stylesheet" href="./styles.css"/></head><body>
-<header><div class="nav"><div class="brand">CinnamonFoto</div><nav class="nav-links"><a href="./index.html">Index</a><a href="./contact.html">Contact</a></nav><a class="cta" href="./booking.html">Book a slot</a></div></header>
-<main><h1 class="page-title">Contact & Socials Wireframe</h1><p class="page-subtitle">Fast multi-channel inquiry page.</p>
-<section class="grid">
-<div class="block span-4"><h3>WhatsApp</h3><p>Quick chat button + response expectation.</p></div>
-<div class="block span-4"><h3>Telegram</h3><p>Quick chat button + response expectation.</p></div>
-<div class="block span-4"><h3>Email + Socials</h3><p>Instagram, TikTok, Facebook (if needed).</p></div>
-<div class="block span-8"><h3>Simple Inquiry Form</h3><p>Name, contact, shoot type, preferred date.</p></div>
-<div class="block span-4"><h3>Service Area</h3><p>Sabah + nearby coverage note.</p></div>
-<div class="block span-12"><h3>CTA</h3><p>Go to full booking form.</p></div>
-</section></main><footer><div class="inner">Contact wireframe</div></footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wireframe — Contact & Socials | CinnamonFoto</title>
+  <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+
+<nav class="wf-nav">
+  <div class="wf-brand">CinnamonFoto</div>
+  <div class="wf-links">
+    <a href="./home.html">Home</a>
+    <a href="./portfolio.html">Portfolio</a>
+    <a href="./services.html">Services</a>
+    <a href="./about.html">About</a>
+    <a href="./testimonials.html">Testimonials</a>
+    <a href="./faq-terms.html">FAQ</a>
+    <a href="./contact.html" class="active">Contact</a>
+  </div>
+  <a class="wf-nav-cta" href="./booking.html">Book a slot</a>
+</nav>
+
+<div class="wf-page">
+
+  <div class="wf-page-label">
+    <h1>Contact &amp; Socials</h1>
+    <span>Fast multi-channel inquiry page · WhatsApp / Telegram first · inquiry form · service area</span>
+    <a href="./index.html" style="font-size:12px;color:var(--muted);margin-left:auto;text-decoration:none;">← All wireframes</a>
+  </div>
+
+  <div class="wf-notes">
+    <strong>Wireframe annotations</strong>
+    <ol>
+      <li>WhatsApp and Telegram are the primary contact channels — these buttons use deep links with the business number pre-filled.</li>
+      <li>The inquiry form is lightweight (not the full booking form). It feeds into the same backend; for detailed booking use the Booking page.</li>
+      <li>Service area copy doubles as an SEO signal for "wedding photographer keningau" and surrounding districts.</li>
+      <li>Social icons link to live pages — Instagram and TikTok are primary; Facebook secondary.</li>
+    </ol>
+  </div>
+
+  <!-- §1 Hero -->
+  <div class="wf-section">
+    <span class="wf-section-tag dark">§1 Hero</span>
+    <div class="pad-l text-center" style="background:linear-gradient(135deg,var(--indigo),#1e0d5c);">
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.9px;color:var(--mag);margin-bottom:10px;">Get in touch</div>
+      <div style="font-size:32px;font-weight:900;color:#fff;margin-bottom:10px;letter-spacing:-0.4px;">We'd love to hear from you.</div>
+      <div style="font-size:13px;color:rgba(255,255,255,0.55);max-width:440px;margin:0 auto;line-height:1.7;">Whether you have a question, want to check availability, or just want to say hello — we're here.</div>
+    </div>
+  </div>
+
+  <!-- §2 Quick Contact Options -->
+  <div class="wf-section">
+    <span class="wf-section-tag mag">§2 Quick contact channels</span>
+    <div class="pad-m">
+      <div class="sec-head mb-16">
+        <div class="sec-eyebrow">Fastest way to reach us</div>
+        <div class="sec-title">Pick your preferred channel</div>
+        <div class="sec-sub">We typically reply within a few hours during working days.</div>
+      </div>
+      <div class="flex-col gap-10">
+        <div class="contact-row">
+          <div class="contact-icon ci-wa">💬</div>
+          <div style="flex:1;">
+            <div class="contact-label">WhatsApp</div>
+            <div class="contact-detail">+60 XX-XXXX XXXX · Fastest response · available 9am–9pm</div>
+          </div>
+          <a class="btn btn-wa btn-sm" href="#">Message on WhatsApp</a>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon ci-tg">✈</div>
+          <div style="flex:1;">
+            <div class="contact-label">Telegram</div>
+            <div class="contact-detail">@cinnamonfoto · Good for longer enquiries or file sharing</div>
+          </div>
+          <a class="btn btn-tg btn-sm" href="#">Message on Telegram</a>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon ci-em">✉</div>
+          <div style="flex:1;">
+            <div class="contact-label">Email</div>
+            <div class="contact-detail">hello@cinnamonfoto.co · For formal enquiries or corporate bookings</div>
+          </div>
+          <a class="btn btn-dark-out btn-sm" href="#">Send email</a>
+        </div>
+      </div>
+      <!-- Social icons row -->
+      <hr class="hr-dashed mt-20 mb-16"/>
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.7px;color:var(--muted);margin-bottom:12px;">Follow us</div>
+      <div class="flex gap-10 flex-wrap">
+        <a class="btn btn-dark-out btn-sm" href="#">📸 Instagram</a>
+        <a class="btn btn-dark-out btn-sm" href="#">🎵 TikTok</a>
+        <a class="btn btn-dark-out btn-sm" href="#">📘 Facebook</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- §3 Inquiry Form + Service Area -->
+  <div class="wf-section">
+    <span class="wf-section-tag">§3 Short inquiry form + service area</span>
+    <div class="pad-m">
+      <div class="grid-12 gap-20">
+
+        <!-- Form (8 cols) -->
+        <div class="col-8">
+          <div class="sec-head mb-16">
+            <div class="sec-eyebrow">Quick enquiry</div>
+            <div class="sec-title">Send us a message</div>
+            <div class="sec-sub">For a detailed booking, use the <a href="./booking.html" style="color:var(--accent);">full Booking form →</a></div>
+          </div>
+          <div class="wf-form">
+            <div class="wf-field-row">
+              <div class="wf-field">
+                <div class="wf-field-label">Your name <span class="wf-field-required">*</span></div>
+                <div class="wf-input"></div>
+              </div>
+              <div class="wf-field">
+                <div class="wf-field-label">Phone / WhatsApp <span class="wf-field-required">*</span></div>
+                <div class="wf-input"></div>
+              </div>
+            </div>
+            <div class="wf-field">
+              <div class="wf-field-label">What are you enquiring about?</div>
+              <div class="wf-select" style="display:flex;align-items:center;padding:0 12px;font-size:12px;color:var(--muted);">Select shoot type ▾</div>
+            </div>
+            <div class="wf-field">
+              <div class="wf-field-label">Preferred shoot date</div>
+              <div class="wf-input"></div>
+            </div>
+            <div class="wf-field">
+              <div class="wf-field-label">Message</div>
+              <div class="wf-textarea"></div>
+            </div>
+            <a class="btn btn-primary" href="./booking.html">Send enquiry →</a>
+          </div>
+        </div>
+
+        <!-- Service area (4 cols) -->
+        <div class="col-4">
+          <div class="wf-sidebar" style="position:relative;top:auto;">
+            <div class="sidebar-title">Service area</div>
+            <div style="font-size:12px;color:var(--muted);line-height:1.7;">
+              CinnamonFoto is based in <strong style="color:var(--text);">Keningau, Sabah</strong> and covers all major districts across Sabah, including:
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:4px;">
+              <div class="chip chip-active" style="font-size:11px;padding:4px 10px;">Keningau</div>
+              <div class="chip" style="font-size:11px;padding:4px 10px;">Kota Kinabalu</div>
+              <div class="chip" style="font-size:11px;padding:4px 10px;">Kota Belud</div>
+              <div class="chip" style="font-size:11px;padding:4px 10px;">Sandakan</div>
+              <div class="chip" style="font-size:11px;padding:4px 10px;">Ranau</div>
+              <div class="chip" style="font-size:11px;padding:4px 10px;">Tawau</div>
+              <div class="chip" style="font-size:11px;padding:4px 10px;">Lahad Datu</div>
+              <div class="chip" style="font-size:11px;padding:4px 10px;">Kudat</div>
+            </div>
+            <div class="text-xxs text-muted mt-4">Travel fees may apply for locations outside the Keningau district. Mention your venue in the enquiry and we'll confirm.</div>
+            <hr class="hr"/>
+            <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:6px;">Ready to book?</div>
+            <a class="btn btn-primary btn-sm w-full flex justify-center" href="./booking.html">Full booking form →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

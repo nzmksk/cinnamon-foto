@@ -1,18 +1,339 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Wireframe - Home</title><link rel="stylesheet" href="./styles.css"/></head><body>
-<header><div class="nav"><div class="brand">CinnamonFoto</div><nav class="nav-links"><a href="./index.html">Index</a><a href="./portfolio.html">Portfolio</a><a href="./services.html">Services</a><a href="./about.html">About</a><a href="./contact.html">Contact</a></nav><a class="cta" href="./booking.html">Book a slot</a></div></header>
-<main>
-<h1 class="page-title">Home Wireframe</h1><p class="page-subtitle">Portfolio-first landing page with strong conversion path.</p>
-<section class="grid">
-<div class="block span-12"><span class="badge">Hero</span><h3>Full-width visual + headline + 2 CTAs</h3><p>Message: Vibrant, editorial, documentary storytelling in Sabah.</p></div>
-<div class="block span-6"><h3>Featured Portfolio Strip 1</h3><p>Wedding highlights.</p></div>
-<div class="block span-6"><h3>Featured Portfolio Strip 2</h3><p>Family Raya, graduation, and videography.</p></div>
-<div class="block span-4"><h3>Why CinnamonFoto #1</h3><p>Creative direction + storytelling.</p></div>
-<div class="block span-4"><h3>Why CinnamonFoto #2</h3><p>Local familiarity in Sabah.</p></div>
-<div class="block span-4"><h3>Why CinnamonFoto #3</h3><p>Clear workflow and delivery.</p></div>
-<div class="block span-6"><h3>Services + Starting Price Cards</h3><p>Admin-editable package teasers.</p></div>
-<div class="block span-6"><h3>Before vs After Slider Demo</h3><p>Editing value visualization.</p></div>
-<div class="block span-8"><h3>Testimonials Highlights</h3><p>3 to 5 reviews with trust markers.</p></div>
-<div class="block span-4"><h3>Process</h3><p>Inquiry → Consultation → Shoot → Delivery.</p></div>
-<div class="block span-12"><span class="badge">Final Conversion Block</span><h3>Book a slot + WhatsApp + Telegram</h3><p>Primary conversion endpoint before footer.</p></div>
-</section>
-</main><footer><div class="inner">Home wireframe</div></footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wireframe — Home | CinnamonFoto</title>
+  <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+
+<nav class="wf-nav">
+  <div class="wf-brand">CinnamonFoto</div>
+  <div class="wf-links">
+    <a href="./home.html" class="active">Home</a>
+    <a href="./portfolio.html">Portfolio</a>
+    <a href="./services.html">Services</a>
+    <a href="./about.html">About</a>
+    <a href="./testimonials.html">Testimonials</a>
+    <a href="./faq-terms.html">FAQ</a>
+    <a href="./contact.html">Contact</a>
+  </div>
+  <a class="wf-nav-cta" href="./booking.html">Book a slot</a>
+</nav>
+
+<div class="wf-page">
+
+  <div class="wf-page-label">
+    <h1>Home</h1>
+    <span>Portfolio-first landing page · Primary CTA: Book a slot</span>
+    <a href="./index.html" style="font-size:12px;color:var(--muted);margin-left:auto;text-decoration:none;">← All wireframes</a>
+  </div>
+
+  <div class="wf-notes">
+    <strong>Wireframe annotations</strong>
+    <ol>
+      <li>Hero uses a full-bleed photo/reel strip with dark gradient overlay — image asset TBD.</li>
+      <li>Portfolio strips are horizontally scrollable on mobile, 4-up grid on desktop.</li>
+      <li>Before/After uses a drag-handle slider; static wireframe shows 50/50 split.</li>
+      <li>All package prices are admin-editable via CMS — shown here as placeholders.</li>
+      <li>Final CTA block uses the dark brand base (#0D0A1C) for max contrast at scroll-end.</li>
+    </ol>
+  </div>
+
+  <!-- §1 Hero -->
+  <div class="wf-section">
+    <span class="wf-section-tag dark">§1 Hero</span>
+    <div class="wf-hero">
+      <div class="wf-hero-overlay"></div>
+      <div class="wf-hero-bg-label">Full-bleed photo/reel · image asset placeholder</div>
+      <div class="wf-hero-content" style="position:relative;z-index:2;">
+        <div class="wf-hero-eyebrow">Sabah, Malaysia · Photography &amp; Videography</div>
+        <div class="wf-hero-h1">Your story,<br>told in light.</div>
+        <div class="wf-hero-sub">Vibrant, editorial, documentary coverage for weddings, families, and graduation sessions across Sabah.</div>
+        <div class="wf-hero-actions">
+          <a class="btn btn-mag btn-lg" href="./booking.html">Book a slot</a>
+          <a class="btn btn-outline btn-lg" href="./portfolio.html">View portfolio</a>
+        </div>
+      </div>
+      <div class="wf-hero-reel">
+        ▶ &nbsp;Watch showreel · 90 sec
+      </div>
+    </div>
+  </div>
+
+  <!-- §2 Portfolio Teasers -->
+  <div class="wf-section">
+    <span class="wf-section-tag">§2 Portfolio teasers</span>
+    <div class="pad-m">
+      <div class="sec-head">
+        <div class="sec-eyebrow">Our work</div>
+        <div class="sec-title">Explore the portfolio</div>
+        <div class="sec-sub">Browse by category or dive straight into a story.</div>
+      </div>
+      <div class="grid-4 gap-12">
+        <!-- Wedding -->
+        <a href="./portfolio.html" style="text-decoration:none;">
+          <div class="img-ph img-ph-4-5 rounded-lg" style="min-height:220px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+            Wedding
+          </div>
+          <div style="padding:10px 4px 0;">
+            <div style="font-size:13px;font-weight:700;color:var(--text);">Weddings</div>
+            <div style="font-size:11px;color:var(--muted);">Timeless, emotional storytelling</div>
+          </div>
+        </a>
+        <!-- Family -->
+        <a href="./portfolio.html" style="text-decoration:none;">
+          <div class="img-ph img-ph-4-5 rounded-lg" style="min-height:220px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+            Family / Raya
+          </div>
+          <div style="padding:10px 4px 0;">
+            <div style="font-size:13px;font-weight:700;color:var(--text);">Family &amp; Raya</div>
+            <div style="font-size:11px;color:var(--muted);">Warmth, colour, togetherness</div>
+          </div>
+        </a>
+        <!-- Graduation -->
+        <a href="./portfolio.html" style="text-decoration:none;">
+          <div class="img-ph img-ph-4-5 rounded-lg" style="min-height:220px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            Graduation
+          </div>
+          <div style="padding:10px 4px 0;">
+            <div style="font-size:13px;font-weight:700;color:var(--text);">Graduation</div>
+            <div style="font-size:11px;color:var(--muted);">Milestone portraits worth keeping</div>
+          </div>
+        </a>
+        <!-- Videography -->
+        <a href="./portfolio.html" style="text-decoration:none;">
+          <div class="img-ph img-ph-4-5 rounded-lg" style="min-height:220px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+            Videography
+          </div>
+          <div style="padding:10px 4px 0;">
+            <div style="font-size:13px;font-weight:700;color:var(--text);">Videography</div>
+            <div style="font-size:11px;color:var(--muted);">Cinematic reels and same-day edits</div>
+          </div>
+        </a>
+      </div>
+      <div class="mt-20 flex justify-center">
+        <a class="btn btn-dark-out" href="./portfolio.html">See full portfolio →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- §3 Why CinnamonFoto -->
+  <div class="wf-section">
+    <span class="wf-section-tag mag">§3 Why CinnamonFoto</span>
+    <div class="pad-m">
+      <div class="sec-head text-center">
+        <div class="sec-eyebrow">Why us</div>
+        <div class="sec-title">What makes our approach different</div>
+      </div>
+      <div class="grid-3 gap-14">
+        <div class="surface-box flex-col gap-10">
+          <div style="width:40px;height:40px;background:rgba(58,29,194,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;">🎬</div>
+          <div style="font-size:14px;font-weight:800;color:var(--text);">Storytelling-first</div>
+          <div class="text-xs text-muted">We direct, we guide, we capture real moments — not poses. Every session is a narrative, not a checklist.</div>
+        </div>
+        <div class="surface-box flex-col gap-10">
+          <div style="width:40px;height:40px;background:rgba(225,45,235,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;">📍</div>
+          <div style="font-size:14px;font-weight:800;color:var(--text);">Sabah-rooted</div>
+          <div class="text-xs text-muted">Local knowledge means better locations, natural light timing, and authentic cultural context for every session.</div>
+        </div>
+        <div class="surface-box flex-col gap-10">
+          <div style="width:40px;height:40px;background:rgba(255,194,122,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;">📦</div>
+          <div style="font-size:14px;font-weight:800;color:var(--text);">Clear process &amp; delivery</div>
+          <div class="text-xs text-muted">From inquiry to gallery delivery, every step is communicated. No surprises, no chasing — just great results.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- §4 Services Teaser -->
+  <div class="wf-section">
+    <span class="wf-section-tag">§4 Services teaser</span>
+    <div class="pad-m">
+      <div class="flex items-center justify-between mb-16">
+        <div class="sec-head" style="margin-bottom:0;">
+          <div class="sec-eyebrow">Packages</div>
+          <div class="sec-title">Simple, transparent pricing</div>
+          <div class="sec-sub">All packages are admin-editable · prices shown are placeholder starting points</div>
+        </div>
+        <a class="btn btn-dark-out btn-sm" href="./services.html">All packages →</a>
+      </div>
+      <div class="grid-4 gap-12">
+        <div class="surface-box flex-col gap-10">
+          <div class="tag">Wedding</div>
+          <div style="font-size:20px;font-weight:900;color:var(--accent);">from RM 2,500</div>
+          <div class="text-xxs text-muted">Full-day coverage · edited gallery · highlight reel option</div>
+          <a class="btn btn-primary btn-sm mt-8" href="./services.html">See packages</a>
+        </div>
+        <div class="surface-box flex-col gap-10">
+          <div class="tag">Family / Raya</div>
+          <div style="font-size:20px;font-weight:900;color:var(--accent);">from RM 450</div>
+          <div class="text-xxs text-muted">2–3 hour session · edited photos · family group poses</div>
+          <a class="btn btn-primary btn-sm mt-8" href="./services.html">See packages</a>
+        </div>
+        <div class="surface-box flex-col gap-10">
+          <div class="tag">Graduation</div>
+          <div style="font-size:20px;font-weight:900;color:var(--accent);">from RM 300</div>
+          <div class="text-xxs text-muted">1–2 hour session · studio or outdoor · digital delivery</div>
+          <a class="btn btn-primary btn-sm mt-8" href="./services.html">See packages</a>
+        </div>
+        <div class="surface-box flex-col gap-10">
+          <div class="tag">Videography</div>
+          <div style="font-size:20px;font-weight:900;color:var(--accent);">from RM 1,200</div>
+          <div class="text-xxs text-muted">Cinematic highlight video · RAW footage option · drone</div>
+          <a class="btn btn-primary btn-sm mt-8" href="./services.html">See packages</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- §5 Before/After -->
+  <div class="wf-section">
+    <span class="wf-section-tag mag">§5 Before / After</span>
+    <div class="pad-m">
+      <div class="flex items-center justify-between mb-16">
+        <div>
+          <div class="sec-eyebrow">Editing quality</div>
+          <div class="sec-title">See the difference our edit makes</div>
+          <div class="sec-sub">Drag the handle to compare unedited vs. final delivery</div>
+        </div>
+      </div>
+      <div class="grid-2 gap-12">
+        <div class="ba-wrap">
+          <div class="ba-before"><div class="text-center"><div class="ba-label" style="margin-bottom:6px;">Before</div><div class="text-xxs text-muted">RAW / unprocessed</div></div></div>
+          <div class="ba-after"><div class="text-center"><div class="ba-label" style="margin-bottom:6px;color:#6b27c9;">After</div><div class="text-xxs" style="color:#9f6ee0;">Final delivered edit</div></div></div>
+          <div class="ba-handle"><div class="ba-knob">⟺</div></div>
+        </div>
+        <div class="ba-wrap">
+          <div class="ba-before"><div class="text-center"><div class="ba-label" style="margin-bottom:6px;">Before</div><div class="text-xxs text-muted">Wedding portrait · flat light</div></div></div>
+          <div class="ba-after"><div class="text-center"><div class="ba-label" style="margin-bottom:6px;color:#6b27c9;">After</div><div class="text-xxs" style="color:#9f6ee0;">Warm cinematic grade</div></div></div>
+          <div class="ba-handle"><div class="ba-knob">⟺</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- §6 Testimonials -->
+  <div class="wf-section">
+    <span class="wf-section-tag">§6 Testimonials</span>
+    <div class="pad-m">
+      <div class="flex items-center justify-between mb-16">
+        <div>
+          <div class="sec-eyebrow">Client love</div>
+          <div class="sec-title">What our clients say</div>
+        </div>
+        <a class="btn btn-dark-out btn-sm" href="./testimonials.html">All reviews →</a>
+      </div>
+      <div class="grid-3 gap-12">
+        <div class="tc-card">
+          <div class="tc-stars">★★★★★</div>
+          <div class="tc-quote">"CinnamonFoto captured everything — from the quiet moments to the celebration. We still cry happy tears watching our highlight reel."</div>
+          <div><div class="tc-name">Amira &amp; Hafiz</div><div class="tc-meta">Wedding · Keningau, Sabah</div></div>
+        </div>
+        <div class="tc-card">
+          <div class="tc-stars">★★★★★</div>
+          <div class="tc-quote">"Our Raya photoshoot was so smooth and fun. The kids actually enjoyed it! The family album is something we'll treasure forever."</div>
+          <div><div class="tc-name">The Roslan Family</div><div class="tc-meta">Family / Raya · Kota Belud</div></div>
+        </div>
+        <div class="tc-card">
+          <div class="tc-stars">★★★★★</div>
+          <div class="tc-quote">"I was nervous about my graduation shoot but they made it feel completely natural. Best photos I've ever had taken of me."</div>
+          <div><div class="tc-name">Nurul Ain</div><div class="tc-meta">Graduation · UMS, Kota Kinabalu</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- §7 Process -->
+  <div class="wf-section">
+    <span class="wf-section-tag dark">§7 Process</span>
+    <div class="pad-m">
+      <div class="sec-head text-center mb-16">
+        <div class="sec-eyebrow">How it works</div>
+        <div class="sec-title">Simple from start to finish</div>
+      </div>
+      <div class="process-row">
+        <div class="process-step">
+          <div class="step-circle">1</div>
+          <div class="step-label">Inquiry</div>
+          <div class="step-desc">Submit a booking form or message via WhatsApp / Telegram</div>
+        </div>
+        <div class="process-step">
+          <div class="step-circle">2</div>
+          <div class="step-label">Consultation</div>
+          <div class="step-desc">We confirm details, discuss vision, and lock in your date</div>
+        </div>
+        <div class="process-step">
+          <div class="step-circle">3</div>
+          <div class="step-label">Shoot day</div>
+          <div class="step-desc">Relax — we direct, guide, and capture your moments</div>
+        </div>
+        <div class="process-step">
+          <div class="step-circle">4</div>
+          <div class="step-label">Delivery</div>
+          <div class="step-desc">Edited gallery delivered via private online link</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- §8 Final CTA -->
+  <div class="wf-section">
+    <span class="wf-section-tag mag">§8 Final CTA</span>
+    <div class="wf-dark">
+      <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--mag);">Ready to start?</div>
+      <h2>Let's tell your story.</h2>
+      <p>Fill in a quick booking form and we'll be in touch within 24 hours to confirm your slot.</p>
+      <div class="wf-dark-actions">
+        <a class="btn btn-mag btn-lg" href="./booking.html">Book a slot</a>
+        <a class="btn btn-wa" href="#">💬 WhatsApp</a>
+        <a class="btn btn-tg" href="#">✈ Telegram</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- §9 Footer -->
+  <footer class="wf-footer" style="margin:0 16px;border-radius:14px;overflow:hidden;">
+    <span class="wf-section-tag dark" style="position:relative;top:auto;left:auto;display:inline-block;margin-bottom:20px;opacity:0.6;">§9 Footer</span>
+    <div class="wf-footer-grid">
+      <div>
+        <div class="wf-footer-brand">CinnamonFoto</div>
+        <div class="wf-footer-desc">Vibrant, editorial, documentary photography and videography rooted in Sabah, Malaysia. Serving Keningau, Kota Kinabalu, and surrounding areas.</div>
+      </div>
+      <div>
+        <div class="wf-footer-head">Navigate</div>
+        <ul class="wf-footer-links">
+          <li>Home</li><li>Portfolio</li><li>Services</li><li>About</li><li>Testimonials</li>
+        </ul>
+      </div>
+      <div>
+        <div class="wf-footer-head">Support</div>
+        <ul class="wf-footer-links">
+          <li>FAQ</li><li>Terms &amp; Conditions</li><li>Privacy Policy</li><li>Cookie Policy</li>
+        </ul>
+      </div>
+      <div>
+        <div class="wf-footer-head">Connect</div>
+        <ul class="wf-footer-links">
+          <li>WhatsApp</li><li>Telegram</li><li>Instagram</li><li>Facebook</li><li>TikTok</li>
+        </ul>
+      </div>
+    </div>
+    <div class="wf-footer-bottom">
+      <span>© 2026 CinnamonFoto · Sabah, Malaysia</span>
+      <div class="wf-footer-socials">
+        <div class="social-dot">📸</div>
+        <div class="social-dot">📘</div>
+        <div class="social-dot">🎵</div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
