@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wireframe — Landing | CinnamonFoto Studio</title>
+  <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+
+<nav class="wf-nav">
+  <div>
+    <div class="wf-brand">CinnamonFoto Studio</div>
+    <span class="wf-brand-sub">studio.cinnamonfoto.co</span>
+  </div>
+  <div class="wf-links">
+    <a href="./gallery.html">Gallery</a>
+    <a href="./packages.html">Packages</a>
+    <a href="./terms.html">T&amp;C</a>
+  </div>
+  <a class="wf-nav-cta" href="./book-slot.html">Book a slot</a>
+</nav>
+
+<div class="wf-page">
+
+  <div class="wf-page-label">
+    <h1>Landing Page</h1>
+    <span>studio.cinnamonfoto.co · primary entry point · Raya studio session booking</span>
+    <a href="./index.html" style="font-size:12px;color:var(--muted);margin-left:auto;text-decoration:none;">← All wireframes</a>
+  </div>
+
+  <div class="wf-notes">
+    <strong>Wireframe annotations</strong>
+    <ol>
+      <li>Hero section — purely display, no booking logic here.</li>
+      <li>Package cards link directly to packages.html for details, or fast-track to book-slot.html with that package pre-selected.</li>
+      <li>Gallery strip is a horizontal scroll on mobile; 3-col grid on desktop.</li>
+      <li>How-it-works uses a 3-step horizontal layout matching the booking flow steps.</li>
+      <li>Final dark CTA banner has primary Book button and secondary WhatsApp fallback.</li>
+    </ol>
+  </div>
+
+  <!-- §1 Hero -->
+  <div class="wf-section">
+    <span class="wf-section-tag dark">§1 Hero</span>
+    <div class="wf-hero">
+      <div class="wf-hero-overlay"></div>
+      <div class="wf-hero-bg-label">Studio hero photo — full bleed<br/>warm cinematic tone, backdrop visible</div>
+      <div class="wf-hero-content" style="position:relative;z-index:2;">
+        <div class="wf-hero-eyebrow">Raya 2026 · Keningau, Sabah</div>
+        <div class="wf-hero-h1">Your Raya family<br/>portrait, beautifully shot.</div>
+        <div class="wf-hero-sub">Book a studio session at CinnamonFoto — professional lighting, themed backdrops, and warm direction for your whole family.</div>
+        <div class="wf-hero-actions" style="margin-top:20px;">
+          <a class="btn btn-primary btn-lg" href="./book-slot.html">Book now →</a>
+          <a class="btn btn-outline" href="./packages.html">View packages</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- §2 Studio gallery strip -->
+  <div class="wf-section">
+    <span class="wf-section-tag">§2 Studio gallery strip</span>
+    <div class="pad-m">
+      <div class="sec-head" style="display:flex;justify-content:space-between;align-items:flex-end;">
+        <div>
+          <div class="sec-eyebrow">The space</div>
+          <div class="sec-title">Step inside the studio</div>
+          <div class="sec-sub">Professional setup with curated Raya backdrops, premium lighting, and cosy waiting area.</div>
+        </div>
+        <a class="btn btn-dark-out btn-sm" href="./gallery.html">View full gallery →</a>
+      </div>
+      <div class="studio-gallery">
+        <div class="img-ph sg-wide"><span>Main backdrop — traditional Malay setting</span></div>
+        <div class="img-ph sg-tall"><span>Portrait lighting setup</span></div>
+        <div class="img-ph sg-sq"><span>Minimalist white backdrop</span></div>
+        <div class="img-ph sg-wide2"><span>Full family session — sample shot</span></div>
+        <div class="img-ph sg-sq2"><span>Props & accessories</span></div>
+        <div class="img-ph sg-half"><span>Changing room</span></div>
+        <div class="img-ph sg-third"><span>Waiting area</span></div>
+        <div class="img-ph sg-third"><span>Outdoor link</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- §3 Package teasers -->
+  <div class="wf-section">
+    <span class="wf-section-tag">§3 Package teasers</span>
+    <div class="pad-m">
+      <div class="sec-head" style="text-align:center;margin-bottom:28px;">
+        <div class="sec-eyebrow">Raya 2026 packages</div>
+        <div class="sec-title">Choose your session length</div>
+        <div class="sec-sub">All packages include professional lighting, backdrop, and digital files. Add-ons available at checkout.</div>
+      </div>
+      <div class="grid-3 gap-14">
+
+        <div class="pkg-card">
+          <div class="pkg-badge lite">Essential</div>
+          <div class="pkg-name">1-Hour Session</div>
+          <div>
+            <span class="pkg-price">RM 180</span>
+            <span class="pkg-price-sub">50% deposit = RM 90 to book</span>
+          </div>
+          <ul class="pkg-list">
+            <li>1 hour studio time</li>
+            <li>1 backdrop setup</li>
+            <li>1 outfit</li>
+            <li>~30 edited digital photos</li>
+          </ul>
+          <div class="pkg-hr"></div>
+          <a class="btn btn-dark-out btn-sm w-full flex justify-center" href="./book-slot.html">Book Essential →</a>
+        </div>
+
+        <div class="pkg-card featured">
+          <div class="pkg-badge pop">Most popular</div>
+          <div class="pkg-name">2-Hour Session</div>
+          <div>
+            <span class="pkg-price">RM 320</span>
+            <span class="pkg-price-sub">50% deposit = RM 160 to book</span>
+          </div>
+          <ul class="pkg-list">
+            <li>2 hours studio time</li>
+            <li>2 backdrop setups</li>
+            <li>2 outfits</li>
+            <li>~70 edited digital photos</li>
+            <li>1-min highlight video reel</li>
+          </ul>
+          <div class="pkg-hr"></div>
+          <a class="btn btn-primary btn-sm w-full flex justify-center" href="./book-slot.html">Book Classic →</a>
+        </div>
+
+        <div class="pkg-card">
+          <div class="pkg-badge">Premium</div>
+          <div class="pkg-name">3-Hour Session</div>
+          <div>
+            <span class="pkg-price">RM 480</span>
+            <span class="pkg-price-sub">50% deposit = RM 240 to book</span>
+          </div>
+          <ul class="pkg-list">
+            <li>3 hours studio time</li>
+            <li>3+ backdrop setups</li>
+            <li>Unlimited outfits</li>
+            <li>~130 edited digital photos</li>
+            <li>2-min cinematic video</li>
+            <li>Printed 8×12 album (5 pages)</li>
+          </ul>
+          <div class="pkg-hr"></div>
+          <a class="btn btn-dark-out btn-sm w-full flex justify-center" href="./book-slot.html">Book Premium →</a>
+        </div>
+
+      </div>
+      <div style="text-align:center;margin-top:18px;font-size:12px;color:var(--muted);">
+        Need more time? Add-on 30 min (RM 80) or 1 hr (RM 150) at checkout. <a href="./packages.html" style="color:var(--accent);">See full package details →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- §4 How it works -->
+  <div class="wf-section">
+    <span class="wf-section-tag">§4 How it works</span>
+    <div class="pad-m">
+      <div class="sec-head" style="text-align:center;">
+        <div class="sec-eyebrow">Simple process</div>
+        <div class="sec-title">Book your slot in 3 steps</div>
+      </div>
+      <div class="process-row gap-20" style="margin-top:28px;">
+        <div class="process-step">
+          <div class="step-circle">1</div>
+          <div class="step-label">Pick your date & time</div>
+          <div class="step-desc">Browse available slots on the calendar. Choose a time that works for your family.</div>
+        </div>
+        <div class="process-step">
+          <div class="step-circle">2</div>
+          <div class="step-label">Fill in your details</div>
+          <div class="step-desc">Tell us your name, contact info, and any special requests or add-ons you'd like.</div>
+        </div>
+        <div class="process-step">
+          <div class="step-circle">3</div>
+          <div class="step-label">Pay the 50% deposit</div>
+          <div class="step-desc">Secure your slot with a 50% deposit online. Balance paid on the day of your session.</div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:28px;">
+        <a class="btn btn-primary" href="./book-slot.html">Get started — check availability →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- §5 Testimonials -->
+  <div class="wf-section">
+    <span class="wf-section-tag">§5 Client reviews</span>
+    <div class="pad-m">
+      <div class="sec-head" style="text-align:center;">
+        <div class="sec-eyebrow">What families say</div>
+        <div class="sec-title">Raya memories they'll keep forever</div>
+      </div>
+      <div class="grid-3 gap-14" style="margin-top:20px;">
+        <div class="tc-card">
+          <div class="tc-stars">★★★★★</div>
+          <div class="tc-quote">"The studio was so comfortable and the team guided us every step. Our Raya photos turned out beyond expectations — framing them all!"</div>
+          <div class="tc-name">Nor Azizah binti Hamid</div>
+          <div class="tc-meta">Classic Package · Family of 7 · Keningau</div>
+        </div>
+        <div class="tc-card">
+          <div class="tc-stars">★★★★★</div>
+          <div class="tc-quote">"Booked the night before and they still managed to fit us in. Very professional, backdrops were gorgeous. Kids loved the props!"</div>
+          <div class="tc-name">Muhammad Fadzlan</div>
+          <div class="tc-meta">Essential Package · Family of 4 · Tambunan</div>
+        </div>
+        <div class="tc-card">
+          <div class="tc-stars">★★★★★</div>
+          <div class="tc-quote">"Worth every ringgit. We did the Premium and got a video reel too — shared it with the whole extended family. Will book again next Raya!"</div>
+          <div class="tc-name">Dayang Seri Dewi</div>
+          <div class="tc-meta">Premium Package · Extended family · Keningau</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- §6 FAQ mini -->
+  <div class="wf-section">
+    <span class="wf-section-tag">§6 FAQ (mini)</span>
+    <div class="pad-m">
+      <div class="sec-head" style="display:flex;justify-content:space-between;align-items:flex-end;">
+        <div>
+          <div class="sec-eyebrow">Common questions</div>
+          <div class="sec-title">Need to know</div>
+        </div>
+      </div>
+      <div class="faq-group">
+        <div class="faq-item">
+          <div class="faq-q open">How many people can join a session?</div>
+          <div class="faq-a">Our studio comfortably fits up to 12 people for group sessions. Larger families may need the Premium 3-hour package to accommodate multiple groupings and backdrop changes.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can I reschedule my booking?</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What if I need to cancel?</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Do you provide baju raya or props?</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">When will I receive my edited photos?</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- §7 Final CTA -->
+  <div class="wf-section">
+    <span class="wf-section-tag dark">§7 Final CTA</span>
+    <div class="wf-dark">
+      <div class="wf-hero-eyebrow" style="margin-bottom:0;">Raya 2026 slots are limited</div>
+      <h2>Don't miss out — book your studio session today.</h2>
+      <p>Available slots fill quickly during Raya season. Reserve yours with a 50% deposit and lock in your family's special moment.</p>
+      <div class="wf-dark-actions">
+        <a class="btn btn-primary btn-lg" href="./book-slot.html">Check availability & book →</a>
+        <a class="btn btn-wa" href="#">💬 Ask on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="wf-section" style="overflow:visible;">
+    <div class="wf-footer" style="border-radius:14px;">
+      <div class="wf-footer-inner">
+        <div>
+          <div class="wf-footer-brand">CinnamonFoto Studio</div>
+          <div class="wf-footer-desc">Raya photoshoot studio in Keningau, Sabah. Professional lighting, themed backdrops, and warm direction for families.</div>
+        </div>
+        <div>
+          <div class="wf-footer-head">Quick links</div>
+          <ul class="wf-footer-links">
+            <li><a href="./gallery.html" style="color:inherit;text-decoration:none;">Studio Gallery</a></li>
+            <li><a href="./packages.html" style="color:inherit;text-decoration:none;">Packages & Pricing</a></li>
+            <li><a href="./terms.html" style="color:inherit;text-decoration:none;">Terms & Conditions</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="wf-footer-head">Contact</div>
+          <ul class="wf-footer-links">
+            <li>💬 WhatsApp</li>
+            <li>✈ Telegram</li>
+            <li>📍 Keningau, Sabah</li>
+          </ul>
+        </div>
+      </div>
+      <div class="wf-footer-bottom">
+        <span>© 2026 CinnamonFoto Studio · studio.cinnamonfoto.co</span>
+        <span><a href="./terms.html" style="color:inherit;">T&amp;C</a> · <a href="#" style="color:inherit;">Privacy</a></span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

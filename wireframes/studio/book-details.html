@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wireframe — Step 2: Your Details | CinnamonFoto Studio</title>
+  <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+
+<nav class="wf-nav">
+  <div>
+    <div class="wf-brand">CinnamonFoto Studio</div>
+    <span class="wf-brand-sub">studio.cinnamonfoto.co</span>
+  </div>
+  <div class="wf-links">
+    <a href="./gallery.html">Gallery</a>
+    <a href="./packages.html">Packages</a>
+    <a href="./terms.html">T&amp;C</a>
+  </div>
+  <a class="wf-nav-cta" href="./book-slot.html">Book a slot</a>
+</nav>
+
+<!-- Step progress bar -->
+<div class="steps-bar">
+  <div class="step-item done">
+    <div class="step-circ">1</div>
+    <div class="step-label-sm">Select date &amp; time</div>
+  </div>
+  <div class="step-item active">
+    <div class="step-circ">2</div>
+    <div class="step-label-sm">Your details</div>
+  </div>
+  <div class="step-item">
+    <div class="step-circ">3</div>
+    <div class="step-label-sm">Review &amp; pay</div>
+  </div>
+</div>
+
+<!-- Package context bar -->
+<div class="pkg-context-bar">
+  <span class="pkg-ctx-label">Deco:</span>
+  <span class="pkg-ctx-name" style="color:var(--mag);">Kampung Heritage</span>
+  <div style="width:1px;height:18px;background:rgba(58,29,194,0.25);"></div>
+  <span class="pkg-ctx-label">Slot:</span>
+  <span class="pkg-ctx-name">Sun, 22 March 2026 · 13:20 – 15:20</span>
+  <span class="pkg-ctx-detail">Classic Package · 2 hours</span>
+  <span class="pkg-ctx-change">← Change slot</span>
+  <span class="pkg-ctx-price">RM 320</span>
+</div>
+
+<div class="wf-page">
+
+  <div class="wf-page-label">
+    <h1>Step 2 — Your details</h1>
+    <span>Booking flow · client info · add-ons · Telegram consent · T&amp;C agreement</span>
+    <a href="./index.html" style="font-size:12px;color:var(--muted);margin-left:auto;text-decoration:none;">← All wireframes</a>
+  </div>
+
+  <div class="wf-notes">
+    <strong>Wireframe annotations</strong>
+    <ol>
+      <li>Required fields: Full name, Phone number, Preferred contact channel. Email is required only if Email channel is selected.</li>
+      <li>Add-on time selections extend the session end time — the booking system rechecks that the extended slot doesn't conflict with the next booking before proceeding.</li>
+      <li>Telegram notification consent is optional. If selected, client provides their Telegram handle or phone number at this step.</li>
+      <li>All three consent checkboxes must be ticked to enable the Continue button.</li>
+      <li>Booking summary sidebar is sticky and updates live as add-ons are selected.</li>
+    </ol>
+  </div>
+
+  <div class="wf-section">
+    <span class="wf-section-tag">§1 Form + sidebar</span>
+    <div class="pad-m" style="padding-top:36px;">
+      <div class="grid-12 gap-20">
+
+        <!-- Form (left, 8 cols) -->
+        <div class="col-8">
+          <div class="wf-form">
+
+            <!-- Personal details -->
+            <div style="font-size:13px;font-weight:800;color:var(--text);margin-bottom:4px;">Personal details</div>
+            <div class="wf-field-row">
+              <div class="wf-field">
+                <div class="wf-field-label">Full name <span class="wf-field-required">*</span></div>
+                <div class="wf-input"></div>
+              </div>
+              <div class="wf-field">
+                <div class="wf-field-label">Phone number <span class="wf-field-required">*</span></div>
+                <div class="wf-input"></div>
+                <div class="text-xxs text-muted mt-4">Include country code, e.g. +60 12-345 6789</div>
+              </div>
+            </div>
+
+            <div class="wf-field">
+              <div class="wf-field-label">Email address</div>
+              <div class="wf-input"></div>
+              <div class="text-xxs text-muted mt-4">Required only if you choose Email as your preferred contact channel.</div>
+            </div>
+
+            <div class="wf-field">
+              <div class="wf-field-label">Number of people attending <span class="wf-field-required">*</span></div>
+              <div class="wf-select">Select estimate ▾</div>
+              <div class="text-xxs text-muted mt-4">Classic package: up to 12 people. Helps us prepare the studio setup.</div>
+            </div>
+
+            <hr class="hr"/>
+
+            <!-- Preferred contact channel -->
+            <div style="font-size:13px;font-weight:800;color:var(--text);margin-bottom:4px;">Preferred contact channel</div>
+            <div class="wf-field">
+              <div class="wf-field-label">How should we reach you? <span class="wf-field-required">*</span></div>
+              <div class="channel-row">
+                <div class="ch-pill wa">💬 WhatsApp</div>
+                <div class="ch-pill tg">✈ Telegram</div>
+                <div class="ch-pill">✉ Email</div>
+              </div>
+              <div class="text-xxs text-muted mt-4">We'll send your booking confirmation and any updates via this channel.</div>
+            </div>
+
+            <!-- Telegram notification consent (shown if Telegram channel not selected) -->
+            <div class="info-box">
+              <strong>📣 Telegram booking reminders</strong><br/>
+              <div style="margin-top:4px;font-size:12px;">Get a reminder 24 hours before your session via Telegram bot. Opt-in below (separate from contact channel above).</div>
+              <div style="margin-top:10px;">
+                <div class="wf-checkbox-row">
+                  <div class="wf-checkbox on"></div>
+                  <div class="wf-checkbox-text">Yes, send me a Telegram reminder for my session. My Telegram username: <strong>@username</strong></div>
+                </div>
+              </div>
+              <div style="margin-top:8px;">
+                <div class="wf-field-label" style="font-size:10px;margin-bottom:4px;">Telegram username or phone</div>
+                <div class="wf-input" style="height:34px;max-width:240px;"></div>
+                <div class="text-xxs text-muted mt-4">We'll only use this to send your session reminder. No marketing messages.</div>
+              </div>
+            </div>
+
+            <hr class="hr"/>
+
+            <!-- Add-ons -->
+            <div style="font-size:13px;font-weight:800;color:var(--text);margin-bottom:4px;">Add-ons <span style="font-weight:400;font-size:12px;color:var(--muted);">(optional)</span></div>
+            <div class="flex-col gap-8">
+
+              <div class="addon-item">
+                <div class="addon-info">
+                  <div class="addon-name">+30 min extra studio time</div>
+                  <div class="addon-desc">Extends your session from 15:20 to 15:50</div>
+                </div>
+                <div style="display:flex;align-items:center;gap:12px;">
+                  <div class="addon-price">+ RM 80</div>
+                  <div class="addon-toggle"></div>
+                </div>
+              </div>
+
+              <div class="addon-item selected">
+                <div class="addon-info">
+                  <div class="addon-name">+1 hour extra studio time</div>
+                  <div class="addon-desc">Extends your session from 15:20 to 16:20 ✓ Added</div>
+                </div>
+                <div style="display:flex;align-items:center;gap:12px;">
+                  <div class="addon-price">+ RM 150</div>
+                  <div class="addon-toggle on"></div>
+                </div>
+              </div>
+
+              <div class="addon-item">
+                <div class="addon-info">
+                  <div class="addon-name">Extra backdrop change</div>
+                  <div class="addon-desc">One additional backdrop beyond your 2 included changes</div>
+                </div>
+                <div style="display:flex;align-items:center;gap:12px;">
+                  <div class="addon-price">+ RM 50</div>
+                  <div class="addon-toggle"></div>
+                </div>
+              </div>
+
+              <div class="addon-item">
+                <div class="addon-info">
+                  <div class="addon-name">Premium prop bundle</div>
+                  <div class="addon-desc">Lanterns, ketupat, wau, floral garlands, name board</div>
+                </div>
+                <div style="display:flex;align-items:center;gap:12px;">
+                  <div class="addon-price">+ RM 30</div>
+                  <div class="addon-toggle"></div>
+                </div>
+              </div>
+
+              <div class="addon-item">
+                <div class="addon-info">
+                  <div class="addon-name">Same-day preview (3 edited photos)</div>
+                  <div class="addon-desc">Receive 3 edited photos via WhatsApp/Telegram before leaving</div>
+                </div>
+                <div style="display:flex;align-items:center;gap:12px;">
+                  <div class="addon-price">+ RM 40</div>
+                  <div class="addon-toggle"></div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="highlight-box">
+              <strong>Add-on time check</strong> — You selected +1 hr. Your session now ends at 16:20. The next available booking after yours starts at 16:30 (with buffer). This has been verified as conflict-free.
+            </div>
+
+            <hr class="hr"/>
+
+            <!-- Special requests -->
+            <div class="wf-field">
+              <div class="wf-field-label">Special requests or notes</div>
+              <div class="wf-textarea"></div>
+              <div class="text-xxs text-muted mt-4">E.g. specific poses, family groupings, children's names, mobility needs, custom name board text, etc.</div>
+            </div>
+
+            <hr class="hr"/>
+
+            <!-- Consent checkboxes -->
+            <div style="font-size:13px;font-weight:800;color:var(--text);margin-bottom:4px;">Consent &amp; agreements</div>
+            <div class="flex-col gap-10">
+              <div class="wf-checkbox-row">
+                <div class="wf-checkbox on"></div>
+                <div class="wf-checkbox-text">I have read and agree to the <a href="./terms.html" target="_blank" style="color:var(--accent);">Terms &amp; Conditions</a>, including the booking, deposit, cancellation, and rescheduling policy.</div>
+              </div>
+              <div class="wf-checkbox-row">
+                <div class="wf-checkbox on"></div>
+                <div class="wf-checkbox-text">I consent to CinnamonFoto Studio using my session photos for portfolio and promotional purposes. <span style="color:var(--accent);text-decoration:underline;cursor:default;">Untick to opt out.</span></div>
+              </div>
+              <div class="wf-checkbox-row">
+                <div class="wf-checkbox"></div>
+                <div class="wf-checkbox-text">I agree to the <a href="#" target="_blank" style="color:var(--accent);">Privacy Policy</a> and understand how my personal data will be collected and used.</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Sidebar (right, 4 cols) -->
+        <div class="col-4">
+          <div class="bk-summary">
+            <div class="bk-summary-title">Booking summary</div>
+
+            <div class="flex-col gap-4">
+              <div class="bk-summary-row">
+                <span class="bk-summary-key">Deco</span>
+                <span class="bk-summary-val" style="color:var(--mag);">Kampung Heritage</span>
+              </div>
+              <div class="bk-summary-row">
+                <span class="bk-summary-key">Date</span>
+                <span class="bk-summary-val">Sun, 22 March 2026</span>
+              </div>
+              <div class="bk-summary-row">
+                <span class="bk-summary-key">Time</span>
+                <span class="bk-summary-val">13:20 – 16:20</span>
+              </div>
+              <div class="bk-summary-row" style="font-size:10px;">
+                <span class="bk-summary-key text-muted">(updated with +1hr add-on)</span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class="bk-summary-divider"></div>
+
+            <div class="flex-col gap-6">
+              <div class="bk-summary-row">
+                <span class="bk-summary-key">Classic Package</span>
+                <span class="bk-summary-val">RM 320</span>
+              </div>
+              <div class="bk-summary-row" style="color:var(--accent);">
+                <span class="bk-summary-key" style="color:var(--accent);">+ 1 hr extra time</span>
+                <span class="bk-summary-val" style="color:var(--accent);">+ RM 150</span>
+              </div>
+            </div>
+
+            <div class="bk-summary-divider"></div>
+
+            <div class="bk-summary-row">
+              <span class="bk-summary-key font-bold">Total</span>
+              <span class="bk-summary-val bk-summary-total">RM 470</span>
+            </div>
+            <div class="bk-summary-row">
+              <span class="bk-summary-key">Deposit due now (50%)</span>
+              <span class="bk-summary-val text-accent font-bold">RM 235</span>
+            </div>
+            <div class="bk-summary-row">
+              <span class="bk-summary-key bk-summary-deposit">Balance on arrival</span>
+              <span class="bk-summary-val bk-summary-deposit">RM 235</span>
+            </div>
+
+            <div class="bk-summary-divider"></div>
+
+            <div style="font-size:11px;color:var(--muted);line-height:1.5;">
+              🔒 Your slot is held for <strong style="color:var(--text);">07:42</strong>. Complete your booking to confirm it.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky bottom bar -->
+  <div class="sticky-bottom-bar" style="margin:0 16px;border-radius:14px 14px 0 0;">
+    <div style="font-size:12px;color:var(--muted);">
+      Step 2 of 3 · Total: <strong style="color:var(--accent);">RM 470</strong> · Deposit: <strong style="color:var(--accent);">RM 235</strong>
+    </div>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <a class="btn btn-dark-out btn-sm" href="./book-slot.html">← Back</a>
+      <a class="btn btn-primary btn-disabled btn-sm" href="#">Continue → <span style="font-size:10px;font-weight:400;">(fill required fields)</span></a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

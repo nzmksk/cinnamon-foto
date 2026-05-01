@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wireframe — Step 1: Choose Deco & Slot | CinnamonFoto Studio</title>
+  <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+
+<nav class="wf-nav">
+  <div>
+    <div class="wf-brand">CinnamonFoto Studio</div>
+    <span class="wf-brand-sub">studio.cinnamonfoto.co</span>
+  </div>
+  <div class="wf-links">
+    <a href="./gallery.html">Gallery</a>
+    <a href="./packages.html">Packages</a>
+    <a href="./terms.html">T&amp;C</a>
+  </div>
+  <a class="wf-nav-cta" href="./book-slot.html">Book a slot</a>
+</nav>
+
+<!-- Step progress bar -->
+<div class="steps-bar">
+  <div class="step-item active">
+    <div class="step-circ">1</div>
+    <div class="step-label-sm">Choose deco &amp; slot</div>
+  </div>
+  <div class="step-item">
+    <div class="step-circ">2</div>
+    <div class="step-label-sm">Your details</div>
+  </div>
+  <div class="step-item">
+    <div class="step-circ">3</div>
+    <div class="step-label-sm">Review &amp; pay</div>
+  </div>
+</div>
+
+<!-- Package context bar — updates to show deco once selected -->
+<div class="pkg-context-bar">
+  <span class="pkg-ctx-label">Package:</span>
+  <span class="pkg-ctx-name">Classic — 2-Hour Session</span>
+  <span class="pkg-ctx-detail">120 min · RM 320</span>
+  <span class="pkg-ctx-change">Change package</span>
+  <div style="width:1px;height:18px;background:rgba(58,29,194,0.25);"></div>
+  <span class="pkg-ctx-label">Deco:</span>
+  <span class="pkg-ctx-name" style="color:var(--mag);">Kampung Heritage</span>
+  <span class="pkg-ctx-change">Change</span>
+  <span class="pkg-ctx-price" style="margin-left:auto;">RM 320</span>
+</div>
+
+<div class="wf-page">
+
+  <div class="wf-page-label">
+    <h1>Step 1 — Choose deco &amp; slot</h1>
+    <span>Booking flow · deco preset selection · date calendar · time slot grid</span>
+    <a href="./index.html" style="font-size:12px;color:var(--muted);margin-left:auto;text-decoration:none;">← All wireframes</a>
+  </div>
+
+  <div class="wf-notes">
+    <strong>Wireframe annotations</strong>
+    <ol>
+      <li><strong>Deco presets are independent</strong> — each deco has its own slot availability. Multiple clients can be in the studio simultaneously if they're in different deco setups.</li>
+      <li>Client selects a deco first. The date calendar then shows availability <em>for that deco</em> only. Switching deco resets the date and time selection.</li>
+      <li>Time slots shown are computed from: package duration + any selected add-on time + configured buffer gap. End time is displayed on each slot card.</li>
+      <li>A 10-min hold timer starts on slot selection (not deco selection) to prevent double-booking while the client completes steps 2–3.</li>
+      <li>Deco presets (name, description, capacity, photo) are managed by admin in Settings → Deco Presets.</li>
+    </ol>
+  </div>
+
+  <!-- §1 Choose deco -->
+  <div class="wf-section">
+    <span class="wf-section-tag dark">§1 Choose your deco setup</span>
+    <div class="pad-m" style="padding-top:36px;">
+
+      <div class="sec-head">
+        <div class="sec-eyebrow">Step 1 of 3 — first choice</div>
+        <div class="sec-title">Which studio deco would you like?</div>
+        <div class="sec-sub">Each deco has its own independent schedule — selecting a deco shows you the available dates and times for that specific setup.</div>
+      </div>
+
+      <div class="deco-cards">
+
+        <!-- Kampung Heritage — SELECTED -->
+        <div class="deco-card selected">
+          <div class="deco-card-img">
+            <div class="img-ph" style="height:100%;border-radius:0;">
+              <span>Kampung Heritage — photo placeholder</span>
+            </div>
+            <div class="deco-card-sel-badge">✓</div>
+          </div>
+          <div class="deco-card-body">
+            <div class="deco-card-name">Kampung Heritage</div>
+            <div class="deco-card-desc">Traditional Malay home facade with carved wood textures, warm amber lanterns, and woven rattan accents. Nostalgic and authentic.</div>
+            <div class="deco-card-tags">
+              <span class="deco-card-tag">Up to 14 pax</span>
+              <span class="deco-card-tag">All packages</span>
+              <span class="deco-card-tag">Indoor</span>
+            </div>
+          </div>
+          <div class="deco-card-footer">
+            <span class="deco-card-cap">Slots available this week</span>
+            <span class="deco-card-btn">✓ Selected</span>
+          </div>
+        </div>
+
+        <!-- Modern Minimalist -->
+        <div class="deco-card">
+          <div class="deco-card-img">
+            <div class="img-ph" style="height:100%;border-radius:0;">
+              <span>Modern Minimalist — photo placeholder</span>
+            </div>
+            <div class="deco-card-sel-badge">✓</div>
+          </div>
+          <div class="deco-card-body">
+            <div class="deco-card-name">Modern Minimalist</div>
+            <div class="deco-card-desc">Clean ivory/cream seamless background with soft shadow lighting. Lets the colours of your outfits take centre stage. Elegant and timeless.</div>
+            <div class="deco-card-tags">
+              <span class="deco-card-tag">Up to 12 pax</span>
+              <span class="deco-card-tag">All packages</span>
+              <span class="deco-card-tag">Indoor</span>
+            </div>
+          </div>
+          <div class="deco-card-footer">
+            <span class="deco-card-cap">Slots available this week</span>
+            <span class="deco-card-btn">Select →</span>
+          </div>
+        </div>
+
+        <!-- Garden Bloom -->
+        <div class="deco-card">
+          <div class="deco-card-img">
+            <div class="img-ph" style="height:100%;border-radius:0;">
+              <span>Garden Bloom — photo placeholder</span>
+            </div>
+            <div class="deco-card-sel-badge">✓</div>
+          </div>
+          <div class="deco-card-body">
+            <div class="deco-card-name">Garden Bloom</div>
+            <div class="deco-card-desc">Floral arch with lush sage greenery, artificial blooms, and wicker furniture. Bright, colourful, and perfect for playful Raya outfits.</div>
+            <div class="deco-card-tags">
+              <span class="deco-card-tag">Up to 10 pax</span>
+              <span class="deco-card-tag">Classic &amp; Premium</span>
+              <span class="deco-card-tag">Indoor</span>
+            </div>
+          </div>
+          <div class="deco-card-footer">
+            <span class="deco-card-cap">Slots available this week</span>
+            <span class="deco-card-btn">Select →</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="highlight-box" style="margin-top:16px;">
+        <strong>Deco sets run simultaneously</strong> — The studio operates all deco setups at the same time. Selecting <em>Kampung Heritage</em> on 22 March 13:20 does not affect the availability of <em>Modern Minimalist</em> or <em>Garden Bloom</em> at the same time.
+      </div>
+
+    </div>
+  </div>
+
+  <!-- §2 Date picker -->
+  <div class="wf-section">
+    <span class="wf-section-tag">§2 Choose a date</span>
+    <div class="pad-m" style="padding-top:36px;">
+
+      <div style="font-size:13px;font-weight:800;color:var(--text);margin-bottom:4px;">
+        Availability for <span style="color:var(--mag);">Kampung Heritage</span>
+      </div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:16px;">Dates shown are for this deco setup only. Other decos may have different availability on the same dates.</div>
+
+      <div class="grid-12 gap-20">
+        <div class="col-5">
+          <div class="cal">
+            <div class="cal-head">
+              <span class="cal-nav">‹</span>
+              <span class="cal-month-label">March 2026</span>
+              <span class="cal-nav">›</span>
+            </div>
+            <div class="cal-weekdays">
+              <div class="cal-wd">Sun</div>
+              <div class="cal-wd">Mon</div>
+              <div class="cal-wd">Tue</div>
+              <div class="cal-wd">Wed</div>
+              <div class="cal-wd">Thu</div>
+              <div class="cal-wd">Fri</div>
+              <div class="cal-wd">Sat</div>
+            </div>
+            <div class="cal-days">
+              <div class="cal-day empty"></div><div class="cal-day empty"></div><div class="cal-day empty"></div><div class="cal-day empty"></div><div class="cal-day empty"></div><div class="cal-day empty"></div><div class="cal-day past">1</div>
+              <div class="cal-day past">2</div><div class="cal-day past">3</div><div class="cal-day today">4</div><div class="cal-day avail">5</div><div class="cal-day avail">6</div><div class="cal-day full">7</div><div class="cal-day avail">8</div>
+              <div class="cal-day avail">9</div><div class="cal-day avail">10</div><div class="cal-day limited">11</div><div class="cal-day limited">12</div><div class="cal-day avail">13</div><div class="cal-day full">14</div><div class="cal-day avail">15</div>
+              <div class="cal-day full">16</div><div class="cal-day full">17</div><div class="cal-day avail">18</div><div class="cal-day avail">19</div><div class="cal-day avail">20</div><div class="cal-day avail">21</div><div class="cal-day selected">22</div>
+              <div class="cal-day avail">23</div><div class="cal-day avail">24</div><div class="cal-day avail">25</div><div class="cal-day limited">26</div><div class="cal-day avail">27</div><div class="cal-day avail">28</div><div class="cal-day avail">29</div>
+              <div class="cal-day avail">30</div><div class="cal-day avail">31</div><div class="cal-day empty"></div><div class="cal-day empty"></div><div class="cal-day empty"></div><div class="cal-day empty"></div><div class="cal-day empty"></div>
+            </div>
+            <div class="cal-legend">
+              <div class="cal-leg-item"><div class="cal-leg-dot avail"></div>Available</div>
+              <div class="cal-leg-item"><div class="cal-leg-dot limited"></div>Limited (≤2)</div>
+              <div class="cal-leg-item"><div class="cal-leg-dot full"></div>Fully booked</div>
+              <div class="cal-leg-item"><div class="cal-leg-dot sel"></div>Selected</div>
+            </div>
+          </div>
+
+          <div class="highlight-box" style="margin-top:14px;">
+            <strong>Kampung Heritage · Classic (2hr) + 10min gap</strong><br/>
+            Slots: 09:00, 11:10, 13:20, 15:30 on available dates.
+          </div>
+        </div>
+
+        <!-- §3 Slot list -->
+        <div class="col-7">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:8px;">
+            <div style="font-size:13px;font-weight:800;color:var(--text);">
+              Time slots — <span style="color:var(--mag);">Kampung Heritage</span> · Sun, 22 March
+            </div>
+            <div style="font-size:11px;color:var(--muted);">3 slots available · 2hr + 10min gap</div>
+          </div>
+
+          <div class="slot-list">
+
+            <div class="slot-item booked">
+              <div class="slot-check"></div>
+              <div class="slot-time-wrap">
+                <span class="slot-time">09:00</span>
+                <span class="slot-end">ends 11:00</span>
+              </div>
+              <span class="slot-dur">2 hr session</span>
+              <span class="slot-badge booked">Booked</span>
+            </div>
+
+            <div class="slot-item buffer">
+              <div style="width:18px;"></div>
+              <div class="slot-time-wrap">
+                <span class="slot-time" style="font-size:11px;color:var(--muted);">11:00 – 11:10</span>
+              </div>
+              <span class="slot-dur">buffer gap</span>
+              <span class="slot-badge buffer">10 min gap</span>
+            </div>
+
+            <div class="slot-item booked">
+              <div class="slot-check"></div>
+              <div class="slot-time-wrap">
+                <span class="slot-time">11:10</span>
+                <span class="slot-end">ends 13:10</span>
+              </div>
+              <span class="slot-dur">2 hr session</span>
+              <span class="slot-badge booked">Booked</span>
+            </div>
+
+            <div class="slot-item buffer">
+              <div style="width:18px;"></div>
+              <div class="slot-time-wrap">
+                <span class="slot-time" style="font-size:11px;color:var(--muted);">13:10 – 13:20</span>
+              </div>
+              <span class="slot-dur">buffer gap</span>
+              <span class="slot-badge buffer">10 min gap</span>
+            </div>
+
+            <!-- SELECTED -->
+            <div class="slot-item selected">
+              <div class="slot-check">✓</div>
+              <div class="slot-time-wrap">
+                <span class="slot-time">13:20</span>
+                <span class="slot-end">ends 15:20</span>
+              </div>
+              <span class="slot-dur">2 hr session</span>
+              <span class="slot-badge sel">Selected</span>
+            </div>
+
+            <div class="slot-item buffer">
+              <div style="width:18px;"></div>
+              <div class="slot-time-wrap">
+                <span class="slot-time" style="font-size:11px;color:var(--muted);">15:20 – 15:30</span>
+              </div>
+              <span class="slot-dur">buffer gap</span>
+              <span class="slot-badge buffer">10 min gap</span>
+            </div>
+
+            <div class="slot-item avail">
+              <div class="slot-check"></div>
+              <div class="slot-time-wrap">
+                <span class="slot-time">15:30</span>
+                <span class="slot-end">ends 17:30</span>
+              </div>
+              <span class="slot-dur">2 hr session</span>
+              <span class="slot-badge avail">Available</span>
+            </div>
+
+          </div>
+
+          <div class="info-box" style="margin-top:14px;">
+            <strong>⏱ Slot held for 10:00 minutes</strong> — Kampung Heritage · 13:20, 22 March is temporarily reserved. Complete booking to confirm.
+          </div>
+
+          <!-- Cross-deco availability hint -->
+          <div class="surface-box" style="margin-top:14px;padding:12px 16px;background:rgba(225,45,235,0.04);border-color:rgba(225,45,235,0.2);">
+            <div style="font-size:11px;font-weight:700;color:var(--mag);margin-bottom:6px;">Can't find a slot? Try a different deco.</div>
+            <div style="font-size:11px;color:var(--muted);margin-bottom:8px;">Other deco setups may have more availability on 22 March:</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;">
+              <div class="btn btn-sm" style="padding:5px 12px;font-size:11px;background:var(--bg);border:1.5px solid var(--border);">Modern Minimalist — 4 slots open</div>
+              <div class="btn btn-sm" style="padding:5px 12px;font-size:11px;background:var(--bg);border:1.5px solid var(--border);">Garden Bloom — 3 slots open</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- §4 Selection summary -->
+  <div class="wf-section">
+    <span class="wf-section-tag green">§4 Selection summary</span>
+    <div class="pad-s">
+      <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
+        <div>
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);">Deco</div>
+          <div style="font-size:14px;font-weight:800;color:var(--mag);margin-top:2px;">Kampung Heritage</div>
+        </div>
+        <div style="width:1px;height:36px;background:var(--border);"></div>
+        <div>
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);">Date &amp; time</div>
+          <div style="font-size:14px;font-weight:800;color:var(--text);margin-top:2px;">Sunday, 22 March 2026 · 13:20 – 15:20</div>
+        </div>
+        <div style="width:1px;height:36px;background:var(--border);"></div>
+        <div>
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);">Package</div>
+          <div style="font-size:14px;font-weight:700;color:var(--accent);margin-top:2px;">Classic — 2hr · RM 320</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky bottom bar -->
+  <div class="sticky-bottom-bar" style="margin:0 16px;border-radius:14px 14px 0 0;">
+    <div style="font-size:12px;color:var(--muted);">
+      <strong style="color:var(--mag);">Kampung Heritage</strong> · 22 Mar 2026 · 13:20–15:20 · Classic
+    </div>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <a class="btn btn-dark-out btn-sm" href="./packages.html">← Back to packages</a>
+      <a class="btn btn-primary" href="./book-details.html">Continue to details →</a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

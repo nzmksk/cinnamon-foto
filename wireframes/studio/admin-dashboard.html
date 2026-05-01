@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wireframe — Admin Dashboard | CinnamonFoto Studio</title>
+  <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+
+<div class="admin-wrap">
+
+  <aside class="admin-sidebar">
+    <div class="admin-logo">CinnamonFoto Studio<span class="admin-logo-sub">Admin panel</span></div>
+    <div class="admin-nav-section">Main</div>
+    <a href="./admin-dashboard.html" class="admin-nav-item active"><span class="admin-nav-icon">📊</span> Dashboard</a>
+    <a href="./admin-bookings.html" class="admin-nav-item"><span class="admin-nav-icon">📋</span> Bookings</a>
+    <a href="./admin-slots.html" class="admin-nav-item"><span class="admin-nav-icon">🗓️</span> Slot Management</a>
+    <div class="admin-nav-section">Config</div>
+    <a href="./admin-settings.html" class="admin-nav-item"><span class="admin-nav-icon">⚙️</span> Settings</a>
+    <div class="admin-nav-section">Site</div>
+    <a href="./landing.html" class="admin-nav-item"><span class="admin-nav-icon">🔗</span> View studio site</a>
+    <a href="./index.html" class="admin-nav-item"><span class="admin-nav-icon">◀</span> Wireframe index</a>
+  </aside>
+
+  <div class="admin-main">
+    <div class="admin-topbar">
+      <div class="admin-topbar-title">Dashboard</div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div style="font-size:12px;color:var(--muted);">Wednesday, 4 March 2026</div>
+        <a class="btn btn-primary btn-sm" href="./admin-bookings.html">View all bookings</a>
+      </div>
+    </div>
+
+    <div class="admin-content">
+
+      <div class="wf-notes" style="margin:0 0 20px 0;">
+        <strong>Wireframe annotations</strong>
+        <ol>
+          <li>Today's schedule shows <strong>all 3 deco setups side by side</strong> — demonstrating simultaneous parallel bookings across decos.</li>
+          <li>Each column = 1 deco track (Kampung Heritage / Modern Minimalist / Garden Bloom). Shared time labels on the left.</li>
+          <li>A booking in Deco A at 09:00 does not block Deco B or C at the same time — each column is independent.</li>
+          <li>Stats cards aggregate across all decos.</li>
+          <li>"Needs attention" panel flags pending payments and reschedule requests.</li>
+        </ol>
+      </div>
+
+      <!-- Stat cards -->
+      <div class="stat-cards">
+        <div class="stat-card">
+          <div class="stat-eyebrow">Today — all decos</div>
+          <div class="stat-value">9</div>
+          <div class="stat-sub">sessions across 3 decos · 3 open slots remaining</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-eyebrow">This week</div>
+          <div class="stat-value">38</div>
+          <div class="stat-sub">bookings · 3 decos combined</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-eyebrow">This month</div>
+          <div class="stat-value accent">114</div>
+          <div class="stat-sub">bookings · March 2026</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-eyebrow">Revenue (deposits)</div>
+          <div class="stat-value accent" style="font-size:20px;">RM 19,040</div>
+          <div class="stat-sub">deposits collected · March so far</div>
+        </div>
+      </div>
+
+      <div class="grid-12 gap-20">
+
+        <!-- Today's multi-deco schedule (9 cols) -->
+        <div class="col-9">
+          <div class="surface-box" style="padding:0;overflow:hidden;">
+            <div style="padding:14px 18px;background:var(--bg);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;">
+              <div style="font-size:13px;font-weight:800;color:var(--text);">Today's schedule — Wed, 4 March 2026</div>
+              <a href="./admin-slots.html" style="font-size:12px;color:var(--accent);text-decoration:none;">Full week view →</a>
+            </div>
+
+            <!-- Multi-deco timeline grid -->
+            <div style="padding:16px 18px;">
+              <div class="deco-timeline-grid">
+
+                <!-- Column headers -->
+                <div class="dtl-head-cell" style="background:var(--bg);border-right:1px solid var(--border);font-size:9px;color:var(--muted);text-align:right;padding:8px 6px;border-bottom:1px solid var(--border);">Time</div>
+                <div class="dtl-head-cell" style="background:rgba(225,45,235,0.06);border-color:rgba(225,45,235,0.2);">
+                  <div style="font-size:11px;font-weight:800;color:var(--mag);">Kampung Heritage</div>
+                </div>
+                <div class="dtl-head-cell" style="background:rgba(58,29,194,0.05);">
+                  <div style="font-size:11px;font-weight:800;color:var(--accent);">Modern Minimalist</div>
+                </div>
+                <div class="dtl-head-cell" style="background:rgba(22,163,74,0.05);">
+                  <div style="font-size:11px;font-weight:800;color:#166534;">Garden Bloom</div>
+                </div>
+
+                <!-- 09:00 row -->
+                <div class="dtl-time-cell">09:00</div>
+                <div class="dtl-slot-cell" style="background:rgba(225,45,235,0.06);">
+                  <div class="tl-block booked" style="border-left-color:var(--mag);background:rgba(225,45,235,0.09);min-height:52px;">
+                    <div class="tl-block-name" style="font-size:11px;">Nor Azizah</div>
+                    <div class="tl-block-meta">Classic · 09:00–11:00 · 8 pax</div>
+                  </div>
+                </div>
+                <div class="dtl-slot-cell" style="background:rgba(58,29,194,0.03);">
+                  <div class="tl-block booked" style="min-height:52px;">
+                    <div class="tl-block-name" style="font-size:11px;">Halim &amp; Family</div>
+                    <div class="tl-block-meta">Essential · 09:00–10:00 · 5 pax</div>
+                  </div>
+                </div>
+                <div class="dtl-slot-cell" style="background:rgba(22,163,74,0.03);">
+                  <div class="tl-block empty" style="min-height:52px;font-size:11px;">Available · 09:00–11:00</div>
+                </div>
+
+                <!-- 10:00 row -->
+                <div class="dtl-time-cell">10:00</div>
+                <div class="dtl-slot-cell" style="background:rgba(225,45,235,0.06);">
+                  <div class="tl-block buffer" style="min-height:52px;">→ cont. Azizah</div>
+                </div>
+                <div class="dtl-slot-cell" style="background:rgba(58,29,194,0.03);">
+                  <div class="tl-block buffer" style="min-height:52px;">buffer (10 min)</div>
+                </div>
+                <div class="dtl-slot-cell" style="background:rgba(22,163,74,0.03);"></div>
+
+                <!-- 11:00 row -->
+                <div class="dtl-time-cell">11:00</div>
+                <div class="dtl-slot-cell" style="background:rgba(225,45,235,0.06);">
+                  <div class="tl-block buffer" style="min-height:52px;font-size:10px;">buffer (10 min)</div>
+                </div>
+                <div class="dtl-slot-cell" style="background:rgba(58,29,194,0.03);">
+                  <div class="tl-block booked" style="min-height:52px;">
+                    <div class="tl-block-name" style="font-size:11px;">Salmah binti Yusof</div>
+                    <div class="tl-block-meta">Classic · 11:10–13:10 · 10 pax</div>
+                  </div>
+                </div>
+                <div class="dtl-slot-cell" style="background:rgba(22,163,74,0.03);">
+                  <div class="tl-block booked" style="border-left-color:#166534;background:rgba(22,163,74,0.09);min-height:52px;">
+                    <div class="tl-block-name" style="font-size:11px;">Faridah &amp; Family</div>
+                    <div class="tl-block-meta">Classic · 11:00–13:00 · 7 pax</div>
+                  </div>
+                </div>
+
+                <!-- 12:00 row -->
+                <div class="dtl-time-cell">12:00</div>
+                <div class="dtl-slot-cell" style="background:rgba(225,45,235,0.06);">
+                  <div class="tl-block booked" style="border-left-color:var(--mag);background:rgba(225,45,235,0.09);min-height:52px;">
+                    <div class="tl-block-name" style="font-size:11px;">Fadzlan bin Omar</div>
+                    <div class="tl-block-meta">Essential · 12:20–13:20 · 4 pax</div>
+                  </div>
+                </div>
+                <div class="dtl-slot-cell" style="background:rgba(58,29,194,0.03);">
+                  <div class="tl-block buffer" style="min-height:52px;">→ cont. Salmah</div>
+                </div>
+                <div class="dtl-slot-cell" style="background:rgba(22,163,74,0.03);">
+                  <div class="tl-block buffer" style="min-height:52px;border-left-color:#166534;">→ cont. Faridah</div>
+                </div>
+
+                <!-- 13:00 row -->
+                <div class="dtl-time-cell">13:00</div>
+                <div class="dtl-slot-cell" style="background:rgba(225,45,235,0.06);">
+                  <div class="tl-block buffer" style="min-height:52px;font-size:10px;">buffer (10 min)</div>
+                </div>
+                <div class="dtl-slot-cell" style="background:rgba(58,29,194,0.03);">
+                  <div class="tl-block buffer" style="min-height:52px;font-size:10px;">buffer (10 min)</div>
+                </div>
+                <div class="dtl-slot-cell" style="background:rgba(22,163,74,0.03);">
+                  <div class="tl-block buffer" style="min-height:52px;font-size:10px;">buffer (10 min)</div>
+                </div>
+
+                <!-- 14:00 row -->
+                <div class="dtl-time-cell">14:00</div>
+                <div class="dtl-slot-cell" style="background:rgba(225,45,235,0.06);">
+                  <div class="tl-block booked" style="border-left-color:var(--mag);background:rgba(225,45,235,0.09);min-height:52px;">
+                    <div class="tl-block-name" style="font-size:11px;">Dayang Seri Dewi</div>
+                    <div class="tl-block-meta">Premium · 13:30–16:30 · 15 pax</div>
+                  </div>
+                </div>
+                <div class="dtl-slot-cell" style="background:rgba(58,29,194,0.03);">
+                  <div class="tl-block booked" style="min-height:52px;">
+                    <div class="tl-block-name" style="font-size:11px;">Zulaikha binti R.</div>
+                    <div class="tl-block-meta">Classic · 13:20–15:20 · 9 pax</div>
+                  </div>
+                </div>
+                <div class="dtl-slot-cell" style="background:rgba(22,163,74,0.03);">
+                  <div class="tl-block booked" style="border-left-color:#166534;background:rgba(22,163,74,0.09);min-height:52px;">
+                    <div class="tl-block-name" style="font-size:11px;">Rashid bin Karim</div>
+                    <div class="tl-block-meta">Classic · 13:20–15:20 · 6 pax</div>
+                  </div>
+                </div>
+
+                <!-- 15:00 / 16:00 row abbreviated -->
+                <div class="dtl-time-cell">15:00+</div>
+                <div class="dtl-slot-cell" style="background:rgba(225,45,235,0.06);">
+                  <div class="tl-block buffer" style="min-height:52px;">→ cont. Dayang (until 16:30)</div>
+                </div>
+                <div class="dtl-slot-cell" style="background:rgba(58,29,194,0.03);">
+                  <div class="tl-block empty" style="min-height:52px;font-size:11px;">Available · 15:30–17:30</div>
+                </div>
+                <div class="dtl-slot-cell" style="background:rgba(22,163,74,0.03);">
+                  <div class="tl-block empty" style="min-height:52px;font-size:11px;">Available · 15:30–17:30</div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right sidebar (3 cols) -->
+        <div class="col-3 flex-col gap-14">
+
+          <!-- Quick actions -->
+          <div class="surface-box">
+            <div style="font-size:13px;font-weight:800;color:var(--text);margin-bottom:12px;">Quick actions</div>
+            <div class="flex-col gap-8">
+              <a class="btn btn-primary btn-sm flex justify-center" href="./admin-slots.html">🗓️ Manage slots</a>
+              <a class="btn btn-dark-out btn-sm flex justify-center" href="./admin-bookings.html">📋 All bookings</a>
+              <a class="btn btn-dark-out btn-sm flex justify-center" href="./admin-settings.html">⚙️ Adjust gap / decos</a>
+            </div>
+          </div>
+
+          <!-- Deco utilization summary -->
+          <div class="surface-box">
+            <div style="font-size:12px;font-weight:800;color:var(--text);margin-bottom:12px;">Today — deco utilisation</div>
+            <div class="flex-col gap-10">
+              <div style="font-size:12px;">
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+                  <span style="color:var(--mag);font-weight:700;">Kampung Heritage</span>
+                  <span style="font-weight:700;">4 / 4 slots</span>
+                </div>
+                <div style="height:6px;background:var(--border);border-radius:99px;overflow:hidden;">
+                  <div style="width:100%;height:100%;background:var(--mag);border-radius:99px;"></div>
+                </div>
+                <div style="font-size:10px;color:var(--muted);margin-top:3px;">Fully booked</div>
+              </div>
+              <div style="font-size:12px;">
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+                  <span style="color:var(--accent);font-weight:700;">Modern Minimalist</span>
+                  <span style="font-weight:700;">3 / 4 slots</span>
+                </div>
+                <div style="height:6px;background:var(--border);border-radius:99px;overflow:hidden;">
+                  <div style="width:75%;height:100%;background:var(--accent);border-radius:99px;"></div>
+                </div>
+                <div style="font-size:10px;color:var(--muted);margin-top:3px;">1 slot open (15:30)</div>
+              </div>
+              <div style="font-size:12px;">
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+                  <span style="color:#166534;font-weight:700;">Garden Bloom</span>
+                  <span style="font-weight:700;">2 / 4 slots</span>
+                </div>
+                <div style="height:6px;background:var(--border);border-radius:99px;overflow:hidden;">
+                  <div style="width:50%;height:100%;background:#166534;border-radius:99px;"></div>
+                </div>
+                <div style="font-size:10px;color:var(--muted);margin-top:3px;">2 slots open</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Needs attention -->
+          <div class="surface-box" style="background:rgba(225,45,235,0.05);border-color:var(--mag);">
+            <div style="font-size:13px;font-weight:800;color:var(--text);margin-bottom:8px;">⚡ Needs attention</div>
+            <div class="flex-col gap-8">
+              <div style="font-size:12px;color:var(--muted);">
+                <strong style="color:var(--text);">1 pending payment</strong> — CF-2026-0851 (Mohd Ridzuan, Modern Minimalist).
+                <a href="./admin-bookings.html" style="color:var(--accent);">Review →</a>
+              </div>
+              <div style="font-size:12px;color:var(--muted);">
+                <strong style="color:var(--text);">1 reschedule request</strong> — Hairul, Kampung Heritage 12 Mar.
+                <a href="./admin-bookings.html" style="color:var(--accent);">Respond →</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

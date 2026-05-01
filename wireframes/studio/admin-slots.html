@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wireframe — Admin Slot Management | CinnamonFoto Studio</title>
+  <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+
+<div class="admin-wrap">
+
+  <aside class="admin-sidebar">
+    <div class="admin-logo">CinnamonFoto Studio<span class="admin-logo-sub">Admin panel</span></div>
+    <div class="admin-nav-section">Main</div>
+    <a href="./admin-dashboard.html" class="admin-nav-item"><span class="admin-nav-icon">📊</span> Dashboard</a>
+    <a href="./admin-bookings.html" class="admin-nav-item"><span class="admin-nav-icon">📋</span> Bookings</a>
+    <a href="./admin-slots.html" class="admin-nav-item active"><span class="admin-nav-icon">🗓️</span> Slot Management</a>
+    <div class="admin-nav-section">Config</div>
+    <a href="./admin-settings.html" class="admin-nav-item"><span class="admin-nav-icon">⚙️</span> Settings</a>
+    <div class="admin-nav-section">Site</div>
+    <a href="./landing.html" class="admin-nav-item"><span class="admin-nav-icon">🔗</span> View studio site</a>
+    <a href="./index.html" class="admin-nav-item"><span class="admin-nav-icon">◀</span> Wireframe index</a>
+  </aside>
+
+  <div class="admin-main">
+    <div class="admin-topbar">
+      <div class="admin-topbar-title">Slot Management</div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div style="font-size:12px;color:var(--muted);">Week of 2–8 March 2026</div>
+        <div class="btn btn-sm" style="background:var(--bg);border:1px solid var(--border);">‹ Prev week</div>
+        <div class="btn btn-sm" style="background:var(--bg);border:1px solid var(--border);">Next week ›</div>
+        <a class="btn btn-danger btn-sm" href="#">Block dates</a>
+      </div>
+    </div>
+
+    <div class="admin-content">
+
+      <div class="wf-notes" style="margin:0 0 20px 0;">
+        <strong>Wireframe annotations</strong>
+        <ol>
+          <li><strong>Each deco tab is an independent schedule</strong> — switching tabs shows the week view for that deco only. Bookings in different decos on the same time/date are both valid and shown separately.</li>
+          <li>Admin can block a specific time range within a single deco (e.g., block Kampung Heritage 14:00–17:00 on Saturday without affecting other decos).</li>
+          <li>The right panel shows a daily summary and block tool for the <em>currently selected deco</em> on the selected date.</li>
+          <li>Buffer gaps are shown between consecutive bookings within the same deco. They do not appear between decos (they're independent).</li>
+          <li>Deco tabs are generated from the list of active deco presets in Settings → Deco Presets.</li>
+        </ol>
+      </div>
+
+      <!-- Deco selector tabs -->
+      <div class="deco-tabs">
+        <div class="deco-tab active">
+          <div class="deco-tab-dot"></div>
+          Kampung Heritage
+          <span style="font-size:10px;background:rgba(225,45,235,0.1);color:var(--mag);padding:2px 7px;border-radius:99px;margin-left:4px;">4 booked today</span>
+        </div>
+        <div class="deco-tab">
+          <div class="deco-tab-dot"></div>
+          Modern Minimalist
+          <span style="font-size:10px;background:rgba(58,29,194,0.08);color:var(--accent);padding:2px 7px;border-radius:99px;margin-left:4px;">3 booked today</span>
+        </div>
+        <div class="deco-tab">
+          <div class="deco-tab-dot"></div>
+          Garden Bloom
+          <span style="font-size:10px;background:rgba(22,163,74,0.08);color:#166534;padding:2px 7px;border-radius:99px;margin-left:4px;">2 booked today</span>
+        </div>
+      </div>
+
+      <!-- Active deco context -->
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;padding:10px 14px;background:rgba(225,45,235,0.05);border:1px solid rgba(225,45,235,0.2);border-radius:10px;flex-wrap:wrap;">
+        <div style="font-size:12px;font-weight:800;color:var(--mag);">Kampung Heritage</div>
+        <div style="font-size:12px;color:var(--muted);">· Up to 14 pax · All packages · Independent slot track</div>
+        <div style="margin-left:auto;display:flex;gap:8px;">
+          <a class="btn btn-sm" style="padding:5px 12px;font-size:11px;background:var(--bg);border:1.5px solid var(--border);">Edit deco settings</a>
+          <a class="btn btn-danger btn-sm" style="padding:5px 12px;font-size:11px;" href="#">Block this deco</a>
+        </div>
+      </div>
+
+      <div class="grid-12 gap-20">
+
+        <!-- Week calendar (9 cols) — shows Kampung Heritage only -->
+        <div class="col-9">
+
+          <!-- Legend -->
+          <div style="display:flex;gap:14px;margin-bottom:12px;flex-wrap:wrap;">
+            <div class="cal-leg-item"><div style="width:14px;height:14px;border-radius:3px;background:var(--mag);opacity:0.8;"></div>Booked (Kampung Heritage)</div>
+            <div class="cal-leg-item"><div style="width:14px;height:14px;border-radius:3px;background:var(--ph-bg);"></div>Buffer gap</div>
+            <div class="cal-leg-item"><div style="width:14px;height:14px;border-radius:3px;background:#fecaca;"></div>Blocked</div>
+            <div class="cal-leg-item"><div style="width:14px;height:14px;border-radius:3px;background:#f0fdf4;border:1px solid #86efac;"></div>Available</div>
+          </div>
+
+          <div class="surface-box" style="padding:0;overflow:hidden;">
+            <!-- Week header -->
+            <div class="week-cal-head">
+              <div class="wc-head-cell" style="font-size:9px;text-align:center;">Time</div>
+              <div class="wc-head-cell"><div>Mon</div><div style="font-size:13px;font-weight:900;color:var(--text);">2</div></div>
+              <div class="wc-head-cell"><div>Tue</div><div style="font-size:13px;font-weight:900;color:var(--text);">3</div></div>
+              <div class="wc-head-cell today"><div>Wed</div><div style="font-size:13px;font-weight:900;color:var(--accent);">4</div></div>
+              <div class="wc-head-cell"><div>Thu</div><div style="font-size:13px;font-weight:900;color:var(--text);">5</div></div>
+              <div class="wc-head-cell"><div>Fri</div><div style="font-size:13px;font-weight:900;color:var(--text);">6</div></div>
+              <div class="wc-head-cell"><div>Sat</div><div style="font-size:13px;font-weight:900;color:var(--text);">7</div></div>
+              <div class="wc-head-cell"><div>Sun</div><div style="font-size:13px;font-weight:900;color:var(--text);">8</div></div>
+            </div>
+
+            <div class="week-cal-body">
+              <div class="wc-time-col">
+                <div class="wc-time-label">09:00</div>
+                <div class="wc-time-label">10:00</div>
+                <div class="wc-time-label">11:00</div>
+                <div class="wc-time-label">12:00</div>
+                <div class="wc-time-label">13:00</div>
+                <div class="wc-time-label">14:00</div>
+                <div class="wc-time-label">15:00</div>
+                <div class="wc-time-label">16:00</div>
+                <div class="wc-time-label">17:00</div>
+              </div>
+
+              <!-- Mon 2 -->
+              <div class="wc-day-col">
+                <div class="wc-slot booked"><div class="wc-slot-inner" style="background:var(--mag);color:#fff;font-size:10px;">Azizah · Classic</div></div>
+                <div class="wc-slot booked"><div class="wc-slot-inner buf">→ cont.</div></div>
+                <div class="wc-slot"><div class="wc-slot-inner buf">buffer</div></div>
+                <div class="wc-slot booked"><div class="wc-slot-inner" style="background:var(--mag);color:#fff;font-size:10px;">Omar · Ess.</div></div>
+                <div class="wc-slot"><div class="wc-slot-inner buf">buffer</div></div>
+                <div class="wc-slot booked"><div class="wc-slot-inner" style="background:var(--mag);color:#fff;font-size:10px;">Siti · Classic</div></div>
+                <div class="wc-slot booked"><div class="wc-slot-inner buf">→ cont.</div></div>
+                <div class="wc-slot"><div class="wc-slot-inner buf">buffer</div></div>
+                <div class="wc-slot" style="background:#f0fdf4;"></div>
+              </div>
+
+              <!-- Tue 3 -->
+              <div class="wc-day-col">
+                <div class="wc-slot booked"><div class="wc-slot-inner" style="background:var(--mag);color:#fff;font-size:10px;">Zulaikha · Ess.</div></div>
+                <div class="wc-slot"><div class="wc-slot-inner buf">buffer</div></div>
+                <div class="wc-slot booked"><div class="wc-slot-inner" style="background:var(--mag);color:#fff;font-size:10px;">Rahimi · Classic</div></div>
+                <div class="wc-slot booked"><div class="wc-slot-inner buf">→ cont.</div></div>
+                <div class="wc-slot"><div class="wc-slot-inner buf">buffer</div></div>
+                <div class="wc-slot" style="background:#f0fdf4;"></div>
+                <div class="wc-slot" style="background:#f0fdf4;"></div>
+                <div class="wc-slot" style="background:#f0fdf4;"></div>
+                <div class="wc-slot" style="background:#f0fdf4;"></div>
+              </div>
+
+              <!-- Wed 4 (today) -->
+              <div class="wc-day-col" style="background:rgba(58,29,194,0.015);">
+                <div class="wc-slot booked"><div class="wc-slot-inner" style="background:var(--mag);color:#fff;font-size:10px;">Azizah · Classic</div></div>
+                <div class="wc-slot booked"><div class="wc-slot-inner buf">→ cont.</div></div>
+                <div class="wc-slot"><div class="wc-slot-inner buf">buffer</div></div>
+                <div class="wc-slot booked"><div class="wc-slot-inner" style="background:var(--mag);color:#fff;font-size:10px;">Fadzlan · Ess.</div></div>
+                <div class="wc-slot"><div class="wc-slot-inner buf">buffer</div></div>
+                <div class="wc-slot booked"><div class="wc-slot-inner" style="background:var(--mag);color:#fff;font-size:10px;">Dayang · Prem.</div></div>
+                <div class="wc-slot booked"><div class="wc-slot-inner buf">→ cont.</div></div>
+                <div class="wc-slot booked"><div class="wc-slot-inner buf">→ cont.</div></div>
+                <div class="wc-slot" style="background:#f0fdf4;"></div>
+              </div>
+
+              <!-- Thu 5 -->
+              <div class="wc-day-col">
+                <div class="wc-slot booked"><div class="wc-slot-inner" style="background:var(--mag);color:#fff;font-size:10px;">Halim · Classic</div></div>
+                <div class="wc-slot booked"><div class="wc-slot-inner buf">→ cont.</div></div>
+                <div class="wc-slot"><div class="wc-slot-inner buf">buffer</div></div>
+                <div class="wc-slot booked"><div class="wc-slot-inner" style="background:var(--mag);color:#fff;font-size:10px;">Noraini · Ess.</div></div>
+                <div class="wc-slot"><div class="wc-slot-inner buf">buffer</div></div>
+                <div class="wc-slot booked"><div class="wc-slot-inner" style="background:var(--mag);color:#fff;font-size:10px;">Rizwan · Classic</div></div>
+                <div class="wc-slot booked"><div class="wc-slot-inner buf">→ cont.</div></div>
+                <div class="wc-slot"><div class="wc-slot-inner buf">buffer</div></div>
+                <div class="wc-slot" style="background:#f0fdf4;"></div>
+              </div>
+
+              <!-- Fri 6 (full) -->
+              <div class="wc-day-col">
+                <div class="wc-slot booked"><div class="wc-slot-inner" style="background:var(--mag);color:#fff;font-size:10px;">Salmah · Classic</div></div>
+                <div class="wc-slot booked"><div class="wc-slot-inner buf">→ cont.</div></div>
+                <div class="wc-slot"><div class="wc-slot-inner buf">buffer</div></div>
+                <div class="wc-slot booked"><div class="wc-slot-inner" style="background:var(--mag);color:#fff;font-size:10px;">Arif · Classic</div></div>
+                <div class="wc-slot booked"><div class="wc-slot-inner buf">→ cont.</div></div>
+                <div class="wc-slot"><div class="wc-slot-inner buf">buffer</div></div>
+                <div class="wc-slot booked"><div class="wc-slot-inner" style="background:var(--mag);color:#fff;font-size:10px;">Nadia · Prem.</div></div>
+                <div class="wc-slot booked"><div class="wc-slot-inner buf">→ cont.</div></div>
+                <div class="wc-slot booked"><div class="wc-slot-inner buf">→ cont.</div></div>
+              </div>
+
+              <!-- Sat 7 (partial block) -->
+              <div class="wc-day-col">
+                <div class="wc-slot booked"><div class="wc-slot-inner" style="background:var(--mag);color:#fff;font-size:10px;">Suhaila · Classic</div></div>
+                <div class="wc-slot booked"><div class="wc-slot-inner buf">→ cont.</div></div>
+                <div class="wc-slot"><div class="wc-slot-inner buf">buffer</div></div>
+                <div class="wc-slot" style="background:#f0fdf4;"></div>
+                <div class="wc-slot blocked"><div class="wc-slot-inner blk">Blocked</div></div>
+                <div class="wc-slot blocked"><div class="wc-slot-inner blk">Blocked</div></div>
+                <div class="wc-slot blocked"><div class="wc-slot-inner blk">Blocked</div></div>
+                <div class="wc-slot booked"><div class="wc-slot-inner" style="background:var(--mag);color:#fff;font-size:10px;">Hafizah · Ess.</div></div>
+                <div class="wc-slot"><div class="wc-slot-inner buf">buffer</div></div>
+              </div>
+
+              <!-- Sun 8 -->
+              <div class="wc-day-col">
+                <div class="wc-slot booked"><div class="wc-slot-inner" style="background:var(--mag);color:#fff;font-size:10px;">Rashid · Prem.</div></div>
+                <div class="wc-slot booked"><div class="wc-slot-inner buf">→ cont.</div></div>
+                <div class="wc-slot booked"><div class="wc-slot-inner buf">→ cont.</div></div>
+                <div class="wc-slot"><div class="wc-slot-inner buf">buffer</div></div>
+                <div class="wc-slot" style="background:#f0fdf4;"></div>
+                <div class="wc-slot" style="background:#f0fdf4;"></div>
+                <div class="wc-slot" style="background:#f0fdf4;"></div>
+                <div class="wc-slot" style="background:#f0fdf4;"></div>
+                <div class="wc-slot" style="background:#f0fdf4;"></div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right panel (3 cols) -->
+        <div class="col-3 flex-col gap-14">
+
+          <!-- Block tool (scoped to selected deco) -->
+          <div class="surface-box">
+            <div style="font-size:13px;font-weight:800;color:var(--text);margin-bottom:4px;">🚫 Block slots</div>
+            <div style="font-size:11px;color:var(--muted);margin-bottom:12px;">Applies to <strong style="color:var(--mag);">Kampung Heritage</strong> only. Other decos unaffected.</div>
+            <div class="flex-col gap-10">
+              <div class="wf-field">
+                <div class="wf-field-label">Date</div>
+                <div class="wf-input"></div>
+              </div>
+              <div class="wf-field">
+                <div class="wf-field-label">Block type</div>
+                <div class="wf-select">Full day ▾</div>
+              </div>
+              <div class="wf-field">
+                <div class="wf-field-label">Reason (internal)</div>
+                <div class="wf-textarea" style="height:60px;"></div>
+              </div>
+              <a class="btn btn-danger btn-sm w-full flex justify-center" href="#">Block for Kampung Heritage</a>
+            </div>
+          </div>
+
+          <!-- Sat 7 summary for selected deco -->
+          <div class="surface-box">
+            <div style="font-size:12px;font-weight:800;color:var(--text);margin-bottom:10px;">Sat, 7 Mar — Kampung Heritage</div>
+            <div class="flex-col gap-6" style="font-size:12px;">
+              <div class="bk-summary-row">
+                <span class="bk-summary-key">Booked sessions</span>
+                <span class="bk-summary-val">2</span>
+              </div>
+              <div class="bk-summary-row">
+                <span class="bk-summary-key">Blocked hours</span>
+                <span class="bk-summary-val text-mag">14:00–17:00</span>
+              </div>
+              <div class="bk-summary-row">
+                <span class="bk-summary-key">Open slots</span>
+                <span class="bk-summary-val text-success">1 (12:20)</span>
+              </div>
+            </div>
+            <div style="margin-top:12px;display:flex;gap:8px;">
+              <a class="btn btn-dark-out btn-sm" href="#">Edit block</a>
+              <a class="btn btn-sm" style="background:#fef2f2;border:1px solid #fecaca;color:#991b1b;" href="#">Remove</a>
+            </div>
+          </div>
+
+          <!-- Buffer info -->
+          <div class="highlight-box">
+            <strong>Buffer gap: 10 min (all decos)</strong><br/>
+            Applied within each deco's own slot sequence. Does not affect cross-deco scheduling.
+            <div style="margin-top:6px;"><a href="./admin-settings.html" style="color:var(--accent);">Change in Settings →</a></div>
+          </div>
+
+          <!-- Cross-deco note -->
+          <div class="info-box">
+            <strong>Cross-deco availability</strong><br/>
+            To see another deco's schedule, click the tab above. Bookings in other decos on the same date/time are independent and do not affect this view.
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

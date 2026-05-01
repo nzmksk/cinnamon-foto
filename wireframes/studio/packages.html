@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wireframe — Packages | CinnamonFoto Studio</title>
+  <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+
+<nav class="wf-nav">
+  <div>
+    <div class="wf-brand">CinnamonFoto Studio</div>
+    <span class="wf-brand-sub">studio.cinnamonfoto.co</span>
+  </div>
+  <div class="wf-links">
+    <a href="./gallery.html">Gallery</a>
+    <a href="./packages.html" class="active">Packages</a>
+    <a href="./terms.html">T&amp;C</a>
+  </div>
+  <a class="wf-nav-cta" href="./book-slot.html">Book a slot</a>
+</nav>
+
+<div class="wf-page">
+
+  <div class="wf-page-label">
+    <h1>Packages & Pricing</h1>
+    <span>studio.cinnamonfoto.co/packages · Raya 2026 session tiers + add-ons</span>
+    <a href="./index.html" style="font-size:12px;color:var(--muted);margin-left:auto;text-decoration:none;">← All wireframes</a>
+  </div>
+
+  <div class="wf-notes">
+    <strong>Wireframe annotations</strong>
+    <ol>
+      <li>Packages are admin-editable (name, price, duration, inclusions). Duration feeds directly into the slot picker logic.</li>
+      <li>"Book this package" CTA passes the package ID to book-slot.html via URL param (e.g., ?pkg=classic).</li>
+      <li>Add-ons section shows time extensions and extras. Add-ons are selected in book-details.html Step 2.</li>
+      <li>Prices shown are base rates. 50% deposit is required at checkout — calculated automatically.</li>
+      <li>FAQ accordion here covers package-specific questions (what's included, turnaround, extras).</li>
+    </ol>
+  </div>
+
+  <!-- §1 Hero -->
+  <div class="wf-section">
+    <span class="wf-section-tag dark">§1 Hero</span>
+    <div class="wf-hero wf-hero-sm">
+      <div class="wf-hero-overlay"></div>
+      <div class="wf-hero-bg-label">Packages hero — collage of all 3 session types</div>
+      <div class="wf-hero-content" style="position:relative;z-index:2;">
+        <div class="wf-hero-eyebrow">Raya 2026 packages</div>
+        <div class="wf-hero-h1" style="font-size:28px;">Find the right session for your family.</div>
+        <div class="wf-hero-sub" style="font-size:13px;margin-bottom:0;">All packages include professional lighting, backdrop, and digital files. Payment: 50% deposit to book, balance on arrival.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- §2 Package cards (full detail) -->
+  <div class="wf-section">
+    <span class="wf-section-tag">§2 Package cards</span>
+    <div class="pad-m">
+      <div class="grid-3 gap-14">
+
+        <!-- Essential -->
+        <div class="pkg-card">
+          <div class="pkg-badge lite">Essential</div>
+          <div class="pkg-name">1-Hour Session</div>
+          <div>
+            <span class="pkg-price">RM 180</span>
+            <span class="pkg-price-sub">Deposit: RM 90 · Balance: RM 90 on arrival</span>
+          </div>
+          <div class="pkg-hr"></div>
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);margin-bottom:6px;">Includes</div>
+          <ul class="pkg-list">
+            <li>1 hour studio time (60 min)</li>
+            <li>1 backdrop setup of your choice</li>
+            <li>1 outfit change</li>
+            <li>Up to 8 people</li>
+            <li>~30 edited digital photos (JPEG)</li>
+            <li>Online gallery delivery (7–10 working days)</li>
+          </ul>
+          <div class="pkg-hr"></div>
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);margin-bottom:6px;">Best for</div>
+          <div style="font-size:12px;color:var(--muted);">Small families or couples wanting a focused, quick session.</div>
+          <div class="pkg-hr"></div>
+          <a class="btn btn-dark-out btn-sm w-full flex justify-center" href="./book-slot.html?pkg=essential">Book Essential →</a>
+        </div>
+
+        <!-- Classic (featured) -->
+        <div class="pkg-card featured">
+          <div class="pkg-badge pop">Most popular</div>
+          <div class="pkg-name">2-Hour Session</div>
+          <div>
+            <span class="pkg-price">RM 320</span>
+            <span class="pkg-price-sub">Deposit: RM 160 · Balance: RM 160 on arrival</span>
+          </div>
+          <div class="pkg-hr"></div>
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);margin-bottom:6px;">Includes</div>
+          <ul class="pkg-list">
+            <li>2 hours studio time (120 min)</li>
+            <li>2 backdrop setups of your choice</li>
+            <li>2 outfit changes</li>
+            <li>Up to 12 people</li>
+            <li>~70 edited digital photos (JPEG + select RAW)</li>
+            <li>1-minute highlight video reel (MP4)</li>
+            <li>Online gallery delivery (7–10 working days)</li>
+          </ul>
+          <div class="pkg-hr"></div>
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);margin-bottom:6px;">Best for</div>
+          <div style="font-size:12px;color:var(--muted);">Medium families wanting variety — multiple looks and groupings.</div>
+          <div class="pkg-hr"></div>
+          <a class="btn btn-primary btn-sm w-full flex justify-center" href="./book-slot.html?pkg=classic">Book Classic →</a>
+        </div>
+
+        <!-- Premium -->
+        <div class="pkg-card">
+          <div class="pkg-badge">Premium</div>
+          <div class="pkg-name">3-Hour Session</div>
+          <div>
+            <span class="pkg-price">RM 480</span>
+            <span class="pkg-price-sub">Deposit: RM 240 · Balance: RM 240 on arrival</span>
+          </div>
+          <div class="pkg-hr"></div>
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);margin-bottom:6px;">Includes</div>
+          <ul class="pkg-list">
+            <li>3 hours studio time (180 min)</li>
+            <li>All 3 backdrops available</li>
+            <li>Unlimited outfit changes</li>
+            <li>Up to 20 people (extended family)</li>
+            <li>~130 edited digital photos (JPEG + RAW)</li>
+            <li>2-minute cinematic video (MP4)</li>
+            <li>Printed 8×12 photo album (5 pages)</li>
+            <li>Priority online gallery (5 working days)</li>
+          </ul>
+          <div class="pkg-hr"></div>
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);margin-bottom:6px;">Best for</div>
+          <div style="font-size:12px;color:var(--muted);">Large/extended families who want the full experience and keepsakes.</div>
+          <div class="pkg-hr"></div>
+          <a class="btn btn-dark-out btn-sm w-full flex justify-center" href="./book-slot.html?pkg=premium">Book Premium →</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- §3 Add-ons -->
+  <div class="wf-section">
+    <span class="wf-section-tag">§3 Add-ons</span>
+    <div class="pad-m">
+      <div class="sec-head">
+        <div class="sec-eyebrow">Extend your session</div>
+        <div class="sec-title">Optional add-ons</div>
+        <div class="sec-sub">Add-ons are selected during checkout (Step 2). Prices are added to your total before deposit calculation.</div>
+      </div>
+      <div class="grid-2 gap-14">
+
+        <div class="addon-item">
+          <div class="addon-info">
+            <div class="addon-name">+30 min extra studio time</div>
+            <div class="addon-desc">Extend your session by 30 minutes. Ideal for large families needing more time between setups.</div>
+          </div>
+          <div class="addon-price">+ RM 80</div>
+        </div>
+
+        <div class="addon-item selected">
+          <div class="addon-info">
+            <div class="addon-name">+1 hour extra studio time</div>
+            <div class="addon-desc">Best value if you know you need more time — 60 minutes added to your chosen package.</div>
+          </div>
+          <div class="addon-price">+ RM 150</div>
+        </div>
+
+        <div class="addon-item">
+          <div class="addon-info">
+            <div class="addon-name">Extra backdrop change</div>
+            <div class="addon-desc">Add an additional backdrop setup beyond your package's included changes. Subject to availability.</div>
+          </div>
+          <div class="addon-price">+ RM 50</div>
+        </div>
+
+        <div class="addon-item">
+          <div class="addon-info">
+            <div class="addon-name">Premium prop bundle</div>
+            <div class="addon-desc">Curated Raya props: ketupat, wau, lanterns, floral garlands, personalised name boards.</div>
+          </div>
+          <div class="addon-price">+ RM 30</div>
+        </div>
+
+        <div class="addon-item">
+          <div class="addon-info">
+            <div class="addon-name">Printed 4R photos set (20 pcs)</div>
+            <div class="addon-desc">Set of 20 printed 4R glossy photos from your session. Ready for collection 3 working days after delivery.</div>
+          </div>
+          <div class="addon-price">+ RM 60</div>
+        </div>
+
+        <div class="addon-item">
+          <div class="addon-info">
+            <div class="addon-name">Same-day preview (3 edited photos)</div>
+            <div class="addon-desc">Receive 3 professionally edited photos via WhatsApp/Telegram before you leave the studio.</div>
+          </div>
+          <div class="addon-price">+ RM 40</div>
+        </div>
+
+      </div>
+      <div class="highlight-box" style="margin-top:16px;">
+        <strong>How add-on time works with slot scheduling</strong> — When you select a time add-on, the system extends your slot's end time accordingly. The next available slot after yours accounts for your total session time + the configured buffer gap.
+      </div>
+    </div>
+  </div>
+
+  <!-- §4 Package FAQ -->
+  <div class="wf-section">
+    <span class="wf-section-tag">§4 Package FAQ</span>
+    <div class="pad-m">
+      <div class="sec-head">
+        <div class="sec-eyebrow">Questions about packages</div>
+        <div class="sec-title">What's included, exactly?</div>
+      </div>
+      <div class="faq-group">
+        <div class="faq-item">
+          <div class="faq-q open">How are edited photos delivered?</div>
+          <div class="faq-a">All edited photos are delivered via a private online gallery link. You can download full-resolution JPEGs directly. The link is valid for 60 days. RAW files are included in Classic and Premium packages.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What happens if my session runs over time?</div>
+          <div class="faq-a">We'll give you a 5-minute warning before your time is up. If you'd like to continue, additional time can be purchased on the spot (subject to the next booking's schedule). We recommend adding time at checkout to guarantee availability.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can I request a specific number of edited photos?</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is there a changing room available?</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What is the latest date to book for Raya?</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- §5 CTA -->
+  <div class="wf-section">
+    <span class="wf-section-tag mag">§5 CTA</span>
+    <div class="wf-dark" style="padding:40px 44px;">
+      <h2 style="font-size:26px;">Ready to reserve your slot?</h2>
+      <p>Choose a package above, then pick your date and time. Deposit secures your booking instantly.</p>
+      <div class="wf-dark-actions">
+        <a class="btn btn-primary btn-lg" href="./book-slot.html">Book now — check availability →</a>
+        <a class="btn btn-wa" href="#">💬 Ask on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wireframe — Step 3: Review & Pay | CinnamonFoto Studio</title>
+  <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+
+<nav class="wf-nav">
+  <div>
+    <div class="wf-brand">CinnamonFoto Studio</div>
+    <span class="wf-brand-sub">studio.cinnamonfoto.co</span>
+  </div>
+  <div class="wf-links">
+    <a href="./gallery.html">Gallery</a>
+    <a href="./packages.html">Packages</a>
+    <a href="./terms.html">T&amp;C</a>
+  </div>
+  <a class="wf-nav-cta" href="./book-slot.html">Book a slot</a>
+</nav>
+
+<!-- Step progress bar -->
+<div class="steps-bar">
+  <div class="step-item done">
+    <div class="step-circ">1</div>
+    <div class="step-label-sm">Select date &amp; time</div>
+  </div>
+  <div class="step-item done">
+    <div class="step-circ">2</div>
+    <div class="step-label-sm">Your details</div>
+  </div>
+  <div class="step-item active">
+    <div class="step-circ">3</div>
+    <div class="step-label-sm">Review &amp; pay</div>
+  </div>
+</div>
+
+<div class="wf-page">
+
+  <div class="wf-page-label">
+    <h1>Step 3 — Review &amp; Pay deposit</h1>
+    <span>Booking flow · full order review · 50% deposit payment · slot confirmation</span>
+    <a href="./index.html" style="font-size:12px;color:var(--muted);margin-left:auto;text-decoration:none;">← All wireframes</a>
+  </div>
+
+  <div class="wf-notes">
+    <strong>Wireframe annotations</strong>
+    <ol>
+      <li>This page is read-only review — client can go back to edit, but cannot change fields inline here.</li>
+      <li>Deposit is 50% of total. The exact % is admin-configurable; shown here as 50%.</li>
+      <li>Payment method options are placeholder — actual gateway (e.g., Billplz, iPay88) to be finalised.</li>
+      <li>Slot hold timer continues from Step 1. If expired, client sees an error and is redirected to book-slot.html to re-select.</li>
+      <li>On successful payment, client is redirected to book-confirm.html with booking reference in the URL.</li>
+    </ol>
+  </div>
+
+  <div class="wf-section">
+    <span class="wf-section-tag">§1 Review + payment</span>
+    <div class="pad-m" style="padding-top:36px;">
+      <div class="grid-12 gap-20">
+
+        <!-- Left: Review + payment (8 cols) -->
+        <div class="col-8 flex-col gap-16">
+
+          <!-- Booking details review -->
+          <div>
+            <div style="font-size:13px;font-weight:800;color:var(--text);margin-bottom:12px;">Booking details</div>
+            <div class="surface-box" style="display:flex;flex-direction:column;gap:0;padding:0;overflow:hidden;">
+
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 18px;border-bottom:1px solid var(--border);">
+                <div>
+                  <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);">Date &amp; time</div>
+                  <div style="font-size:14px;font-weight:800;color:var(--text);margin-top:2px;">Sunday, 22 March 2026 · 13:20 – 16:20</div>
+                </div>
+                <a href="./book-slot.html" style="font-size:12px;color:var(--accent);text-decoration:none;font-weight:600;">Edit</a>
+              </div>
+
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 18px;border-bottom:1px solid var(--border);">
+                <div>
+                  <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);">Deco setup</div>
+                  <div style="font-size:14px;font-weight:800;color:var(--mag);margin-top:2px;">Kampung Heritage</div>
+                  <div style="font-size:12px;color:var(--muted);margin-top:2px;">Traditional Malay facade · up to 14 pax</div>
+                </div>
+                <a href="./book-slot.html" style="font-size:12px;color:var(--accent);text-decoration:none;font-weight:600;">Change</a>
+              </div>
+
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 18px;border-bottom:1px solid var(--border);">
+                <div>
+                  <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);">Package</div>
+                  <div style="font-size:14px;font-weight:800;color:var(--text);margin-top:2px;">Classic — 2-Hour Session</div>
+                  <div style="font-size:12px;color:var(--muted);margin-top:2px;">2 hrs, 2 outfits, ~70 edited photos, 1-min video reel</div>
+                </div>
+                <a href="./book-slot.html" style="font-size:12px;color:var(--accent);text-decoration:none;font-weight:600;">Change</a>
+              </div>
+
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 18px;border-bottom:1px solid var(--border);">
+                <div>
+                  <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);">Add-ons</div>
+                  <div style="font-size:14px;font-weight:800;color:var(--text);margin-top:2px;">+1 hour extra studio time</div>
+                  <div style="font-size:12px;color:var(--muted);margin-top:2px;">Session extended to 16:20</div>
+                </div>
+                <a href="./book-details.html" style="font-size:12px;color:var(--accent);text-decoration:none;font-weight:600;">Edit</a>
+              </div>
+
+              <div style="padding:12px 18px;border-bottom:1px solid var(--border);">
+                <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);margin-bottom:8px;">Client details</div>
+                <div class="grid-2 gap-10" style="font-size:12px;">
+                  <div><span style="color:var(--muted);">Name: </span><strong>Nur Farhana binti Aziz</strong></div>
+                  <div><span style="color:var(--muted);">Phone: </span><strong>+60 12-345 6789</strong></div>
+                  <div><span style="color:var(--muted);">Contact via: </span><strong>💬 WhatsApp</strong></div>
+                  <div><span style="color:var(--muted);">Attendees: </span><strong>~8 people</strong></div>
+                  <div><span style="color:var(--muted);">Telegram reminders: </span><strong>✓ Yes (@farhana_photo)</strong></div>
+                </div>
+                <div style="margin-top:8px;font-size:12px;color:var(--muted);">Notes: <em>"We have 2 toddlers — please have a step stool available."</em></div>
+              </div>
+
+              <div style="padding:12px 18px;display:flex;justify-content:flex-end;">
+                <a href="./book-details.html" style="font-size:12px;color:var(--accent);text-decoration:none;font-weight:600;">Edit client details</a>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Deposit breakdown -->
+          <div>
+            <div style="font-size:13px;font-weight:800;color:var(--text);margin-bottom:12px;">Payment breakdown</div>
+            <div class="deposit-box">
+              <div class="deposit-row">
+                <span style="color:var(--muted);">Classic Package</span>
+                <span style="font-weight:700;">RM 320.00</span>
+              </div>
+              <div class="deposit-row">
+                <span style="color:var(--muted);">+ 1 hr extra time</span>
+                <span style="font-weight:700;">RM 150.00</span>
+              </div>
+              <div class="deposit-row deposit-total">
+                <span style="font-weight:800;color:var(--text);">Total session price</span>
+                <span>RM 470.00</span>
+              </div>
+              <div class="deposit-row" style="margin-top:12px;padding-top:12px;border-top:1px solid var(--border);">
+                <span style="color:var(--muted);">Deposit due now (50%)</span>
+                <span style="font-weight:900;font-size:18px;color:var(--accent);">RM 235.00</span>
+              </div>
+              <div class="deposit-row">
+                <span style="color:var(--muted);">Balance due on arrival</span>
+                <span style="font-weight:700;color:var(--muted);">RM 235.00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Payment method -->
+          <div>
+            <div style="font-size:13px;font-weight:800;color:var(--text);margin-bottom:12px;">Select payment method</div>
+            <div class="payment-box">
+              <div class="payment-box-head">Online payment</div>
+
+              <div class="payment-method">
+                <div class="pay-radio selected"></div>
+                <div class="pay-logo">FPX</div>
+                <div>
+                  <div class="pay-label">FPX / Online Banking</div>
+                  <div class="pay-detail">Maybank2u, CIMB Clicks, RHB, and more</div>
+                </div>
+              </div>
+
+              <div class="payment-method">
+                <div class="pay-radio"></div>
+                <div class="pay-logo">Visa</div>
+                <div>
+                  <div class="pay-label">Credit / Debit Card</div>
+                  <div class="pay-detail">Visa, Mastercard</div>
+                </div>
+              </div>
+
+              <div class="payment-method">
+                <div class="pay-radio"></div>
+                <div class="pay-logo">DuitNow</div>
+                <div>
+                  <div class="pay-label">DuitNow QR</div>
+                  <div class="pay-detail">Scan with any Malaysian banking app</div>
+                </div>
+              </div>
+
+            </div>
+            <div class="text-xxs text-muted mt-8">Payment is processed securely. Your card details are not stored by CinnamonFoto Studio. <strong>[Gateway TBD — placeholder]</strong></div>
+          </div>
+
+          <!-- Final pay button -->
+          <div style="background:rgba(58,29,194,0.04);border:1.5px solid rgba(58,29,194,0.15);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;">
+            <div>
+              <div style="font-size:12px;color:var(--muted);">Amount due now</div>
+              <div style="font-size:24px;font-weight:900;color:var(--accent);">RM 235.00</div>
+              <div style="font-size:11px;color:var(--muted);">50% deposit — secures your slot</div>
+            </div>
+            <a class="btn btn-primary btn-lg" href="./book-confirm.html">Pay deposit &amp; confirm booking →</a>
+          </div>
+
+          <div class="text-xxs text-muted">
+            By paying, you confirm you have read and agree to the <a href="./terms.html" target="_blank" style="color:var(--accent);">Terms &amp; Conditions</a> and <a href="#" style="color:var(--accent);">Privacy Policy</a>.
+          </div>
+
+        </div>
+
+        <!-- Sidebar (right, 4 cols) -->
+        <div class="col-4">
+          <div class="bk-summary">
+            <div class="bk-summary-title">Your booking at a glance</div>
+
+            <div class="flex-col gap-4">
+              <div class="bk-summary-row">
+                <span class="bk-summary-key">Date</span>
+                <span class="bk-summary-val">Sun, 22 Mar 2026</span>
+              </div>
+              <div class="bk-summary-row">
+                <span class="bk-summary-key">Time</span>
+                <span class="bk-summary-val">13:20 – 16:20</span>
+              </div>
+              <div class="bk-summary-row">
+                <span class="bk-summary-key">Duration</span>
+                <span class="bk-summary-val">3 hours (incl. +1hr add-on)</span>
+              </div>
+            </div>
+
+            <div class="bk-summary-divider"></div>
+
+            <div class="flex-col gap-4">
+              <div class="bk-summary-row">
+                <span class="bk-summary-key">Classic Package</span>
+                <span class="bk-summary-val">RM 320</span>
+              </div>
+              <div class="bk-summary-row" style="color:var(--accent);">
+                <span class="bk-summary-key" style="color:var(--accent);">+1 hr add-on</span>
+                <span class="bk-summary-val" style="color:var(--accent);">+ RM 150</span>
+              </div>
+            </div>
+
+            <div class="bk-summary-divider"></div>
+
+            <div class="bk-summary-row">
+              <span class="bk-summary-key font-bold">Total</span>
+              <span class="bk-summary-val bk-summary-total">RM 470</span>
+            </div>
+            <div class="bk-summary-row">
+              <span class="bk-summary-key">Deposit now</span>
+              <span class="bk-summary-val text-accent font-bold">RM 235</span>
+            </div>
+            <div class="bk-summary-row">
+              <span class="bk-summary-key bk-summary-deposit">Balance on arrival</span>
+              <span class="bk-summary-val bk-summary-deposit">RM 235</span>
+            </div>
+
+            <div class="bk-summary-divider"></div>
+
+            <div style="font-size:11px;color:var(--muted);line-height:1.5;">
+              🔒 Slot held for <strong style="color:var(--text);">04:18</strong> — pay now to secure it.
+            </div>
+
+            <div class="bk-summary-divider"></div>
+
+            <div class="flex-col gap-8">
+              <div style="font-size:11px;font-weight:700;color:var(--text);">After payment you will:</div>
+              <div class="sidebar-step">
+                <div class="sidebar-step-num">1</div>
+                <div>Receive a booking confirmation via WhatsApp</div>
+              </div>
+              <div class="sidebar-step">
+                <div class="sidebar-step-num">2</div>
+                <div>Get a Telegram reminder 24 hrs before your session</div>
+              </div>
+              <div class="sidebar-step">
+                <div class="sidebar-step-num">3</div>
+                <div>Arrive at the studio — balance due on arrival</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

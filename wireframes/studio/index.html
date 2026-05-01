@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wireframe Pack — CinnamonFoto Studio Booking System</title>
+  <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+<nav class="wf-nav">
+  <div>
+    <div class="wf-brand">CinnamonFoto Studio</div>
+    <span class="wf-brand-sub">studio.cinnamonfoto.co — Wireframe Pack</span>
+  </div>
+</nav>
+
+<div class="wf-page">
+  <div class="wf-page-label">
+    <h1>Wireframe Index</h1>
+    <span>Studio booking system · Raya time-slot reservation · studio subdomain</span>
+  </div>
+
+  <div class="wf-notes">
+    <strong>About this wireframe pack</strong>
+    <ol>
+      <li>This is the <strong>studio.cinnamonfoto.co</strong> booking system — separate from the main www site.</li>
+      <li>Purpose: Raya photoshoot studio time-slot reservation with online deposit payment.</li>
+      <li>Slot duration is package-dependent. A configurable buffer gap separates consecutive bookings.</li>
+      <li>Guest booking (no account required). Telegram notification sent on payment confirmation if client consents.</li>
+      <li>Admin section manages bookings, slot availability, and system settings.</li>
+    </ol>
+  </div>
+
+  <!-- Public Pages -->
+  <div class="wf-section">
+    <span class="wf-section-tag dark">Public pages</span>
+    <div class="pad-m" style="padding-top:36px;">
+      <div class="sec-head">
+        <div class="sec-eyebrow">Client-facing</div>
+        <div class="sec-title">studio.cinnamonfoto.co</div>
+        <div class="sec-sub">Pages accessible to clients browsing and booking sessions.</div>
+      </div>
+
+      <div class="grid-3 gap-14">
+
+        <a href="./landing.html" style="text-decoration:none;">
+          <div class="surface-box" style="display:flex;flex-direction:column;gap:10px;height:100%;">
+            <div style="font-size:20px;">🏠</div>
+            <div style="font-size:14px;font-weight:800;color:var(--text);">Landing Page</div>
+            <div style="font-size:12px;color:var(--muted);line-height:1.6;">Hero, countdown to Raya, studio gallery strip, package teasers, how-it-works, FAQ, CTA banner.</div>
+            <div class="tag" style="margin-top:auto;">landing.html</div>
+          </div>
+        </a>
+
+        <a href="./gallery.html" style="text-decoration:none;">
+          <div class="surface-box" style="display:flex;flex-direction:column;gap:10px;height:100%;">
+            <div style="font-size:20px;">🖼️</div>
+            <div style="font-size:14px;font-weight:800;color:var(--text);">Studio Gallery</div>
+            <div style="font-size:12px;color:var(--muted);line-height:1.6;">Full masonry gallery of studio setups, backdrops, lighting rigs, and sample client photos.</div>
+            <div class="tag" style="margin-top:auto;">gallery.html</div>
+          </div>
+        </a>
+
+        <a href="./packages.html" style="text-decoration:none;">
+          <div class="surface-box" style="display:flex;flex-direction:column;gap:10px;height:100%;">
+            <div style="font-size:20px;">📦</div>
+            <div style="font-size:14px;font-weight:800;color:var(--text);">Packages & Pricing</div>
+            <div style="font-size:12px;color:var(--muted);line-height:1.6;">3 tier packages (Essential 1hr / Classic 2hr / Premium 3hr), add-ons, FAQ, and Book CTA.</div>
+            <div class="tag" style="margin-top:auto;">packages.html</div>
+          </div>
+        </a>
+
+        <a href="./terms.html" style="text-decoration:none;">
+          <div class="surface-box" style="display:flex;flex-direction:column;gap:10px;height:100%;">
+            <div style="font-size:20px;">📄</div>
+            <div style="font-size:14px;font-weight:800;color:var(--text);">Terms & Conditions</div>
+            <div style="font-size:12px;color:var(--muted);line-height:1.6;">Booking policy, 50% deposit, cancellation & rescheduling rules, data usage, liability.</div>
+            <div class="tag" style="margin-top:auto;">terms.html</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Booking Flow -->
+  <div class="wf-section">
+    <span class="wf-section-tag mag">Booking flow</span>
+    <div class="pad-m" style="padding-top:36px;">
+      <div class="sec-head">
+        <div class="sec-eyebrow">3-step flow</div>
+        <div class="sec-title">Client booking journey</div>
+        <div class="sec-sub">Packages page → Step 1 → Step 2 → Step 3 → Confirmation</div>
+      </div>
+
+      <!-- Flow diagram -->
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:28px;flex-wrap:wrap;">
+        <div class="surface-box" style="padding:10px 14px;font-size:12px;font-weight:700;">packages.html<br/><span style="font-size:10px;color:var(--muted);font-weight:400;">Choose package</span></div>
+        <div style="color:var(--muted);">→</div>
+        <div class="surface-box" style="padding:10px 14px;font-size:12px;font-weight:700;border-color:var(--accent);">book-slot.html<br/><span style="font-size:10px;color:var(--muted);font-weight:400;">Step 1: Pick date & time</span></div>
+        <div style="color:var(--muted);">→</div>
+        <div class="surface-box" style="padding:10px 14px;font-size:12px;font-weight:700;border-color:var(--accent);">book-details.html<br/><span style="font-size:10px;color:var(--muted);font-weight:400;">Step 2: Your details</span></div>
+        <div style="color:var(--muted);">→</div>
+        <div class="surface-box" style="padding:10px 14px;font-size:12px;font-weight:700;border-color:var(--accent);">book-payment.html<br/><span style="font-size:10px;color:var(--muted);font-weight:400;">Step 3: Pay deposit</span></div>
+        <div style="color:var(--muted);">→</div>
+        <div class="surface-box" style="padding:10px 14px;font-size:12px;font-weight:700;border-color:#25d366;">book-confirm.html<br/><span style="font-size:10px;color:var(--muted);font-weight:400;">Confirmed!</span></div>
+      </div>
+
+      <div class="grid-4 gap-14">
+
+        <a href="./book-slot.html" style="text-decoration:none;">
+          <div class="surface-box" style="display:flex;flex-direction:column;gap:10px;height:100%;border-color:var(--accent);">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div class="step-circ" style="background:var(--accent);border-color:var(--accent);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;flex-shrink:0;">1</div>
+              <div style="font-size:14px;font-weight:800;color:var(--text);">Select Date & Time</div>
+            </div>
+            <div style="font-size:12px;color:var(--muted);line-height:1.6;">Month calendar + time slot grid. Slots computed from package duration + configurable gap. Availability legend.</div>
+            <div class="tag" style="margin-top:auto;">book-slot.html</div>
+          </div>
+        </a>
+
+        <a href="./book-details.html" style="text-decoration:none;">
+          <div class="surface-box" style="display:flex;flex-direction:column;gap:10px;height:100%;border-color:var(--accent);">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div class="step-circ" style="background:var(--accent);border-color:var(--accent);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;flex-shrink:0;">2</div>
+              <div style="font-size:14px;font-weight:800;color:var(--text);">Your Details</div>
+            </div>
+            <div style="font-size:12px;color:var(--muted);line-height:1.6;">Client info, add-on time packages, special requests, Telegram notification consent, T&C agreement.</div>
+            <div class="tag" style="margin-top:auto;">book-details.html</div>
+          </div>
+        </a>
+
+        <a href="./book-payment.html" style="text-decoration:none;">
+          <div class="surface-box" style="display:flex;flex-direction:column;gap:10px;height:100%;border-color:var(--accent);">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div class="step-circ" style="background:var(--accent);border-color:var(--accent);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;flex-shrink:0;">3</div>
+              <div style="font-size:14px;font-weight:800;color:var(--text);">Review & Pay Deposit</div>
+            </div>
+            <div style="font-size:12px;color:var(--muted);line-height:1.6;">Full order summary, deposit breakdown (50%), payment method selection, pay button.</div>
+            <div class="tag" style="margin-top:auto;">book-payment.html</div>
+          </div>
+        </a>
+
+        <a href="./book-confirm.html" style="text-decoration:none;">
+          <div class="surface-box" style="display:flex;flex-direction:column;gap:10px;height:100%;">
+            <div style="font-size:20px;">✅</div>
+            <div style="font-size:14px;font-weight:800;color:var(--text);">Confirmation</div>
+            <div style="font-size:12px;color:var(--muted);line-height:1.6;">Booking reference, full summary, Telegram notification opt-in, calendar save, what-happens-next.</div>
+            <div class="tag" style="margin-top:auto;">book-confirm.html</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Pages -->
+  <div class="wf-section">
+    <span class="wf-section-tag warm">Admin pages</span>
+    <div class="pad-m" style="padding-top:36px;">
+      <div class="sec-head">
+        <div class="sec-eyebrow">studio.cinnamonfoto.co/admin</div>
+        <div class="sec-title">Admin panel</div>
+        <div class="sec-sub">Manage bookings, slot availability, buffer gap settings, packages, and notifications.</div>
+      </div>
+
+      <div class="grid-4 gap-14">
+
+        <a href="./admin-dashboard.html" style="text-decoration:none;">
+          <div class="surface-box" style="display:flex;flex-direction:column;gap:10px;height:100%;">
+            <div style="font-size:20px;">📊</div>
+            <div style="font-size:14px;font-weight:800;color:var(--text);">Dashboard</div>
+            <div style="font-size:12px;color:var(--muted);line-height:1.6;">Today's stats, slot timeline, upcoming bookings summary, quick action buttons.</div>
+            <div class="tag" style="margin-top:auto;">admin-dashboard.html</div>
+          </div>
+        </a>
+
+        <a href="./admin-bookings.html" style="text-decoration:none;">
+          <div class="surface-box" style="display:flex;flex-direction:column;gap:10px;height:100%;">
+            <div style="font-size:20px;">📋</div>
+            <div style="font-size:14px;font-weight:800;color:var(--text);">Bookings</div>
+            <div style="font-size:12px;color:var(--muted);line-height:1.6;">Full bookings table with status filters, search, date range filter, and per-row actions.</div>
+            <div class="tag" style="margin-top:auto;">admin-bookings.html</div>
+          </div>
+        </a>
+
+        <a href="./admin-slots.html" style="text-decoration:none;">
+          <div class="surface-box" style="display:flex;flex-direction:column;gap:10px;height:100%;">
+            <div style="font-size:20px;">🗓️</div>
+            <div style="font-size:14px;font-weight:800;color:var(--text);">Slot Management</div>
+            <div style="font-size:12px;color:var(--muted);line-height:1.6;">Week calendar with slot occupancy, block/unblock dates, buffer gap visualisation.</div>
+            <div class="tag" style="margin-top:auto;">admin-slots.html</div>
+          </div>
+        </a>
+
+        <a href="./admin-settings.html" style="text-decoration:none;">
+          <div class="surface-box" style="display:flex;flex-direction:column;gap:10px;height:100%;">
+            <div style="font-size:20px;">⚙️</div>
+            <div style="font-size:14px;font-weight:800;color:var(--text);">Settings</div>
+            <div style="font-size:12px;color:var(--muted);line-height:1.6;">Buffer gap duration, deposit %, operating hours, Telegram bot token, package management.</div>
+            <div class="tag" style="margin-top:auto;">admin-settings.html</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Key decisions -->
+  <div class="wf-section">
+    <span class="wf-section-tag">Open decisions</span>
+    <div class="pad-m" style="padding-top:36px;">
+      <div class="grid-2 gap-14">
+        <div>
+          <div class="sec-title" style="font-size:16px;margin-bottom:12px;">Confirmed in requirements</div>
+          <div class="flex-col gap-8">
+            <div class="highlight-box">✓ Guest booking — no account required</div>
+            <div class="highlight-box">✓ Online deposit payment in-app (fixed RM50)</div>
+            <div class="highlight-box">✓ Package-dependent slot duration</div>
+            <div class="highlight-box">✓ Add-on time purchasable per booking</div>
+            <div class="highlight-box">✓ Configurable buffer gap between slots (admin setting)</div>
+            <div class="highlight-box">✓ Telegram notification on confirmed payment (with client consent)</div>
+            <div class="highlight-box">✓ Payment gateway integration (CHIP)</div>
+          </div>
+        </div>
+        <div>
+          <div class="sec-title" style="font-size:16px;margin-bottom:12px;">Still to confirm</div>
+          <div class="flex-col gap-8">
+            <div class="wf-notes" style="margin:0;">
+              <ol>
+                <li>Studio operating hours and how many simultaneous rooms (1 studio = 1 slot at a time, or multiple?)</li>
+                <li>Rescheduling flow — can clients self-reschedule via the site or only via admin?</li>
+                <li>Telegram bot setup — how does admin receive booking notifications?</li>
+                <li>Slot hold timer — should the selected slot be temporarily held while client fills the form (e.g., 10-minute hold)?</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wireframe — Booking Confirmed | CinnamonFoto Studio</title>
+  <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+
+<nav class="wf-nav">
+  <div>
+    <div class="wf-brand">CinnamonFoto Studio</div>
+    <span class="wf-brand-sub">studio.cinnamonfoto.co</span>
+  </div>
+  <div class="wf-links">
+    <a href="./gallery.html">Gallery</a>
+    <a href="./packages.html">Packages</a>
+    <a href="./terms.html">T&amp;C</a>
+  </div>
+  <a class="wf-nav-cta" href="./book-slot.html">Book another slot</a>
+</nav>
+
+<!-- Completed steps bar -->
+<div class="steps-bar">
+  <div class="step-item done">
+    <div class="step-circ">1</div>
+    <div class="step-label-sm">Select date &amp; time</div>
+  </div>
+  <div class="step-item done">
+    <div class="step-circ">2</div>
+    <div class="step-label-sm">Your details</div>
+  </div>
+  <div class="step-item done">
+    <div class="step-circ">3</div>
+    <div class="step-label-sm">Review &amp; pay</div>
+  </div>
+</div>
+
+<div class="wf-page">
+
+  <div class="wf-page-label">
+    <h1>Booking Confirmed</h1>
+    <span>Post-payment · booking reference · Telegram opt-in · what to expect</span>
+    <a href="./index.html" style="font-size:12px;color:var(--muted);margin-left:auto;text-decoration:none;">← All wireframes</a>
+  </div>
+
+  <div class="wf-notes">
+    <strong>Wireframe annotations</strong>
+    <ol>
+      <li>This page is only accessible after a successful payment callback from the payment gateway.</li>
+      <li>Booking reference is generated server-side and shown prominently. Client should screenshot or save this page.</li>
+      <li>If client consented to Telegram notifications during Step 2, a confirmation is also sent immediately via bot. This page shows that confirmation was sent.</li>
+      <li>If client did NOT consent to Telegram during Step 2, an optional late opt-in is offered here (client can tap to connect the Telegram bot).</li>
+      <li>WhatsApp confirmation is always sent regardless of channel preference (as a fallback guarantee).</li>
+    </ol>
+  </div>
+
+  <!-- §1 Success banner -->
+  <div class="wf-section">
+    <span class="wf-section-tag green">§1 Confirmation</span>
+    <div class="pad-m">
+      <div style="text-align:center;padding:20px 0;">
+        <div style="font-size:48px;margin-bottom:12px;">🎉</div>
+        <div style="font-size:26px;font-weight:900;color:var(--success-tx);margin-bottom:8px;">Booking confirmed!</div>
+        <div style="font-size:14px;color:var(--muted);max-width:480px;margin:0 auto;line-height:1.7;">Your studio session has been reserved and your deposit payment received. We look forward to capturing your Raya memories!</div>
+      </div>
+
+      <!-- Booking reference card -->
+      <div style="max-width:480px;margin:20px auto 0;background:var(--success-bg);border:1.5px solid var(--success-bd);border-radius:14px;padding:20px 24px;text-align:center;">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;color:var(--success-tx);margin-bottom:8px;">Booking reference</div>
+        <div style="font-size:28px;font-weight:900;color:var(--success-tx);letter-spacing:3px;font-family:monospace;">CF-2026-0847</div>
+        <div style="font-size:11px;color:#15803d;margin-top:6px;">Save this number for rescheduling or enquiries</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- §2 Booking summary -->
+  <div class="wf-section">
+    <span class="wf-section-tag">§2 Session details</span>
+    <div class="pad-m">
+      <div class="grid-12 gap-20">
+
+        <div class="col-8">
+          <div style="font-size:14px;font-weight:800;color:var(--text);margin-bottom:16px;">Your confirmed session</div>
+          <div class="surface-box" style="padding:0;overflow:hidden;">
+
+            <div style="display:flex;gap:20px;padding:16px 18px;border-bottom:1px solid var(--border);align-items:center;">
+              <div style="font-size:28px;">📅</div>
+              <div>
+                <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);">Date &amp; time</div>
+                <div style="font-size:16px;font-weight:900;color:var(--text);margin-top:2px;">Sunday, 22 March 2026</div>
+                <div style="font-size:14px;font-weight:700;color:var(--accent);">13:20 – 16:20 (3 hours)</div>
+              </div>
+            </div>
+
+            <div style="display:flex;gap:20px;padding:16px 18px;border-bottom:1px solid var(--border);align-items:center;">
+              <div style="font-size:28px;">🎨</div>
+              <div>
+                <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);">Deco setup</div>
+                <div style="font-size:14px;font-weight:800;color:var(--mag);margin-top:2px;">Kampung Heritage</div>
+                <div style="font-size:12px;color:var(--muted);margin-top:2px;">Traditional Malay facade · up to 14 pax</div>
+              </div>
+            </div>
+
+            <div style="display:flex;gap:20px;padding:16px 18px;border-bottom:1px solid var(--border);align-items:center;">
+              <div style="font-size:28px;">📦</div>
+              <div>
+                <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);">Package &amp; add-ons</div>
+                <div style="font-size:14px;font-weight:800;color:var(--text);margin-top:2px;">Classic — 2-Hour Session</div>
+                <div style="font-size:12px;color:var(--muted);margin-top:2px;">+ 1 hour extra time add-on</div>
+              </div>
+            </div>
+
+            <div style="display:flex;gap:20px;padding:16px 18px;border-bottom:1px solid var(--border);align-items:center;">
+              <div style="font-size:28px;">💳</div>
+              <div>
+                <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);">Payment</div>
+                <div style="font-size:14px;font-weight:800;color:var(--text);margin-top:2px;">Deposit paid: RM 235.00 ✓</div>
+                <div style="font-size:12px;color:var(--muted);margin-top:2px;">Balance due on arrival: RM 235.00 · Total: RM 470.00</div>
+              </div>
+            </div>
+
+            <div style="display:flex;gap:20px;padding:16px 18px;align-items:center;">
+              <div style="font-size:28px;">📍</div>
+              <div>
+                <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--muted);">Studio location</div>
+                <div style="font-size:14px;font-weight:800;color:var(--text);margin-top:2px;">CinnamonFoto Studio</div>
+                <div style="font-size:12px;color:var(--muted);margin-top:2px;">[Studio address placeholder] · Keningau, Sabah</div>
+                <a href="#" style="font-size:12px;color:var(--accent);margin-top:4px;display:inline-block;">Open in Google Maps →</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="bk-summary">
+            <div class="bk-summary-title">Quick actions</div>
+            <div class="flex-col gap-8">
+              <a class="btn btn-primary btn-sm flex justify-center" href="#">📅 Save to calendar</a>
+              <a class="btn btn-wa btn-sm flex justify-center" href="#">💬 Add to WhatsApp contacts</a>
+              <a class="btn btn-dark-out btn-sm flex justify-center" href="#">🖨 Print / save this page</a>
+            </div>
+            <div class="bk-summary-divider"></div>
+            <div style="font-size:11px;color:var(--muted);">Booking ref: <strong style="color:var(--text);">CF-2026-0847</strong></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- §3 Notification confirmation -->
+  <div class="wf-section">
+    <span class="wf-section-tag">§3 Notifications</span>
+    <div class="pad-m">
+      <div style="font-size:14px;font-weight:800;color:var(--text);margin-bottom:16px;">Confirmation sent</div>
+      <div class="flex-col gap-10">
+
+        <!-- WhatsApp — always sent -->
+        <div style="display:flex;align-items:center;gap:14px;padding:14px 18px;background:#f0fdf4;border:1.5px solid #86efac;border-radius:12px;">
+          <div style="font-size:24px;">💬</div>
+          <div>
+            <div style="font-size:13px;font-weight:700;color:#166534;">WhatsApp confirmation sent</div>
+            <div style="font-size:12px;color:#15803d;margin-top:2px;">A confirmation message has been sent to +60 12-345 6789 with your booking details.</div>
+          </div>
+        </div>
+
+        <!-- Telegram — shown if opted in -->
+        <div style="display:flex;align-items:center;gap:14px;padding:14px 18px;background:#eff8ff;border:1.5px solid #93c5fd;border-radius:12px;">
+          <div style="font-size:24px;">✈</div>
+          <div>
+            <div style="font-size:13px;font-weight:700;color:#1d4ed8;">Telegram bot connected</div>
+            <div style="font-size:12px;color:#1e40af;margin-top:2px;">Booking confirmation sent to @farhana_photo. You'll also receive a reminder 24 hours before your session.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- §4 Telegram late opt-in (shown if NOT opted in during Step 2) -->
+  <div class="wf-section">
+    <span class="wf-section-tag">§4 Telegram opt-in (conditional — shown if not opted in at Step 2)</span>
+    <div class="pad-m">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+        <div>
+          <div style="font-size:14px;font-weight:800;color:var(--text);margin-bottom:4px;">Get a reminder via Telegram</div>
+          <div style="font-size:12px;color:var(--muted);max-width:480px;line-height:1.6;">Didn't opt in earlier? Connect our Telegram bot to receive a session reminder 24 hours before your shoot. One tap — no spam.</div>
+        </div>
+        <a class="btn btn-tg" href="#">✈ Connect Telegram reminder bot</a>
+      </div>
+      <div class="text-xxs text-muted mt-8">We'll only send your session reminder. No marketing messages. You can disconnect the bot anytime.</div>
+    </div>
+  </div>
+
+  <!-- §5 What happens next -->
+  <div class="wf-section">
+    <span class="wf-section-tag">§5 What to expect next</span>
+    <div class="pad-m">
+      <div class="sec-head">
+        <div class="sec-eyebrow">Next steps</div>
+        <div class="sec-title">You're all set — here's what happens next</div>
+      </div>
+      <div class="process-row" style="margin-top:20px;">
+        <div class="process-step">
+          <div class="step-circle" style="background:var(--success-tx);">✓</div>
+          <div class="step-label">Slot secured</div>
+          <div class="step-desc">Your 13:20 slot on 22 March is locked. No one else can book it.</div>
+        </div>
+        <div class="process-step">
+          <div class="step-circle">⏰</div>
+          <div class="step-label">24-hr reminder</div>
+          <div class="step-desc">You'll receive a reminder the day before via WhatsApp (and Telegram if connected).</div>
+        </div>
+        <div class="process-step">
+          <div class="step-circle">📸</div>
+          <div class="step-label">Session day</div>
+          <div class="step-desc">Arrive at the studio on time. Pay the RM 235 balance. Enjoy your Raya shoot!</div>
+        </div>
+      </div>
+
+      <div class="highlight-box" style="margin-top:24px;">
+        <strong>Need to reschedule?</strong> — Contact us via WhatsApp with your booking reference <strong>CF-2026-0847</strong> at least 48 hours before your session. First reschedule is free.
+        <div style="margin-top:8px;"><a class="btn btn-wa btn-sm" href="#">💬 WhatsApp us</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- §6 Browse portfolio CTA -->
+  <div class="wf-section">
+    <span class="wf-section-tag dark">§6 Cross-link CTA</span>
+    <div class="pad-m" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+      <div>
+        <div style="font-size:14px;font-weight:800;color:var(--text);">While you wait — explore our work</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:4px;">See the quality and style you can expect from your session.</div>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <a class="btn btn-dark-out btn-sm" href="./gallery.html">View studio gallery</a>
+        <a class="btn btn-primary btn-sm" href="https://cinnamonfoto.co/portfolio" target="_blank">See full portfolio →</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

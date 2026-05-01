@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wireframe — Admin Settings | CinnamonFoto Studio</title>
+  <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+
+<div class="admin-wrap">
+
+  <!-- Sidebar -->
+  <aside class="admin-sidebar">
+    <div class="admin-logo">
+      CinnamonFoto Studio
+      <span class="admin-logo-sub">Admin panel</span>
+    </div>
+    <div class="admin-nav-section">Main</div>
+    <a href="./admin-dashboard.html" class="admin-nav-item">
+      <span class="admin-nav-icon">📊</span> Dashboard
+    </a>
+    <a href="./admin-bookings.html" class="admin-nav-item">
+      <span class="admin-nav-icon">📋</span> Bookings
+    </a>
+    <a href="./admin-slots.html" class="admin-nav-item">
+      <span class="admin-nav-icon">🗓️</span> Slot Management
+    </a>
+    <div class="admin-nav-section">Config</div>
+    <a href="./admin-settings.html" class="admin-nav-item active">
+      <span class="admin-nav-icon">⚙️</span> Settings
+    </a>
+    <div class="admin-nav-section">Site</div>
+    <a href="./landing.html" class="admin-nav-item">
+      <span class="admin-nav-icon">🔗</span> View studio site
+    </a>
+    <a href="./index.html" class="admin-nav-item">
+      <span class="admin-nav-icon">◀</span> Wireframe index
+    </a>
+  </aside>
+
+  <!-- Main content -->
+  <div class="admin-main">
+    <div class="admin-topbar">
+      <div class="admin-topbar-title">Settings</div>
+      <div style="display:flex;gap:10px;">
+        <a class="btn btn-dark-out btn-sm" href="#">Discard changes</a>
+        <a class="btn btn-primary btn-sm" href="#">Save all settings</a>
+      </div>
+    </div>
+
+    <div class="admin-content">
+
+      <div class="wf-notes" style="margin:0 0 20px 0;">
+        <strong>Wireframe annotations</strong>
+        <ol>
+          <li>All settings are saved globally and take effect immediately on the live booking system.</li>
+          <li>Buffer gap change is the most critical setting — it recalculates available slot start times for all future bookings.</li>
+          <li>Deposit % change applies to new bookings only — does not retroactively affect confirmed bookings.</li>
+          <li>Package settings link to the package definitions (duration, price, inclusions) used by the slot picker.</li>
+          <li>Telegram bot token is a sensitive field — masked by default. Required for reminder notifications.</li>
+        </ol>
+      </div>
+
+      <!-- §1 Slot & scheduling settings -->
+      <div class="settings-section">
+        <div class="settings-head">
+          <span class="settings-head-icon">⏱</span>
+          Slot &amp; Scheduling
+        </div>
+        <div class="settings-body">
+
+          <div class="settings-row">
+            <div class="settings-row-info">
+              <div class="settings-row-label">Buffer gap between bookings</div>
+              <div class="settings-row-desc">Time reserved between the end of one session and the start of the next. Accounts for changeover, cleaning, and brief rest. Changes apply to all future slot calculations immediately.</div>
+            </div>
+            <div class="settings-row-ctrl">
+              <div class="seg-control">
+                <div class="seg-btn">0 min</div>
+                <div class="seg-btn">5 min</div>
+                <div class="seg-btn active">10 min</div>
+                <div class="seg-btn">15 min</div>
+                <div class="seg-btn">20 min</div>
+                <div class="seg-btn">30 min</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="settings-row">
+            <div class="settings-row-info">
+              <div class="settings-row-label">Studio operating hours</div>
+              <div class="settings-row-desc">First bookable slot start time and last allowed end time. No bookings can be scheduled outside these hours.</div>
+            </div>
+            <div class="settings-row-ctrl">
+              <div style="display:flex;align-items:center;gap:10px;">
+                <div style="display:flex;align-items:center;gap:6px;font-size:13px;">
+                  <span style="color:var(--muted);">Opens</span>
+                  <div class="wf-select" style="width:80px;height:34px;font-size:12px;">09:00 ▾</div>
+                </div>
+                <span style="color:var(--muted);">–</span>
+                <div style="display:flex;align-items:center;gap:6px;font-size:13px;">
+                  <span style="color:var(--muted);">Closes</span>
+                  <div class="wf-select" style="width:80px;height:34px;font-size:12px;">18:00 ▾</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="settings-row">
+            <div class="settings-row-info">
+              <div class="settings-row-label">Slot hold timer</div>
+              <div class="settings-row-desc">How long a selected slot is temporarily reserved while the client fills in their booking details (Steps 1→3). After this time, the slot is released if payment is not completed.</div>
+            </div>
+            <div class="settings-row-ctrl">
+              <div class="seg-control">
+                <div class="seg-btn">5 min</div>
+                <div class="seg-btn active">10 min</div>
+                <div class="seg-btn">15 min</div>
+                <div class="seg-btn">20 min</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="settings-row">
+            <div class="settings-row-info">
+              <div class="settings-row-label">Studio closed days</div>
+              <div class="settings-row-desc">Days of the week when the studio is permanently closed. No slots will be shown on these days in the client booking calendar.</div>
+            </div>
+            <div class="settings-row-ctrl">
+              <div style="display:flex;gap:6px;flex-wrap:wrap;">
+                <div class="seg-btn" style="border:1.5px solid var(--border);border-radius:6px;cursor:default;font-size:12px;">Mon</div>
+                <div class="seg-btn" style="border:1.5px solid var(--border);border-radius:6px;cursor:default;font-size:12px;">Tue</div>
+                <div class="seg-btn" style="border:1.5px solid var(--border);border-radius:6px;cursor:default;font-size:12px;">Wed</div>
+                <div class="seg-btn" style="border:1.5px solid var(--border);border-radius:6px;cursor:default;font-size:12px;">Thu</div>
+                <div class="seg-btn" style="border:1.5px solid var(--border);border-radius:6px;cursor:default;font-size:12px;">Fri</div>
+                <div class="seg-btn" style="border:1.5px solid var(--border);border-radius:6px;cursor:default;font-size:12px;">Sat</div>
+                <div class="seg-btn" style="border:1.5px solid var(--border);border-radius:6px;cursor:default;font-size:12px;">Sun</div>
+              </div>
+              <div style="font-size:10px;color:var(--muted);margin-top:6px;">Click to toggle. Currently: no permanent closed days.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- §2 Payment settings -->
+      <div class="settings-section">
+        <div class="settings-head">
+          <span class="settings-head-icon">💳</span>
+          Payment &amp; Deposit
+        </div>
+        <div class="settings-body">
+
+          <div class="settings-row">
+            <div class="settings-row-info">
+              <div class="settings-row-label">Deposit percentage</div>
+              <div class="settings-row-desc">Percentage of the total booking price charged as a deposit to secure the slot. Applies to all new bookings. Does not retroactively affect confirmed bookings.</div>
+            </div>
+            <div class="settings-row-ctrl">
+              <div class="seg-control">
+                <div class="seg-btn">30%</div>
+                <div class="seg-btn active">50%</div>
+                <div class="seg-btn">100%</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="settings-row">
+            <div class="settings-row-info">
+              <div class="settings-row-label">Payment gateway</div>
+              <div class="settings-row-desc">The online payment provider used at checkout. Configuration is done externally (gateway dashboard); only the integration toggle is managed here.</div>
+            </div>
+            <div class="settings-row-ctrl">
+              <div style="display:flex;flex-direction:column;gap:8px;min-width:220px;">
+                <div class="wf-select" style="height:34px;font-size:12px;">CHIP (FPX + cards) ▾</div>
+                <div style="font-size:10px;color:var(--muted);">Status: <span style="color:var(--success-tx);font-weight:700;">✓ Connected</span> · Merchant ID: CF-MERCHANT-001</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="settings-row">
+            <div class="settings-row-info">
+              <div class="settings-row-label">Refund policy visibility</div>
+              <div class="settings-row-desc">Show a deposit refund policy summary on the payment page (Step 3) to reduce checkout abandonment.</div>
+            </div>
+            <div class="settings-row-ctrl">
+              <div class="toggle-switch on"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- §3 Packages -->
+      <div class="settings-section">
+        <div class="settings-head">
+          <span class="settings-head-icon">📦</span>
+          Packages &amp; Pricing
+        </div>
+        <div class="settings-body">
+          <div class="wf-notes" style="margin:0 0 14px 0;font-size:12px;">Package duration values are used by the slot picker to calculate slot end times. Changing a package's duration affects all future availability calculations for that package.</div>
+
+          <table class="data-table" style="font-size:12px;">
+            <thead>
+              <tr>
+                <th>Package name</th>
+                <th>Duration (min)</th>
+                <th>Base price (RM)</th>
+                <th>Max people</th>
+                <th>Active</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Essential</strong></td>
+                <td>
+                  <div class="wf-input" style="height:32px;width:80px;display:inline-flex;align-items:center;padding:0 10px;font-size:12px;font-weight:700;">60</div>
+                </td>
+                <td>
+                  <div style="display:flex;align-items:center;gap:4px;font-size:12px;"><span style="color:var(--muted);">RM</span>
+                  <div class="wf-input" style="height:32px;width:70px;display:inline-flex;align-items:center;padding:0 10px;font-size:12px;font-weight:700;">180</div></div>
+                </td>
+                <td>8</td>
+                <td><div class="toggle-switch on"></div></td>
+                <td><a class="btn btn-dark-out btn-sm" style="padding:4px 10px;font-size:11px;" href="#">Edit</a></td>
+              </tr>
+              <tr>
+                <td><strong>Classic</strong> <span class="badge badge-confirmed" style="margin-left:4px;">Default</span></td>
+                <td>
+                  <div class="wf-input" style="height:32px;width:80px;display:inline-flex;align-items:center;padding:0 10px;font-size:12px;font-weight:700;">120</div>
+                </td>
+                <td>
+                  <div style="display:flex;align-items:center;gap:4px;font-size:12px;"><span style="color:var(--muted);">RM</span>
+                  <div class="wf-input" style="height:32px;width:70px;display:inline-flex;align-items:center;padding:0 10px;font-size:12px;font-weight:700;">320</div></div>
+                </td>
+                <td>12</td>
+                <td><div class="toggle-switch on"></div></td>
+                <td><a class="btn btn-dark-out btn-sm" style="padding:4px 10px;font-size:11px;" href="#">Edit</a></td>
+              </tr>
+              <tr>
+                <td><strong>Premium</strong></td>
+                <td>
+                  <div class="wf-input" style="height:32px;width:80px;display:inline-flex;align-items:center;padding:0 10px;font-size:12px;font-weight:700;">180</div>
+                </td>
+                <td>
+                  <div style="display:flex;align-items:center;gap:4px;font-size:12px;"><span style="color:var(--muted);">RM</span>
+                  <div class="wf-input" style="height:32px;width:70px;display:inline-flex;align-items:center;padding:0 10px;font-size:12px;font-weight:700;">480</div></div>
+                </td>
+                <td>20</td>
+                <td><div class="toggle-switch on"></div></td>
+                <td><a class="btn btn-dark-out btn-sm" style="padding:4px 10px;font-size:11px;" href="#">Edit</a></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div style="margin-top:12px;">
+            <a class="btn btn-dark-out btn-sm" href="#">+ Add new package</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- §3.5 Deco Presets -->
+      <div class="settings-section">
+        <div class="settings-head">
+          <span class="settings-head-icon">🎨</span>
+          Deco Presets
+        </div>
+        <div class="settings-body">
+          <div class="wf-notes" style="margin:0 0 16px 0;font-size:12px;">Each active deco preset gets its own independent booking track — clients select a deco during booking, and slots are shown per-deco. Decos can run simultaneously. Disabling a deco hides it from the client booking flow immediately (existing bookings are unaffected).</div>
+
+          <div class="deco-preset-grid">
+
+            <!-- Kampung Heritage -->
+            <div class="deco-preset-card">
+              <div class="deco-preset-img">
+                <div class="img-ph" style="height:100%;border-radius:0;"><span>Kampung Heritage — photo</span></div>
+              </div>
+              <div class="deco-preset-body">
+                <div class="deco-preset-name">Kampung Heritage</div>
+                <div class="deco-preset-desc">Traditional Malay home facade with carved wood textures, warm amber lanterns, and woven rattan accents.</div>
+                <div class="flex-col gap-6" style="font-size:12px;margin-top:4px;">
+                  <div class="bk-summary-row" style="font-size:11px;">
+                    <span class="bk-summary-key">Max capacity</span>
+                    <div class="wf-input" style="height:28px;width:60px;display:inline-flex;align-items:center;padding:0 8px;font-size:12px;font-weight:700;">14</div>
+                  </div>
+                  <div class="bk-summary-row" style="font-size:11px;">
+                    <span class="bk-summary-key">Available for</span>
+                    <span class="bk-summary-val">All packages</span>
+                  </div>
+                </div>
+              </div>
+              <div class="deco-preset-footer">
+                <div style="display:flex;align-items:center;gap:6px;">
+                  <div class="toggle-switch on"></div>
+                  <span style="font-size:11px;color:var(--success-tx);font-weight:700;">Active</span>
+                </div>
+                <div style="display:flex;gap:6px;">
+                  <a class="btn btn-dark-out btn-sm" style="padding:4px 10px;font-size:11px;" href="#">Edit</a>
+                  <a class="btn btn-sm" style="padding:4px 10px;font-size:11px;background:#fef2f2;border:1px solid #fecaca;color:#991b1b;" href="#">Delete</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Modern Minimalist -->
+            <div class="deco-preset-card">
+              <div class="deco-preset-img">
+                <div class="img-ph" style="height:100%;border-radius:0;"><span>Modern Minimalist — photo</span></div>
+              </div>
+              <div class="deco-preset-body">
+                <div class="deco-preset-name">Modern Minimalist</div>
+                <div class="deco-preset-desc">Clean ivory/cream seamless background with soft shadow lighting. Timeless and elegant.</div>
+                <div class="flex-col gap-6" style="font-size:12px;margin-top:4px;">
+                  <div class="bk-summary-row" style="font-size:11px;">
+                    <span class="bk-summary-key">Max capacity</span>
+                    <div class="wf-input" style="height:28px;width:60px;display:inline-flex;align-items:center;padding:0 8px;font-size:12px;font-weight:700;">12</div>
+                  </div>
+                  <div class="bk-summary-row" style="font-size:11px;">
+                    <span class="bk-summary-key">Available for</span>
+                    <span class="bk-summary-val">All packages</span>
+                  </div>
+                </div>
+              </div>
+              <div class="deco-preset-footer">
+                <div style="display:flex;align-items:center;gap:6px;">
+                  <div class="toggle-switch on"></div>
+                  <span style="font-size:11px;color:var(--success-tx);font-weight:700;">Active</span>
+                </div>
+                <div style="display:flex;gap:6px;">
+                  <a class="btn btn-dark-out btn-sm" style="padding:4px 10px;font-size:11px;" href="#">Edit</a>
+                  <a class="btn btn-sm" style="padding:4px 10px;font-size:11px;background:#fef2f2;border:1px solid #fecaca;color:#991b1b;" href="#">Delete</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Garden Bloom -->
+            <div class="deco-preset-card">
+              <div class="deco-preset-img">
+                <div class="img-ph" style="height:100%;border-radius:0;"><span>Garden Bloom — photo</span></div>
+              </div>
+              <div class="deco-preset-body">
+                <div class="deco-preset-name">Garden Bloom</div>
+                <div class="deco-preset-desc">Floral arch with lush sage greenery and wicker furniture. Bright and colourful.</div>
+                <div class="flex-col gap-6" style="font-size:12px;margin-top:4px;">
+                  <div class="bk-summary-row" style="font-size:11px;">
+                    <span class="bk-summary-key">Max capacity</span>
+                    <div class="wf-input" style="height:28px;width:60px;display:inline-flex;align-items:center;padding:0 8px;font-size:12px;font-weight:700;">10</div>
+                  </div>
+                  <div class="bk-summary-row" style="font-size:11px;">
+                    <span class="bk-summary-key">Available for</span>
+                    <div class="wf-select" style="height:28px;font-size:11px;width:140px;">Classic &amp; Premium only ▾</div>
+                  </div>
+                </div>
+              </div>
+              <div class="deco-preset-footer">
+                <div style="display:flex;align-items:center;gap:6px;">
+                  <div class="toggle-switch on"></div>
+                  <span style="font-size:11px;color:var(--success-tx);font-weight:700;">Active</span>
+                </div>
+                <div style="display:flex;gap:6px;">
+                  <a class="btn btn-dark-out btn-sm" style="padding:4px 10px;font-size:11px;" href="#">Edit</a>
+                  <a class="btn btn-sm" style="padding:4px 10px;font-size:11px;background:#fef2f2;border:1px solid #fecaca;color:#991b1b;" href="#">Delete</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div style="margin-top:16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+            <a class="btn btn-dark-out btn-sm" href="#">+ Add new deco preset</a>
+            <div style="font-size:11px;color:var(--muted);">Adding a new preset immediately creates an independent slot track. Admin must set its operating hours or it defaults to studio hours.</div>
+          </div>
+
+          <div class="highlight-box" style="margin-top:14px;">
+            <strong>Deco-specific operating hours</strong> — By default, each deco uses the global studio operating hours (09:00–18:00). You can override hours per deco in the Edit panel (e.g., Garden Bloom only available weekends). <em>This field is wired in the Edit modal — not shown here.</em>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- §4 Notifications -->
+      <div class="settings-section">
+        <div class="settings-head">
+          <span class="settings-head-icon">🔔</span>
+          Notifications
+        </div>
+        <div class="settings-body">
+
+          <div class="settings-row">
+            <div class="settings-row-info">
+              <div class="settings-row-label">Telegram bot (client reminders)</div>
+              <div class="settings-row-desc">Telegram bot token used to send clients a session reminder 24 hours before their booking. Clients only receive notifications if they opted in during booking.</div>
+            </div>
+            <div class="settings-row-ctrl">
+              <div style="display:flex;flex-direction:column;gap:8px;min-width:240px;">
+                <div class="wf-input" style="height:34px;display:flex;align-items:center;padding:0 12px;font-size:12px;color:var(--muted);">••••••••••••••••••••••••••</div>
+                <a href="#" style="font-size:11px;color:var(--accent);">Show / Edit token</a>
+                <div style="font-size:10px;color:var(--success-tx);font-weight:700;">✓ Bot active — @CinnamonStudioBot</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="settings-row">
+            <div class="settings-row-info">
+              <div class="settings-row-label">Admin notification channel</div>
+              <div class="settings-row-desc">Where admin receives alerts for new bookings, payment confirmations, and reschedule requests.</div>
+            </div>
+            <div class="settings-row-ctrl">
+              <div class="seg-control">
+                <div class="seg-btn">Email</div>
+                <div class="seg-btn active">Telegram</div>
+                <div class="seg-btn">Both</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="settings-row">
+            <div class="settings-row-info">
+              <div class="settings-row-label">Admin Telegram chat ID</div>
+              <div class="settings-row-desc">The Telegram chat or group ID where admin booking notifications are sent.</div>
+            </div>
+            <div class="settings-row-ctrl">
+              <div class="wf-input" style="height:34px;width:180px;display:inline-flex;align-items:center;padding:0 12px;font-size:12px;color:var(--muted);">-100123456789</div>
+            </div>
+          </div>
+
+          <div class="settings-row">
+            <div class="settings-row-info">
+              <div class="settings-row-label">Client WhatsApp confirmation</div>
+              <div class="settings-row-desc">Automatically send a WhatsApp confirmation message to the client's phone number on booking confirmation. Always enabled as fallback.</div>
+            </div>
+            <div class="settings-row-ctrl">
+              <div style="display:flex;align-items:center;gap:10px;">
+                <div class="toggle-switch on"></div>
+                <span style="font-size:12px;color:var(--muted);">Always on</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="settings-row">
+            <div class="settings-row-info">
+              <div class="settings-row-label">Reminder timing</div>
+              <div class="settings-row-desc">When the automated session reminder is sent to clients who opted in to Telegram notifications.</div>
+            </div>
+            <div class="settings-row-ctrl">
+              <div class="seg-control">
+                <div class="seg-btn">12 hr</div>
+                <div class="seg-btn active">24 hr</div>
+                <div class="seg-btn">48 hr</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- §5 Booking behaviour -->
+      <div class="settings-section">
+        <div class="settings-head">
+          <span class="settings-head-icon">📋</span>
+          Booking Behaviour
+        </div>
+        <div class="settings-body">
+
+          <div class="settings-row">
+            <div class="settings-row-info">
+              <div class="settings-row-label">Maximum advance booking window</div>
+              <div class="settings-row-desc">How far in advance clients can book a session. Prevents bookings too far out before Raya availability is confirmed.</div>
+            </div>
+            <div class="settings-row-ctrl">
+              <div class="seg-control">
+                <div class="seg-btn">30 days</div>
+                <div class="seg-btn active">60 days</div>
+                <div class="seg-btn">90 days</div>
+                <div class="seg-btn">No limit</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="settings-row">
+            <div class="settings-row-info">
+              <div class="settings-row-label">Allow same-day bookings</div>
+              <div class="settings-row-desc">Whether clients can book a slot for the same day. Disable if you need preparation time.</div>
+            </div>
+            <div class="settings-row-ctrl">
+              <div class="toggle-switch"></div>
+            </div>
+          </div>
+
+          <div class="settings-row">
+            <div class="settings-row-info">
+              <div class="settings-row-label">Minimum booking notice</div>
+              <div class="settings-row-desc">Minimum time between "now" and the session start time. Prevents last-minute bookings below this threshold.</div>
+            </div>
+            <div class="settings-row-ctrl">
+              <div class="seg-control">
+                <div class="seg-btn">None</div>
+                <div class="seg-btn">2 hr</div>
+                <div class="seg-btn active">24 hr</div>
+                <div class="seg-btn">48 hr</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Save footer -->
+      <div style="display:flex;justify-content:flex-end;gap:10px;padding-top:8px;">
+        <a class="btn btn-dark-out" href="#">Discard changes</a>
+        <a class="btn btn-primary btn-lg" href="#">Save all settings</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

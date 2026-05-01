@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wireframe — Studio Gallery | CinnamonFoto Studio</title>
+  <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+
+<nav class="wf-nav">
+  <div>
+    <div class="wf-brand">CinnamonFoto Studio</div>
+    <span class="wf-brand-sub">studio.cinnamonfoto.co</span>
+  </div>
+  <div class="wf-links">
+    <a href="./gallery.html" class="active">Gallery</a>
+    <a href="./packages.html">Packages</a>
+    <a href="./terms.html">T&amp;C</a>
+  </div>
+  <a class="wf-nav-cta" href="./book-slot.html">Book a slot</a>
+</nav>
+
+<div class="wf-page">
+
+  <div class="wf-page-label">
+    <h1>Studio Gallery</h1>
+    <span>studio.cinnamonfoto.co/gallery · studio space showcase + sample client work</span>
+    <a href="./index.html" style="font-size:12px;color:var(--muted);margin-left:auto;text-decoration:none;">← All wireframes</a>
+  </div>
+
+  <div class="wf-notes">
+    <strong>Wireframe annotations</strong>
+    <ol>
+      <li>Gallery has two tabs: Studio Space (the room, equipment, backdrops) and Client Sessions (sample family photos from previous Raya shoots).</li>
+      <li>Masonry grid with mixed orientations — portrait-heavy to showcase full outfits and family groupings.</li>
+      <li>Clicking any photo opens a lightbox with prev/next navigation.</li>
+      <li>Caption labels on hover: backdrop name, session type.</li>
+      <li>Sticky Book button appears after first scroll past the hero.</li>
+    </ol>
+  </div>
+
+  <!-- §1 Hero -->
+  <div class="wf-section">
+    <span class="wf-section-tag dark">§1 Hero</span>
+    <div class="wf-hero wf-hero-sm">
+      <div class="wf-hero-overlay"></div>
+      <div class="wf-hero-bg-label">Hero — studio wide-angle establishing shot</div>
+      <div class="wf-hero-content" style="position:relative;z-index:2;">
+        <div class="wf-hero-eyebrow">Our studio space</div>
+        <div class="wf-hero-h1" style="font-size:30px;">A studio built for Raya moments.</div>
+        <div class="wf-hero-sub" style="font-size:13px;margin-bottom:0;">Professional lighting, curated backdrops, and a comfortable space for the whole family.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- §2 Tabs + gallery -->
+  <div class="wf-section">
+    <span class="wf-section-tag">§2 Gallery grid</span>
+    <div class="pad-m">
+
+      <!-- Tab switcher -->
+      <div style="display:flex;gap:8px;margin-bottom:24px;border-bottom:2px solid var(--border);padding-bottom:0;">
+        <div style="padding:10px 18px;font-size:13px;font-weight:700;color:var(--accent);border-bottom:2px solid var(--accent);margin-bottom:-2px;cursor:default;">Studio Space</div>
+        <div style="padding:10px 18px;font-size:13px;font-weight:600;color:var(--muted);cursor:default;">Client Sessions</div>
+      </div>
+
+      <!-- Tab content: Studio Space -->
+      <div style="margin-bottom:24px;">
+        <div class="sec-sub" style="margin-bottom:16px;">The room, equipment, backdrop options, and ambience — so you know exactly what to expect.</div>
+        <div class="studio-gallery" style="grid-auto-rows:64px;">
+          <div class="img-ph sg-wide"><span>Main hall — full width view</span></div>
+          <div class="img-ph sg-tall"><span>Backdrop wall A — "Rumah Melayu Lama"</span></div>
+          <div class="img-ph sg-sq"><span>Backdrop wall B — Minimalist Ivory</span></div>
+          <div class="img-ph sg-wide2"><span>Backdrop wall C — Pastel Sage garden arch</span></div>
+          <div class="img-ph sg-sq2"><span>Lighting rig setup</span></div>
+          <div class="img-ph sg-half"><span>Prop basket — lanterns, ketupat, flowers</span></div>
+          <div class="img-ph sg-third"><span>Changing room</span></div>
+          <div class="img-ph sg-third"><span>Waiting area + refreshments</span></div>
+          <div class="img-ph sg-third"><span>Powder room</span></div>
+          <div class="img-ph sg-sq"><span>Reception / check-in desk</span></div>
+          <div class="img-ph sg-wide2"><span>Outdoor link / car park entrance</span></div>
+          <div class="img-ph sg-sq2"><span>Full studio from far</span></div>
+        </div>
+      </div>
+
+      <!-- Tab content: Client Sessions (collapsed/not active) -->
+      <div class="highlight-box">
+        <strong style="color:var(--accent);">Tab: Client Sessions</strong> — shows sample family Raya photos from previous sessions. Same masonry grid layout. Admin can enable/disable this tab and manage which photos appear.
+      </div>
+
+    </div>
+  </div>
+
+  <!-- §3 Backdrop options highlight -->
+  <div class="wf-section">
+    <span class="wf-section-tag">§3 Backdrop options</span>
+    <div class="pad-m">
+      <div class="sec-head">
+        <div class="sec-eyebrow">Choose your look</div>
+        <div class="sec-title">3 curated Raya backdrops</div>
+        <div class="sec-sub">Each backdrop is included in your session package. Higher-tier packages allow multiple backdrop changes.</div>
+      </div>
+      <div class="grid-3 gap-14">
+
+        <div class="surface-box" style="display:flex;flex-direction:column;gap:12px;">
+          <div class="img-ph img-ph-4-5"><span>Backdrop A preview</span></div>
+          <div style="font-size:14px;font-weight:800;color:var(--text);">Rumah Melayu Lama</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.6;">Traditional Malay home facade with carved wood texture, warm amber tones. Feels authentic and nostalgic.</div>
+          <div class="chips">
+            <span class="chip active" style="font-size:10px;padding:4px 10px;">Available all packages</span>
+          </div>
+        </div>
+
+        <div class="surface-box" style="display:flex;flex-direction:column;gap:12px;">
+          <div class="img-ph img-ph-4-5"><span>Backdrop B preview</span></div>
+          <div style="font-size:14px;font-weight:800;color:var(--text);">Minimalist Ivory</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.6;">Clean ivory/cream seamless background. Lets colours of traditional outfits pop. Great for formal family portraits.</div>
+          <div class="chips">
+            <span class="chip active" style="font-size:10px;padding:4px 10px;">Available all packages</span>
+          </div>
+        </div>
+
+        <div class="surface-box" style="display:flex;flex-direction:column;gap:12px;">
+          <div class="img-ph img-ph-4-5"><span>Backdrop C preview</span></div>
+          <div style="font-size:14px;font-weight:800;color:var(--text);">Sage Garden Arch</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.6;">Floral arch with sage greenery. Bright and modern — perfect for playful, colourful Raya outfits and children's portraits.</div>
+          <div class="chips">
+            <span class="chip" style="font-size:10px;padding:4px 10px;">Classic & Premium only</span>
+          </div>
+        </div>
+
+      </div>
+      <div class="info-box" style="margin-top:16px;">
+        <strong>Backdrop change timing</strong> — Each backdrop change takes approximately 5 minutes and is accounted for within your session time. Premium package clients may request additional custom setups subject to availability.
+      </div>
+    </div>
+  </div>
+
+  <!-- §4 CTA strip -->
+  <div class="wf-section">
+    <span class="wf-section-tag mag">§4 Book CTA</span>
+    <div class="wf-dark" style="padding:40px 44px;">
+      <h2 style="font-size:26px;">Like what you see? Book your studio session.</h2>
+      <p>Slots are limited per day to ensure each family gets the full attention they deserve.</p>
+      <div class="wf-dark-actions">
+        <a class="btn btn-primary btn-lg" href="./book-slot.html">Check available slots →</a>
+        <a class="btn btn-outline" href="./packages.html">View packages first</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
