@@ -1,0 +1,11 @@
+[[redirects]]
+  from = "https://cinnamonfoto.netlify.app/*"
+  to = "https://www.cinnamonfoto.co/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://cinnamonfoto.co/*"
+  to = "https://www.cinnamonfoto.co/:splat"
+  status = 301
+  force = true
