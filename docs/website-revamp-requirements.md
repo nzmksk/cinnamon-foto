@@ -14,9 +14,10 @@ CinnamonFoto will revamp its website to prioritize a stronger and more immersive
 ## 2) Goals & Success Metrics
 
 ### Core goals (priority order)
-1. Improve portfolio presentation and storytelling quality.
-2. Improve conversion readiness through "Book a slot" journeys.
-3. Build long-term foundation for SEO, content, and automation.
+1. Mobile-first web design
+2. Improve portfolio presentation and storytelling quality.
+3. Improve conversion readiness through "Book a slot" journeys.
+4. Build long-term foundation for SEO, content, and automation.
 
 ### KPIs to track
 - **Average session duration**
@@ -45,10 +46,7 @@ CinnamonFoto will revamp its website to prioritize a stronger and more immersive
 ## 4) Brand & Creative Direction
 
 ### Desired style
-- Vibrant modern
-- Editorial
-- Documentary
-- Warm cinematic
+- Modern minimalist
 
 ### Reference site
 - https://thekhulafastudio.com
@@ -64,11 +62,12 @@ CinnamonFoto will revamp its website to prioritize a stronger and more immersive
 1. Home
 2. Portfolio
 3. About
-4. Services & Packages
-5. Testimonials
-6. FAQ + Terms & Conditions
-7. Contact & Socials
-8. Booking
+4. Services
+5. Packages
+6. Reviews
+7. FAQ + Terms & Conditions
+8. Contact & Socials
+9. Booking
 
 ### Additional page strategy
 - **Blog:** move to **Phase 3**

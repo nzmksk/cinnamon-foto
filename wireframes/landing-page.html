@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cinnamon Foto | Wedding Photographer Keningau Sabah</title>
+<meta name="description" content="Cinnamon Foto is Keningau Sabah's premier wedding photography & videography studio. Specialising in weddings, family portraits, graduation & events. Book now.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.cinnamonfoto.co/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cinnamon Foto | Wedding Photographer Keningau Sabah">
+<meta property="og:description" content="Premium wedding, studio & event photography in Keningau, Sabah. Book your session today.">
+<meta property="og:url" content="https://www.cinnamonfoto.co/">
+<meta name="geo.region" content="MY-12">
+<meta name="geo.placename" content="Keningau, Sabah, Malaysia">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ── RESET & TOKENS ─────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:       #F7F7FB;
+  --surface:  #FFFFFF;
+  --text:     #121022;
+  --muted:    #4E4B63;
+  --border:   #DDD9EE;
+  --accent:   #3A1DC2;
+  --accent-h: #2A176D;
+  --mag:      #E12DEB;
+  --indigo:   #2A176D;
+  --warm:     #FFC27A;
+  --dark:     #0D0A1C;
+  --ph:       #D8D4EE;
+  --ph-stripe: rgba(58,29,194,0.06);
+  --radius:   14px;
+  --radius-sm: 8px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── IMAGE PLACEHOLDER ───────────────────────────────────────── */
+.img-ph {
+  background-color: var(--ph);
+  background-image: repeating-linear-gradient(
+    -45deg, transparent, transparent 8px,
+    var(--ph-stripe) 8px, var(--ph-stripe) 9px
+  );
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 8px;
+  color: #9490C0; font-size: 11px; font-weight: 600;
+  letter-spacing: 0.4px; text-transform: uppercase;
+}
+.img-ph svg { opacity: 0.3; width: 30px; height: 30px; }
+
+/* ── NAV ─────────────────────────────────────────────────────── */
+.nav {
+  position: sticky; top: 0; z-index: 200;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  max-width: 1200px; margin: 0 auto;
+  padding: 0 28px;
+  display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  height: 64px;
+}
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px; font-weight: 700; color: var(--indigo);
+  letter-spacing: -0.3px; text-decoration: none;
+  white-space: nowrap;
+}
+.nav-logo span { color: var(--mag); }
+.nav-links {
+  display: flex; gap: 2px; list-style: none;
+}
+.nav-links a {
+  text-decoration: none; color: var(--muted);
+  padding: 7px 12px; border-radius: 7px; font-size: 14px; font-weight: 500;
+  transition: color 0.15s, background 0.15s;
+}
+.nav-links a:hover { color: var(--text); background: var(--bg); }
+.nav-cta {
+  background: var(--accent); color: #fff;
+  text-decoration: none; border-radius: var(--radius-sm);
+  padding: 10px 20px; font-weight: 600; font-size: 14px; white-space: nowrap;
+  transition: background 0.15s;
+}
+.nav-cta:hover { background: var(--accent-h); }
+.nav-burger {
+  display: none; flex-direction: column; gap: 5px;
+  cursor: pointer; padding: 6px;
+}
+.nav-burger span {
+  display: block; width: 22px; height: 2px;
+  background: var(--text); border-radius: 2px;
+}
+
+/* ── HERO ─────────────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  min-height: 96vh;
+  background: var(--indigo);
+  background-image: repeating-linear-gradient(
+    -45deg, transparent, transparent 22px,
+    rgba(255,255,255,0.02) 22px, rgba(255,255,255,0.02) 23px
+  );
+  display: flex; align-items: flex-end;
+  overflow: hidden;
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(5,2,20,0.85) 0%, rgba(5,2,20,0.4) 50%, transparent 100%);
+}
+.hero-bg-label {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.12);
+  text-transform: uppercase; letter-spacing: 2px; text-align: center;
+  pointer-events: none; user-select: none;
+  white-space: nowrap;
+}
+.hero-content {
+  position: relative; z-index: 2;
+  max-width: 1200px; margin: 0 auto; padding: 0 28px 80px;
+  width: 100%;
+}
+.hero-eyebrow {
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 2px; color: var(--mag); margin-bottom: 20px;
+  display: flex; align-items: center; gap: 8px;
+}
+.hero-eyebrow::before {
+  content: ''; display: block; width: 24px; height: 2px; background: var(--mag);
+}
+.hero-h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(42px, 7vw, 80px); font-weight: 900; line-height: 1.0;
+  color: #fff; letter-spacing: -1px; margin-bottom: 22px;
+  max-width: 700px;
+}
+.hero-h1 em { font-style: italic; color: var(--warm); }
+.hero-sub {
+  font-size: 16px; color: rgba(255,255,255,0.6);
+  margin-bottom: 40px; max-width: 480px; line-height: 1.7;
+  font-weight: 300;
+}
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.hero-reel {
+  position: absolute; right: 28px; bottom: 80px; z-index: 2;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 10px; padding: 10px 16px;
+  font-size: 12px; color: rgba(255,255,255,0.65);
+  display: flex; align-items: center; gap: 8px;
+}
+.hero-reel-dot {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: rgba(225,45,235,0.25);
+  border: 1.5px solid var(--mag);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 9px; color: var(--mag);
+}
+
+/* ── BUTTONS ─────────────────────────────────────────────────── */
+.btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  border-radius: var(--radius-sm); font-weight: 600; text-decoration: none;
+  border: 2px solid transparent; cursor: pointer; white-space: nowrap;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  font-family: 'DM Sans', sans-serif;
+}
+.btn-primary { background: var(--accent); color: #fff; padding: 14px 32px; font-size: 15px; }
+.btn-primary:hover { background: var(--accent-h); }
+.btn-outline-white { background: transparent; border-color: rgba(255,255,255,0.35); color: #fff; padding: 14px 32px; font-size: 15px; }
+.btn-outline-white:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.6); }
+.btn-mag { background: var(--mag); color: #fff; padding: 14px 32px; font-size: 15px; }
+.btn-mag:hover { background: #c018ca; }
+.btn-ghost-dark { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.15); color: rgba(255,255,255,0.75); padding: 12px 22px; font-size: 14px; }
+.btn-wa { background: #25D366; color: #fff; padding: 12px 22px; font-size: 14px; }
+.btn-wa:hover { background: #1eb855; }
+.btn-tg { background: #229ED9; color: #fff; padding: 12px 22px; font-size: 14px; }
+.btn-tg:hover { background: #1a89bf; }
+.btn-outline-accent { background: transparent; border-color: var(--accent); color: var(--accent); padding: 11px 22px; font-size: 14px; }
+.btn-outline-accent:hover { background: var(--accent); color: #fff; }
+.btn-sm { padding: 8px 18px !important; font-size: 13px !important; }
+
+/* ── SECTION WRAPPER ────────────────────────────────────────── */
+.section { padding: 80px 28px; }
+.section-inner { max-width: 1200px; margin: 0 auto; }
+.section-dark { background: var(--dark); }
+.section-tinted { background: #F0EEF8; }
+
+/* ── SECTION HEADER ─────────────────────────────────────────── */
+.sec-eyebrow {
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 1.5px; color: var(--mag); margin-bottom: 10px;
+  display: flex; align-items: center; gap: 8px;
+}
+.sec-eyebrow::before { content: ''; display: block; width: 18px; height: 2px; background: var(--mag); }
+.sec-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(26px, 4vw, 40px); font-weight: 700; color: var(--text);
+  letter-spacing: -0.4px; line-height: 1.2; margin-bottom: 10px;
+}
+.sec-title-white { color: #fff; }
+.sec-sub { font-size: 15px; color: var(--muted); line-height: 1.7; max-width: 520px; }
+.sec-sub-white { color: rgba(255,255,255,0.5); }
+
+/* ── PORTFOLIO SECTION ──────────────────────────────────────── */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 36px;
+}
+.portfolio-card {
+  border-radius: var(--radius); overflow: hidden;
+  position: relative; text-decoration: none; display: block;
+}
+.portfolio-card .img-ph { aspect-ratio: 3/4; min-height: 260px; border-radius: var(--radius); }
+.portfolio-card-info {
+  padding: 14px 4px 0;
+}
+.portfolio-card-title { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 2px; }
+.portfolio-card-sub { font-size: 12px; color: var(--muted); }
+
+/* ── WHY US ──────────────────────────────────────────────────── */
+.why-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+  margin-top: 40px;
+}
+.why-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 28px 24px;
+  display: flex; flex-direction: column; gap: 14px;
+}
+.why-icon {
+  width: 48px; height: 48px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center; font-size: 22px;
+}
+.why-icon-a { background: rgba(58,29,194,0.1); }
+.why-icon-b { background: rgba(225,45,235,0.1); }
+.why-icon-c { background: rgba(255,194,122,0.2); }
+.why-title { font-size: 15px; font-weight: 700; color: var(--text); }
+.why-desc { font-size: 13px; color: var(--muted); line-height: 1.65; }
+
+/* ── SERVICES / PACKAGES ─────────────────────────────────────── */
+.services-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
+  margin-top: 36px;
+}
+.svc-card {
+  background: var(--surface); border: 1.5px solid var(--border);
+  border-radius: var(--radius); padding: 22px; position: relative;
+  display: flex; flex-direction: column; gap: 12px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.svc-card.featured {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(58,29,194,0.08);
+}
+.svc-badge {
+  font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px;
+  padding: 3px 10px; border-radius: 5px; width: fit-content;
+  background: var(--bg); border: 1px solid var(--border); color: var(--muted);
+}
+.svc-badge.pop { background: var(--mag); border-color: var(--mag); color: #fff; }
+.svc-name { font-size: 16px; font-weight: 700; color: var(--text); }
+.svc-price { font-size: 22px; font-weight: 800; color: var(--accent); letter-spacing: -0.4px; }
+.svc-price-note { font-size: 12px; color: var(--muted); font-weight: 400; }
+.svc-desc { font-size: 12px; color: var(--muted); line-height: 1.6; }
+.svc-divider { height: 1px; background: var(--border); }
+
+/* ── BEFORE / AFTER ─────────────────────────────────────────── */
+.ba-row {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  margin-top: 36px;
+}
+.ba-wrap {
+  position: relative; border-radius: var(--radius); overflow: hidden;
+  height: 320px; display: flex; border: 1px solid var(--border);
+}
+.ba-before { flex: 1; background: #c5c0de; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 6px; }
+.ba-after  { flex: 1; background: #d8ccee; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 6px; }
+.ba-label {
+  font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px;
+  padding: 4px 10px; border-radius: 5px;
+}
+.ba-label-before { background: rgba(0,0,0,0.2); color: rgba(255,255,255,0.7); }
+.ba-label-after  { background: rgba(58,29,194,0.25); color: #7b55d4; }
+.ba-sublabel { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.45); }
+.ba-sublabel-after { color: #9f72e8; }
+.ba-handle {
+  position: absolute; top: 0; bottom: 0; left: 50%;
+  width: 3px; background: rgba(255,255,255,0.9); transform: translateX(-50%);
+  display: flex; align-items: center; justify-content: center; z-index: 2;
+}
+.ba-knob {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: #fff; box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; color: var(--accent); font-weight: 700;
+}
+
+/* ── TESTIMONIALS ────────────────────────────────────────────── */
+.tc-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+  margin-top: 36px;
+}
+.tc-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 24px;
+  display: flex; flex-direction: column; gap: 14px;
+}
+.tc-stars { color: var(--warm); letter-spacing: 2px; font-size: 14px; }
+.tc-quote {
+  font-size: 14px; color: var(--text); line-height: 1.7;
+  font-style: italic;
+}
+.tc-quote::before { content: '\201C'; }
+.tc-quote::after  { content: '\201D'; }
+.tc-author-name { font-size: 13px; font-weight: 700; color: var(--indigo); }
+.tc-author-meta { font-size: 12px; color: var(--muted); }
+
+/* ── PROCESS ─────────────────────────────────────────────────── */
+.process-row {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 20px; margin-top: 40px; position: relative;
+}
+.process-row::before {
+  content: ''; position: absolute;
+  top: 24px; left: 12.5%; right: 12.5%; height: 1px;
+  background: var(--border); z-index: 0;
+}
+.process-step { text-align: center; position: relative; z-index: 1; }
+.step-num {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: var(--accent); color: #fff;
+  font-size: 16px; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 16px; box-shadow: 0 0 0 6px rgba(58,29,194,0.1);
+}
+.step-label { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+.step-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+/* ── FINAL CTA ──────────────────────────────────────────────── */
+.cta-block {
+  text-align: center; padding: 80px 28px;
+  background: var(--dark);
+  background-image: repeating-linear-gradient(
+    -45deg, transparent, transparent 22px,
+    rgba(255,255,255,0.015) 22px, rgba(255,255,255,0.015) 23px
+  );
+}
+.cta-inner { max-width: 600px; margin: 0 auto; }
+.cta-eyebrow {
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 2px; color: var(--mag); margin-bottom: 18px;
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.cta-eyebrow::before { content: ''; display: block; width: 18px; height: 2px; background: var(--mag); }
+.cta-h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 5vw, 52px); font-weight: 700; color: #fff;
+  line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 16px;
+}
+.cta-h2 em { font-style: italic; color: var(--warm); }
+.cta-sub { font-size: 15px; color: rgba(255,255,255,0.45); margin-bottom: 36px; line-height: 1.7; }
+.cta-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+/* ── FOOTER ──────────────────────────────────────────────────── */
+footer {
+  background: var(--indigo);
+  padding: 56px 28px 28px;
+}
+.footer-inner {
+  max-width: 1200px; margin: 0 auto;
+}
+.footer-grid {
+  display: grid; grid-template-columns: 2.2fr 1fr 1fr 1fr;
+  gap: 36px; margin-bottom: 40px;
+}
+.footer-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 12px;
+}
+.footer-brand span { color: var(--mag); }
+.footer-desc { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.75; max-width: 280px; }
+.footer-heading {
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.8px; color: #fff; margin-bottom: 14px;
+}
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.footer-links li { font-size: 13px; color: rgba(255,255,255,0.45); cursor: default; }
+.footer-links li:hover { color: rgba(255,255,255,0.75); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1); padding-top: 22px;
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  flex-wrap: wrap;
+}
+.footer-copy { font-size: 12px; color: rgba(255,255,255,0.3); }
+.footer-socials { display: flex; gap: 10px; }
+.social-pill {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
+  display: flex; align-items: center; justify-content: center; font-size: 13px;
+  cursor: default;
+}
+
+/* ── SECTION HEADER ROW ──────────────────────────────────────── */
+.sec-row {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  gap: 16px; flex-wrap: wrap;
+}
+
+/* ── WIREFRAME NOTICE BANNER ─────────────────────────────────── */
+.wf-notice {
+  background: #fffbe6; border-bottom: 2px solid #f0a500;
+  padding: 10px 28px;
+  font-size: 12px; color: #7a5700; text-align: center; font-weight: 500;
+}
+.wf-notice strong { font-weight: 700; }
+
+/* ── RESPONSIVE ──────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .portfolio-grid, .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+}
+@media (max-width: 768px) {
+  .nav-links, .nav-cta { display: none; }
+  .nav-burger { display: flex; }
+  .section { padding: 56px 20px; }
+  .hero-content { padding: 0 20px 60px; }
+  .hero-reel { display: none; }
+  .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .ba-row { grid-template-columns: 1fr; }
+  .tc-grid { grid-template-columns: 1fr; }
+  .process-row { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .process-row::before { display: none; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .cta-block { padding: 56px 20px; }
+}
+@media (max-width: 480px) {
+  .portfolio-grid, .services-grid { grid-template-columns: 1fr; }
+  .hero-h1 { font-size: 38px; }
+  .process-row { grid-template-columns: 1fr; }
+  .hero-actions { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<!-- Wireframe notice — remove before production deployment -->
+<div class="wf-notice">
+  <strong>Wireframe</strong> — Landing page design reference. Image placeholders to be replaced with real assets before launch.
+</div>
+
+<!-- ── NAV ───────────────────────────────────────────────────── -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#">Cinnamon<span>Foto</span></a>
+    <ul class="nav-links" role="list">
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Reviews</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <a class="nav-cta" href="#">Book a slot</a>
+    <button class="nav-burger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── §1 HERO ───────────────────────────────────────────────── -->
+<section class="hero" aria-label="Hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-bg-label">Full-bleed hero image / video reel — asset placeholder</div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">Sabah, Malaysia · Photography &amp; Videography</div>
+    <h1 class="hero-h1">
+      Your story,<br>told in <em>light.</em>
+    </h1>
+    <p class="hero-sub">
+      Intimate, considered photography and videography for weddings, families, and graduation sessions across Sabah.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-mag" href="#">Book a slot</a>
+      <a class="btn btn-outline-white" href="#">View portfolio</a>
+    </div>
+  </div>
+
+  <div class="hero-reel" aria-hidden="true">
+    <div class="hero-reel-dot">▶</div>
+    Watch showreel · 90 sec
+  </div>
+</section>
+
+<!-- ── §2 PORTFOLIO TEASERS ──────────────────────────────────── -->
+<section class="section">
+  <div class="section-inner">
+    <div class="sec-row">
+      <div>
+        <div class="sec-eyebrow">Our work</div>
+        <h2 class="sec-title">Explore the portfolio</h2>
+        <p class="sec-sub">Browse by category or dive straight into a story.</p>
+      </div>
+      <a class="btn btn-outline-accent btn-sm" href="#">See full portfolio →</a>
+    </div>
+
+    <div class="portfolio-grid">
+      <a class="portfolio-card" href="#" aria-label="Wedding photography portfolio">
+        <div class="img-ph" style="aspect-ratio:3/4;min-height:280px;border-radius:14px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+          Wedding
+        </div>
+        <div class="portfolio-card-info">
+          <div class="portfolio-card-title">Weddings</div>
+          <div class="portfolio-card-sub">Timeless, emotional storytelling</div>
+        </div>
+      </a>
+      <a class="portfolio-card" href="#" aria-label="Family and Raya photography portfolio">
+        <div class="img-ph" style="aspect-ratio:3/4;min-height:280px;border-radius:14px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          Family / Raya
+        </div>
+        <div class="portfolio-card-info">
+          <div class="portfolio-card-title">Family &amp; Raya</div>
+          <div class="portfolio-card-sub">Warmth, colour, togetherness</div>
+        </div>
+      </a>
+      <a class="portfolio-card" href="#" aria-label="Graduation photography portfolio">
+        <div class="img-ph" style="aspect-ratio:3/4;min-height:280px;border-radius:14px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          Graduation
+        </div>
+        <div class="portfolio-card-info">
+          <div class="portfolio-card-title">Graduation</div>
+          <div class="portfolio-card-sub">Milestone portraits worth keeping</div>
+        </div>
+      </a>
+      <a class="portfolio-card" href="#" aria-label="Videography portfolio">
+        <div class="img-ph" style="aspect-ratio:3/4;min-height:280px;border-radius:14px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+          Videography
+        </div>
+        <div class="portfolio-card-info">
+          <div class="portfolio-card-title">Videography</div>
+          <div class="portfolio-card-sub">Cinematic reels &amp; same-day edits</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── §3 WHY CINNAMONFOTO ───────────────────────────────────── -->
+<section class="section section-tinted">
+  <div class="section-inner">
+    <div style="max-width:560px;">
+      <div class="sec-eyebrow">Why us</div>
+      <h2 class="sec-title">What makes our approach different</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon why-icon-a">🎬</div>
+        <div class="why-title">Storytelling-first</div>
+        <div class="why-desc">We direct, guide, and capture real moments — not poses. Every session is a considered narrative from beginning to end.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon why-icon-b">📍</div>
+        <div class="why-title">Sabah-rooted</div>
+        <div class="why-desc">Local knowledge means better locations, natural light timing, and authentic cultural context for every session across Sabah.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon why-icon-c">📦</div>
+        <div class="why-title">Clear process &amp; delivery</div>
+        <div class="why-desc">From inquiry to gallery delivery, every step is communicated. No surprises, no chasing — just great results, on time.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── §4 SERVICES & PACKAGES TEASER ────────────────────────── -->
+<section class="section">
+  <div class="section-inner">
+    <div class="sec-row">
+      <div>
+        <div class="sec-eyebrow">Packages</div>
+        <h2 class="sec-title">Simple, transparent pricing</h2>
+        <p class="sec-sub">Starting price bands — full package details on the services page.</p>
+      </div>
+      <a class="btn btn-outline-accent btn-sm" href="/packages">All packages →</a>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card featured">
+        <div class="svc-badge pop">Most popular</div>
+        <div class="svc-name">Wedding</div>
+        <div>
+          <div class="svc-price">from RM 2,500</div>
+          <div class="svc-price-note">Full-day coverage</div>
+        </div>
+        <div class="svc-divider"></div>
+        <div class="svc-desc">Edited gallery · highlight reel option · 2 photographers</div>
+        <a class="btn btn-outline-accent btn-sm" href="/packages" style="margin-top:4px;">See packages</a>
+      </div>
+      <div class="svc-card">
+        <div class="svc-badge">Family / Raya</div>
+        <div class="svc-name">Family &amp; Raya</div>
+        <div>
+          <div class="svc-price">from RM 450</div>
+          <div class="svc-price-note">2–3 hour session</div>
+        </div>
+        <div class="svc-divider"></div>
+        <div class="svc-desc">Edited photos · family group poses · outdoor or studio</div>
+        <a class="btn btn-outline-accent btn-sm" href="/packages" style="margin-top:4px;">See packages</a>
+      </div>
+      <div class="svc-card">
+        <div class="svc-badge">Graduation</div>
+        <div class="svc-name">Graduation</div>
+        <div>
+          <div class="svc-price">from RM 300</div>
+          <div class="svc-price-note">1–2 hour session</div>
+        </div>
+        <div class="svc-divider"></div>
+        <div class="svc-desc">Studio or outdoor · digital delivery · individual &amp; group</div>
+        <a class="btn btn-outline-accent btn-sm" href="/packages" style="margin-top:4px;">See packages</a>
+      </div>
+      <div class="svc-card">
+        <div class="svc-badge">Videography</div>
+        <div class="svc-name">Videography</div>
+        <div>
+          <div class="svc-price">from RM 1,200</div>
+          <div class="svc-price-note">Cinematic highlight</div>
+        </div>
+        <div class="svc-divider"></div>
+        <div class="svc-desc">Cinematic video · RAW footage option · drone coverage</div>
+        <a class="btn btn-outline-accent btn-sm" href="/packages" style="margin-top:4px;">See packages</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── §5 BEFORE / AFTER ─────────────────────────────────────── -->
+<section class="section section-tinted">
+  <div class="section-inner">
+    <div>
+      <div class="sec-eyebrow">Editing quality</div>
+      <h2 class="sec-title">See the difference our edit makes</h2>
+      <p class="sec-sub">Drag the handle to compare unedited RAW vs. final delivered edit.</p>
+    </div>
+    <div class="ba-row">
+      <div class="ba-wrap" role="img" aria-label="Before and after comparison: wedding portrait">
+        <div class="ba-before">
+          <span class="ba-label ba-label-before">Before</span>
+          <span class="ba-sublabel">RAW / unprocessed</span>
+        </div>
+        <div class="ba-after">
+          <span class="ba-label ba-label-after">After</span>
+          <span class="ba-sublabel ba-sublabel-after">Final delivered edit</span>
+        </div>
+        <div class="ba-handle" aria-hidden="true"><div class="ba-knob">⟺</div></div>
+      </div>
+      <div class="ba-wrap" role="img" aria-label="Before and after comparison: outdoor session">
+        <div class="ba-before">
+          <span class="ba-label ba-label-before">Before</span>
+          <span class="ba-sublabel">Wedding portrait · flat light</span>
+        </div>
+        <div class="ba-after">
+          <span class="ba-label ba-label-after">After</span>
+          <span class="ba-sublabel ba-sublabel-after">Warm cinematic grade</span>
+        </div>
+        <div class="ba-handle" aria-hidden="true"><div class="ba-knob">⟺</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── §6 TESTIMONIALS ───────────────────────────────────────── -->
+<section class="section">
+  <div class="section-inner">
+    <div class="sec-row">
+      <div>
+        <div class="sec-eyebrow">Client love</div>
+        <h2 class="sec-title">What our clients say</h2>
+      </div>
+      <a class="btn btn-outline-accent btn-sm" href="#">All reviews →</a>
+    </div>
+    <div class="tc-grid" id="reviews">
+      <div class="tc-card">
+        <div class="tc-stars">★★★★★</div>
+        <p class="tc-quote">CinnamonFoto captured everything — from the quiet moments to the celebration. We still cry happy tears watching our highlight reel.</p>
+        <div>
+          <div class="tc-author-name">Amira &amp; Hafiz</div>
+          <div class="tc-author-meta">Wedding · Keningau, Sabah</div>
+        </div>
+      </div>
+      <div class="tc-card">
+        <div class="tc-stars">★★★★★</div>
+        <p class="tc-quote">Our Raya photoshoot was so smooth and fun. The kids actually enjoyed it! The family album is something we'll treasure forever.</p>
+        <div>
+          <div class="tc-author-name">The Roslan Family</div>
+          <div class="tc-author-meta">Family / Raya · Kota Belud</div>
+        </div>
+      </div>
+      <div class="tc-card">
+        <div class="tc-stars">★★★★★</div>
+        <p class="tc-quote">I was nervous about my graduation shoot but they made it feel completely natural. Best photos I've ever had taken of me.</p>
+        <div>
+          <div class="tc-author-name">Nurul Ain</div>
+          <div class="tc-author-meta">Graduation · UMS, Kota Kinabalu</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── §7 PROCESS ────────────────────────────────────────────── -->
+<section class="section section-tinted">
+  <div class="section-inner">
+    <div style="text-align:center;max-width:480px;margin:0 auto;">
+      <div class="sec-eyebrow" style="justify-content:center;">How it works</div>
+      <h2 class="sec-title">Simple from start to finish</h2>
+    </div>
+    <div class="process-row" role="list">
+      <div class="process-step" role="listitem">
+        <div class="step-num" aria-hidden="true">1</div>
+        <div class="step-label">Inquiry</div>
+        <div class="step-desc">Submit a booking form or message via WhatsApp / Telegram</div>
+      </div>
+      <div class="process-step" role="listitem">
+        <div class="step-num" aria-hidden="true">2</div>
+        <div class="step-label">Consultation</div>
+        <div class="step-desc">We confirm details, discuss vision, and lock in your date</div>
+      </div>
+      <div class="process-step" role="listitem">
+        <div class="step-num" aria-hidden="true">3</div>
+        <div class="step-label">Shoot day</div>
+        <div class="step-desc">Relax — we direct, guide, and capture your moments</div>
+      </div>
+      <div class="process-step" role="listitem">
+        <div class="step-num" aria-hidden="true">4</div>
+        <div class="step-label">Delivery</div>
+        <div class="step-desc">Edited gallery delivered via private online link</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── §8 FINAL CTA ──────────────────────────────────────────── -->
+<section class="cta-block">
+  <div class="cta-inner">
+    <div class="cta-eyebrow">Ready to start?</div>
+    <h2 class="cta-h2">Let's tell your <em>story.</em></h2>
+    <p class="cta-sub">Fill in a quick booking form and we'll be in touch within 24 hours to confirm your slot.</p>
+    <div class="cta-actions">
+      <a class="btn btn-mag" href="#">Book a slot</a>
+      <a class="btn btn-wa" href="#">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+      <a class="btn btn-tg" href="#">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+        Telegram
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ────────────────────────────────────────────────── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Cinnamon<span>Foto</span></div>
+        <p class="footer-desc">Considered, minimalist photography and videography rooted in Sabah, Malaysia. Serving Keningau, Kota Kinabalu, and surrounding areas.</p>
+      </div>
+      <div>
+        <div class="footer-heading">Navigate</div>
+        <ul class="footer-links">
+          <li>Home</li>
+          <li>Portfolio</li>
+          <li>Services</li>
+          <li>Packages</li>
+          <li>About</li>
+          <li>Reviews</li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Support</div>
+        <ul class="footer-links">
+          <li>FAQ</li>
+          <li>Terms &amp; Conditions</li>
+          <li>Privacy Policy</li>
+          <li>Cookie Policy</li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Connect</div>
+        <ul class="footer-links">
+          <li>WhatsApp</li>
+          <li>Telegram</li>
+          <li>Instagram</li>
+          <li>Facebook</li>
+          <li>TikTok</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 CinnamonFoto · Keningau, Sabah, Malaysia</span>
+      <div class="footer-socials" aria-label="Social media links">
+        <div class="social-pill" title="Instagram">📸</div>
+        <div class="social-pill" title="Facebook">📘</div>
+        <div class="social-pill" title="TikTok">🎵</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
